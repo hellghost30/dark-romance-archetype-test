@@ -1,0 +1,230 @@
+[
+    {
+      "id": 1,
+      "question_text": "Ідеальне перше побачення. Він приходить і каже:",
+      "image_prompt": "A dominant man confidently leads a woman by the hand into a luxurious, dimly lit restaurant. Dark romance book cover illustration, cinematic style, moody and atmospheric lighting, faceless characters (silhouettes or viewed from behind), painterly digital art, muted color palette (deep reds, blues, grays). --ar 2:3",
+      "answers": [
+        {
+          "text": "“Я все спланував, не хвилюйся. Тобі сподобається.”",
+          "effects": { "dominance": 15, "chaos": -5, "social_status": 5 }
+        },
+        {
+          "text": "“У мене є кілька ідей, але хочу почути, чого хочеш ти.”",
+          "effects": { "dominance": -10, "empathy": 10, "darkness": -5 }
+        },
+        {
+          "text": "“Збирайся, у нас 5 хвилин. Куди їдемо — сюрприз.”",
+          "effects": { "dominance": 10, "chaos": 15, "possessiveness": 5 }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "question_text": "На вечірці до нього відверто фліртує інша. Твоя ідеальна реакція від нього:",
+      "image_prompt": "A possessive man glares menacingly over a woman's shoulder at someone off-camera, his hand firmly on her waist. Dark romance book cover illustration, cinematic style, moody party lighting, faceless characters, painterly digital art, muted color palette. --ar 2:3",
+      "answers": [
+        {
+          "text": "Він холодно її ігнорує, а потім притягує мене до себе і цілує на очах у всіх.",
+          "effects": { "possessiveness": 15, "dominance": 10, "darkness": 5 }
+        },
+        {
+          "text": "Він ввічливо, але твердо каже їй, що він зі мною, і знайомить нас.",
+          "effects": { "empathy": 10, "social_status": 5, "chaos": -10 }
+        },
+        {
+          "text": "Він кидає на неї такий погляд, що вона сама злякано відходить.",
+          "effects": { "darkness": 15, "dominance": 5, "empathy": -10 }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "question_text": "Ти дізнаєшся, що він зробив щось жахливе і, можливо, незаконне заради тебе. Твої думки:",
+      "image_prompt": "A woman's silhouette looks out a rainy window at a dark city, her expression hidden. She is contemplating a dangerous secret. Dark romance book cover illustration, cinematic style, moody lighting, painterly digital art, muted color palette. --ar 2:3",
+      "answers": [
+        {
+          "text": "Це лякає, але... і збуджує. Він готовий на все.",
+          "effects": { "darkness": 20, "empathy": -15, "possessiveness": 10 }
+        },
+        {
+          "text": "Я в жаху. Я не можу бути з тим, хто переступає закон.",
+          "effects": { "darkness": -20, "empathy": 15, "chaos": -10 }
+        },
+        {
+          "text": "Мені страшно за нього. Ми повинні разом знайти вихід.",
+          "effects": { "empathy": 5, "darkness": -5, "possessiveness": 5 }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "question_text": "Який тип влади тебе приваблює більше?",
+      "image_prompt": "A powerful man in a suit stands on a balcony overlooking a vast city at night, his back to the viewer, radiating authority. Dark romance book cover illustration, cinematic style, moody lighting, faceless silhouette, painterly digital art, muted colors. --ar 2:3",
+      "answers": [
+        {
+          "text": "Влада грошей і статусу: він - король корпорацій, політик, аристократ.",
+          "effects": { "social_status": 20, "chaos": -10, "dominance": 5 }
+        },
+        {
+          "text": "Тіньова влада: він - кримінальний бос, лідер банди, сірий кардинал.",
+          "effects": { "darkness": 15, "social_status": 10, "chaos": 10 }
+        },
+        {
+          "text": "Влада інтелекту: він - геній, маніпулятор, який завжди на три кроки попереду.",
+          "effects": { "dominance": 10, "chaos": -5, "darkness": 5 }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "question_text": "Він каже: 'Я не хочу, щоб ти спілкувалася з цим твоїм другом'. Твоя реакція:",
+      "image_prompt": "A man's silhouette corners a woman against a wall, his posture is possessive and demanding, creating a tense atmosphere. Dark romance book cover illustration, cinematic style, moody lighting, faceless characters, painterly digital art, muted color palette. --ar 2:3",
+      "answers": [
+        {
+          "text": "Я розлючена. Ніхто не буде мені вказувати, з ким дружити.",
+          "effects": { "dominance": -15, "possessiveness": -10, "chaos": 5 }
+        },
+        {
+          "text": "Мене це зачіпає. Я хочу зрозуміти, чому він так ревнує.",
+          "effects": { "possessiveness": 5, "empathy": 5 }
+        },
+        {
+          "text": "Потайки мені це подобається. Він так сильно боїться мене втратити.",
+          "effects": { "possessiveness": 15, "darkness": 5, "empathy": -5 }
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "question_text": "Він мовчить кілька днів, а потім з'являється, ніби нічого не сталося. Як ти себе почуваєш?",
+      "image_prompt": "A mysterious man's silhouette appears in a doorway, bathed in shadow, while a woman waits anxiously inside a room. Dark romance book cover illustration, cinematic style, moody lighting, faceless characters, painterly digital art, muted colors. --ar 2:3",
+      "answers": [
+        {
+          "text": "Схвильованою. Його непередбачуваність і таємничість тримають мене в тонусі.",
+          "effects": { "chaos": 15, "darkness": 10, "empathy": -10 }
+        },
+        {
+          "text": "Ображеною та розлюченою. Це неповага до моїх почуттів.",
+          "effects": { "chaos": -10, "empathy": 10, "darkness": -10 }
+        },
+        {
+          "text": "Стривоженою. Я боюся, що з ним щось трапилося, і хочу його підтримати.",
+          "effects": { "empathy": 15, "possessiveness": 5, "chaos": -5 }
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "question_text": "Він дарує тобі подарунок. Що тебе вразить найбільше?",
+      "image_prompt": "A woman's hands are shown holding a small, ornate box; in the background, a man's silhouette watches her reaction intently. Dark romance book cover illustration, cinematic style, moody lighting, faceless characters, painterly digital art, muted colors. --ar 2:3",
+      "answers": [
+        {
+          "text": "Неймовірно дорога річ, про яку всі говорять. Він хоче, щоб всі бачили, що я його.",
+          "effects": { "social_status": 20, "possessiveness": 10, "empathy": -5 }
+        },
+        {
+          "text": "Щось дуже особисте і сентиментальне, про що я згадувала лише раз.",
+          "effects": { "empathy": 15, "possessiveness": 5, "darkness": -10 }
+        },
+        {
+          "text": "Ключі від його квартири. Без зайвих слів.",
+          "effects": { "dominance": 10, "possessiveness": 15, "chaos": 5 }
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "question_text": "Ти плачеш після важкого дня. Як він реагує?",
+      "image_prompt": "A powerful man fiercely embraces a crying woman from behind, his expression unseen but his posture is fiercely protective against a dark background. Dark romance book cover illustration, cinematic style, moody lighting, faceless characters, painterly digital art. --ar 2:3",
+      "answers": [
+        {
+          "text": "Він мовчки обіймає, даючи відчути себе в безпеці, поки ти не заспокоїшся.",
+          "effects": { "empathy": 15, "dominance": -5, "darkness": -5 }
+        },
+        {
+          "text": "Він розлючений. Питає: 'Хто це зробив?' і готовий розібратися з твоїми кривдниками.",
+          "effects": { "darkness": 15, "dominance": 10, "possessiveness": 10, "empathy": -10 }
+        },
+        {
+          "text": "Він трохи розгублений і незграбний, але намагається тебе розсмішити або відволікти.",
+          "effects": { "chaos": 5, "empathy": 5, "dominance": -10 }
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "question_text": "Його минуле - це темна таємниця. Твої дії:",
+      "image_prompt": "A woman's silhouette is seen secretly opening an old dusty box in an attic, a single beam of light illuminates her quest for secrets. Dark romance book cover illustration, cinematic style, moody lighting, faceless character, painterly digital art. --ar 2:3",
+      "answers": [
+        {
+          "text": "Я буду копати, розпитувати його друзів, шукати в інтернеті. Я мушу знати.",
+          "effects": { "chaos": 10, "darkness": 5 }
+        },
+        {
+          "text": "Я буду терпляче чекати, поки він сам не довіриться мені.",
+          "effects": { "empathy": 10, "chaos": -10 }
+        },
+        {
+          "text": "Мене не хвилює його минуле. Важливо лише те, хто він зі мною зараз.",
+          "effects": { "darkness": 10, "empathy": -5 }
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "question_text": "Обери тип стосунків, який тебе інтригує найбільше:",
+      "image_prompt": "Two silhouetted figures locked in a passionate, almost violent embrace, representing a power struggle and intense desire. Dark romance book cover illustration, cinematic style, moody lighting, faceless characters, painterly digital art. --ar 2:3",
+      "answers": [
+        {
+          "text": "Пристрасна боротьба двох сильних особистостей. Постійна напруга і примирення.",
+          "effects": { "dominance": 5, "chaos": 10, "darkness": 5 }
+        },
+        {
+          "text": "Він - мисливець, я - здобич. Гра в кішки-мишки, де він мене переслідує.",
+          "effects": { "possessiveness": 15, "darkness": 10, "dominance": 5 }
+        },
+        {
+          "text": "Він - мій захисник і центр всесвіту. Я - його слабкість і єдине світло.",
+          "effects": { "empathy": 10, "possessiveness": 10, "dominance": -5 }
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "question_text": "Він пропонує тобі переїхати, залишивши все. Твоє рішення?",
+      "image_prompt": "A woman stands at a crossroads, one path leading to a familiar town and the other to a distant, gleaming metropolis where a man's silhouette waits. Dark romance book cover illustration, cinematic style, moody lighting, faceless character, painterly digital art. --ar 2:3",
+      "answers": [
+        {
+          "text": "Так! Я хочу бути там, де він. Нове життя - це пригода.",
+          "effects": { "possessiveness": 10, "social_status": 10, "dominance": 5 }
+        },
+        {
+          "text": "Я відмовлюся. Моє життя і кар'єра для мене занадто важливі.",
+          "effects": { "dominance": -10, "social_status": -5, "empathy": 5 }
+        },
+        {
+          "text": "Я спробую знайти компроміс: жити на два міста або знайти роботу поруч.",
+          "effects": { "empathy": 10, "chaos": -5 }
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "question_text": "Який його 'червоний прапорець' для тебе найпривабливіший?",
+      "image_prompt": "Close up on a man's hand possessively gripping a woman's arm, a display of raw, dangerous ownership. Dark romance book cover illustration, cinematic style, moody lighting, painterly digital art, focus on the hands. --ar 2:3",
+      "answers": [
+        {
+          "text": "Коли він шалено ревнує і нікого до мене не підпускає.",
+          "effects": { "possessiveness": 20, "empathy": -10 }
+        },
+        {
+          "text": "Коли він безжальний до ворогів, але ніжний зі мною.",
+          "effects": { "darkness": 20, "dominance": 5, "empathy": -5 }
+        },
+        {
+          "text": "Коли він емоційно закритий, і я - єдина, хто може пробитися до його серця.",
+          "effects": { "chaos": -10, "darkness": 10, "empathy": 5 }
+        }
+      ]
+    }
+  ]

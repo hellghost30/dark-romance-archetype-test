@@ -1,0 +1,1765 @@
+[
+    {
+      "id": 1,
+      "name": "Крістіан Гарпер",
+      "source": "Twisted Lies (Ana Huang)",
+      "archetype_type": "The Obsessed CEO",
+      "short_description": "Монстр у личині джентльмена. Холодний мільярдер без моралі, одержимий своєю сусідкою.",
+      "long_description": "Харизматичний, смертельно небезпечний чоловік у бездоганному костюмі. Бізнесмен-мільярдер без сумління, який не звик до любові, поки не зустрічає сусідку, що пробуджує в ньому темні бажання. Він одержимий, готовий на все заради неї, і не грає за правилами — він їх створює.",
+      "gender_affinity": "male",
+      "tags": [
+        "Billionaire",
+        "Stalker",
+        "Morally Grey",
+        "Boss",
+        "Enemies to Lovers"
+      ],
+      "traits": {
+        "dominance": 98,
+        "empathy": 15,
+        "possessiveness": 100,
+        "social_status": 100,
+        "chaos": 20,
+        "darkness": 85
+      },
+      "visual_prompt": "Cinematic portrait of a devastatingly handsome man in his early 30s, cold calculating dark eyes, sharp jawline. He wears a bespoke black suit, standing in a luxury penthouse overlooking a rainy city at night. Moody, low-key lighting, photorealistic, 8k resolution, no text."
+    },
+    {
+      "id": 2,
+      "name": "Кілліан (Лорд)",
+      "source": "Lords of Pain (Angel Lawson, Samantha Rue)",
+      "archetype_type": "The Cruel Stepbrother",
+      "short_description": "Лідер 'Лордів'. Твій зведений брат і шкільний кошмар, який тепер одержимий ідеєю захистити тебе.",
+      "long_description": "Неписаний лідер 'лордів' – зухвалий зведений брат героїні, що колись тероризував її в школі разом із друзями. Жорстокий, мстивий і владний, він насолоджується контролем над тими, хто в його владі. Після її повернення стає одержимим ідеєю захистити її, навіть своїми грішними методами.",
+      "gender_affinity": "male",
+      "tags": [
+        "Bully",
+        "Stepbrother",
+        "Revenge",
+        "Dark Academia",
+        "Forced Proximity"
+      ],
+      "traits": {
+        "dominance": 95,
+        "empathy": 10,
+        "possessiveness": 90,
+        "social_status": 85,
+        "chaos": 65,
+        "darkness": 90
+      },
+      "visual_prompt": "Photorealistic portrait of a rebellious college 'king' in his early 20s, intense, arrogant gaze, dark messy hair. He wears an unbuttoned prep school blazer over a casual shirt. Dark academia aesthetic, dramatic shadows, cinematic lighting, no text."
+    },
+    {
+      "id": 3,
+      "name": "Трістан (Лорд)",
+      "source": "Lords of Pain (Angel Lawson, Samantha Rue)",
+      "archetype_type": "The Sadistic Strategist",
+      "short_description": "Колишній друг дитинства, який став твоїм мучителем. Він знає всі твої слабкості і любить грати з болем.",
+      "long_description": "Один із трьох 'лордів', колишній друг дитинства героїні, що став її мучителем. Садистичний і холодний, Трістан знав усі її таємниці і використовував це, аби зламати дівчину. Нині – впливовий 'лорд' університету, небезпечний і безжальний.",
+      "gender_affinity": "male",
+      "tags": [
+        "Bully",
+        "Friends to Enemies",
+        "Sadist",
+        "Manipulator",
+        "Polyamory"
+      ],
+      "traits": {
+        "dominance": 85,
+        "empathy": 5,
+        "possessiveness": 80,
+        "social_status": 85,
+        "chaos": 30,
+        "darkness": 95
+      },
+      "visual_prompt": "Portrait of a handsome young man with sharp features and a cruel, knowing smile. He has cold blue eyes and is dressed in expensive casual clothes, standing against a dark background. Cinematic, detailed texture, photorealistic, no text."
+    },
+    {
+      "id": 4,
+      "name": "Рат (Лорд)",
+      "source": "Lords of Pain (Angel Lawson, Samantha Rue)",
+      "archetype_type": "The Silent Beast",
+      "short_description": "Фізично грізний і мовчазний 'лорд'. М'язистий звір, який показує зуби, захищаючи свою 'леді'.",
+      "long_description": "Третій з 'лордів', найбільш фізично грізний і мовчазний. Рат брав участь у жорстокому знущанні над героїнею, сміючись над її болем. За три роки він став ще могутнішим – справжній м’язистий звір при грошах, готовий показати зуби за свою 'леді'.",
+      "gender_affinity": "male",
+      "tags": [
+        "Silent Protector",
+        "Enforcer",
+        "Bully",
+        "Polyamory"
+      ],
+      "traits": {
+        "dominance": 80,
+        "empathy": 15,
+        "possessiveness": 88,
+        "social_status": 80,
+        "chaos": 70,
+        "darkness": 88
+      },
+      "visual_prompt": "A physically imposing, muscular man with a brooding expression, tattoos visible on his arms. He is wearing dark streetwear. The background is a dimly lit gym or dark alleyway. Intense, dramatic lighting, photorealistic, 8k, no text."
+    },
+    {
+      "id": 5,
+      "name": "Кілліан Карсон",
+      "source": "God of Malice (Rina Kent)",
+      "archetype_type": "The Psychopath Prince",
+      "short_description": "Холоднокровний та небезпечний спадкоємець мафії. Хижак у дорогому костюмі з душею монстра.",
+      "long_description": "Холоднокровний та небезпечний спадкоємець мафії – хижак в дорогому костюмі. Усміхнений спокусник із душею монстра, що приховує жорстокість за вишуканими манерами. Він одержимий увагою героїні та не зупиниться ні перед чим, переслідуючи її.",
+      "gender_affinity": "male",
+      "tags": [
+        "Mafia",
+        "Stalker",
+        "Enemies to Lovers",
+        "Obsession",
+        "Psychopath"
+      ],
+      "traits": {
+        "dominance": 99,
+        "empathy": 0,
+        "possessiveness": 100,
+        "social_status": 95,
+        "chaos": 90,
+        "darkness": 100
+      },
+      "visual_prompt": "A handsome man in his early 20s with a charming but dangerous smile and eyes that lack any empathy. Dressed in a designer suit, holding a glass of whiskey in a luxurious university library. Sharp focus, cinematic mood, photorealistic, no text."
+    },
+    {
+      "id": 6,
+      "name": "Енцо Вітале",
+      "source": "Enzo (S.J. Tilly)",
+      "archetype_type": "The Vengeful Biologist",
+      "short_description": "Загадковий морський біолог з темною стороною. Тихий монстр, який жадає помсти.",
+      "long_description": "Загадковий морський біолог із темною стороною. Енцо – тихий монстр, який, наче хижак океану, виманює героїню на свій човен, аби помститися за її обман. Він небезпечний і приховує не менш хижі інстинкти, ніж акули, яких він годує.",
+      "gender_affinity": "male",
+      "tags": [
+        "Revenge",
+        "Forced Proximity",
+        "Isolation",
+        "Mysterious Stranger"
+      ],
+      "traits": {
+        "dominance": 75,
+        "empathy": 25,
+        "possessiveness": 85,
+        "social_status": 60,
+        "chaos": 50,
+        "darkness": 75
+      },
+      "visual_prompt": "A handsome, brooding man in his late 20s on a research boat at sea, surrounded by marine biology equipment. He has a quiet intensity and watchful eyes. The lighting is harsh sunlight mixed with dark shadows. Photorealistic, cinematic, no text."
+    },
+    {
+      "id": 7,
+      "name": "Картер Мегоні",
+      "source": "Untouchable (Sam Mariano)",
+      "archetype_type": "The High School Tyrant",
+      "short_description": "Шкільний тиран і зірка футболу. Безжальний і владний, він зробить твоє життя пеклом, щоб потім прив'язати до себе.",
+      "long_description": "Самовпевнений старшокласник-плейбой з маленького техаського містечка – шкільний тиран і зірка футболу. Після того як героїня поскаржилася на його друга, Картер зробив її життя пеклом. Безжальний, розбещений і надзвичайно владний, він переступає межі, аби зламати її, а згодом – прив’язати до себе.",
+      "gender_affinity": "male",
+      "tags": [
+        "Bully",
+        "High School",
+        "Enemies to Lovers",
+        "Obsession",
+        "Forced Proximity"
+      ],
+      "traits": {
+        "dominance": 95,
+        "empathy": 10,
+        "possessiveness": 90,
+        "social_status": 70,
+        "chaos": 75,
+        "darkness": 85
+      },
+      "visual_prompt": "Photorealistic portrait of a popular high school football star in his late teens. He has an arrogant smirk, a well-built physique, and is wearing a letterman jacket. Background of a high school hallway. Golden hour lighting, sharp details, no text."
+    },
+    {
+      "id": 8,
+      "name": "Себастіан Ліндстром",
+      "source": "The Bad Guy (Celia Aaron)",
+      "archetype_type": "The Psychopath Abductor",
+      "short_description": "Геній-бізнесмен і справжній психопат, який викрадає жінку, щоб змусити її покохати його.",
+      "long_description": "Геній-бізнесмен і справжній лиходій цієї історії. Себастіан – психопат з вродливим обличчям, який звик отримувати все будь-якою ціною. Він викрадає вчительку, що сподобалася йому, і тримає під замком, прагнучи змусити її покохати його. Абсолютно безжальний, але дивно турботливий у своїй спотвореній любові.",
+      "gender_affinity": "male",
+      "tags": [
+        "Kidnapping",
+        "Stalker",
+        "Psychopath",
+        "Obsession",
+        "Captivity"
+      ],
+      "traits": {
+        "dominance": 100,
+        "empathy": 0,
+        "possessiveness": 100,
+        "social_status": 95,
+        "chaos": 80,
+        "darkness": 100
+      },
+      "visual_prompt": "A chillingly handsome man in his 30s with a perfect smile but empty, dark eyes. Dressed in an expensive business suit, standing in a luxurious, isolated modern house. The atmosphere is sterile and unsettling. Cinematic, high contrast lighting, photorealistic, no text."
+    },
+    {
+      "id": 9,
+      "name": "Кіран Мастерс",
+      "source": "Fear Me (B.B. Reid)",
+      "archetype_type": "The Vengeful Bully",
+      "short_description": "Найбільш грізний хуліган школи. Він навчив тебе боятися, а тепер повернувся за помстою і володінням.",
+      "long_description": "Найбільш грізний хуліган школи, який роками тероризував героїню. Кіран – багатий прийомний син мафіозі, жорстокий і владний. Він привчив її боятися і насолоджується її страхом. Після повернення з виправної колонії його бажання переростає у хворобливу одержимість: він жадає помсти і володіння.",
+      "gender_affinity": "male",
+      "tags": [
+        "Bully",
+        "Revenge",
+        "Hate to Love",
+        "Mafia ties",
+        "High School"
+      ],
+      "traits": {
+        "dominance": 98,
+        "empathy": 5,
+        "possessiveness": 95,
+        "social_status": 80,
+        "chaos": 85,
+        "darkness": 95
+      },
+      "visual_prompt": "Intense portrait of a menacingly handsome high school student with a cruel smirk. He has dark, stormy eyes and is leaning against a brick wall in a schoolyard. He's wealthy and it shows in his clothes, but his vibe is pure danger. Gritty, cinematic style, no text."
+    },
+    {
+      "id": 10,
+      "name": "Калеб",
+      "source": "Captive in the Dark (C.J. Roberts)",
+      "archetype_type": "The Broken Avenger",
+      "short_description": "Темний антигерой, що живе помстою. Він викрав тебе, щоб дістатися до свого ворога, і ненавидить те, ким став.",
+      "long_description": "Темний антигерой із тяжким минулим, викрадений у дитинстві і вирощений для світу секс-рабства. Калеб живе помстою: дванадцять років він шукав чоловіка, що зруйнував його життя. Для цього він викрадає юну дівчину і тренує її, сам ненавидячи те, у що перетворився. Всередині нього точиться боротьба між жорстокістю і зароджуваним коханням до своєї полонянки.",
+      "gender_affinity": "male",
+      "tags": [
+        "Kidnapping",
+        "Revenge",
+        "Stockholm Syndrome",
+        "Broken Hero",
+        "Forced Proximity"
+      ],
+      "traits": {
+        "dominance": 85,
+        "empathy": 20,
+        "possessiveness": 70,
+        "social_status": 30,
+        "chaos": 70,
+        "darkness": 95
+      },
+      "visual_prompt": "A portrait of a haunted man in his late 20s with scars, both visible and emotional. He has a lean, dangerous build and eyes full of pain and rage. He's in a dark, sparse room. Gritty, emotional, photorealistic, cinematic lighting, no text."
+    },
+    {
+      "id": 11,
+      "name": "Лаклан “Кроу” Барсетті",
+      "source": "Buttons and Lace (Penelope Sky)",
+      "archetype_type": "The Mafia Boss",
+      "short_description": "Глава мафії, який купує тебе як рабиню. Кожна твоя покора винагороджується ґудзиком. Він темний і жорстокий.",
+      "long_description": "Глава італійської мафіозної родини, холоднокровний та владний. Кроу купує викрадену дівчину як свою рабиню, вимагаючи підкорення. Він темний, жорстокий, але привабливо небезпечний – кожну її покору він нагороджує ґудзиком. Зовні безсердечний, він поступово розкриває здатність до захисту і справжніх почуттів.",
+      "gender_affinity": "male",
+      "tags": [
+        "Mafia",
+        "Kidnapping",
+        "Captivity",
+        "BDSM"
+      ],
+      "traits": {
+        "dominance": 95,
+        "empathy": 10,
+        "possessiveness": 85,
+        "social_status": 90,
+        "chaos": 40,
+        "darkness": 90
+      },
+      "visual_prompt": "A powerful, cold-faced Italian mafia boss in his 30s, dressed in an impeccable suit. He's sitting in a dark, ornate office, his eyes fixed on the camera. The mood is tense and dangerous. Cinematic lighting, photorealistic, no text."
+    },
+    {
+      "id": 12,
+      "name": "Петер Соколов",
+      "source": "Tormentor Mine (Anna Zaires)",
+      "archetype_type": "The Mercenary Tormentor",
+      "short_description": "Безжальний найманець, який увірвався у твоє життя, щоб помститися. Тепер він твоя тінь і захисник.",
+      "long_description": "Колишній спецпризначенець, перетворений на безжального найманця. Петер – нічний мучитель героїні: увірвався в її життя уночі, зруйнував усе в пошуку помсти. Спершу він тероризує її, прагнучи відомстити за смерть родини, але згодом стає її тінню-захисником. Холодний розум, смертельні навички і прихована здатність до любові – ось його портрет.",
+      "gender_affinity": "male",
+      "tags": [
+        "Mercenary",
+        "Revenge",
+        "Forced Proximity",
+        "Morally Grey",
+        "Stalker"
+      ],
+      "traits": {
+        "dominance": 90,
+        "empathy": 20,
+        "possessiveness": 95,
+        "social_status": 65,
+        "chaos": 50,
+        "darkness": 88
+      },
+      "visual_prompt": "A dangerously handsome Russian man with cold, intelligent eyes and a military-grade physique. He is dressed in tactical gear, lurking in the shadows of a modern home. High-contrast, cinematic lighting, photorealistic, no text."
+    },
+    {
+      "id": 13,
+      "name": "Джуліан Есквера",
+      "source": "Twist Me (Anna Zaires)",
+      "archetype_type": "The Island Abductor",
+      "short_description": "Красивий і безжальний бос, який викрав тебе на приватний острів. Його ніжність руйнівніша за жорстокість.",
+      "long_description": "Красивий і безжальний кримінальний бос, який викрадає 18-річну Нору і утримує її на приватному острові. Джуліан – загадка: невідомо, хто він і навіщо її забрав. Він жорстокий настільки, наскільки прекрасний – його ніжність руйнівніша за його жорсткість. Хоч Нора боїться темряви в ньому, її одночасно тягне до цього “чудовиська в подобі ангела”.",
+      "gender_affinity": "male",
+      "tags": [
+        "Kidnapping",
+        "Captivity",
+        "Mafia",
+        "Age Gap",
+        "Forced Proximity"
+      ],
+      "traits": {
+        "dominance": 100,
+        "empathy": 15,
+        "possessiveness": 100,
+        "social_status": 95,
+        "chaos": 45,
+        "darkness": 92
+      },
+      "visual_prompt": "A stunningly handsome man with an angel's face and a predator's eyes. He is on a beautiful, remote tropical island, dressed in expensive linen clothes. The contrast between the paradise setting and his dangerous aura is palpable. Cinematic, photorealistic, no text."
+    },
+    {
+      "id": 14,
+      "name": "Ігнаціо “Нас” Вітале",
+      "source": "Monster in His Eyes (J.M. Darhower)",
+      "archetype_type": "The Mysterious Guardian",
+      "short_description": "Загадковий старший чоловік, мафіозний вбивця з небезпечним шармом, який стає твоїм таємним опікуном.",
+      "long_description": "Загадковий старший чоловік, який рятує студентку від небезпеки й зачаровує її аурою темряви. Нас – мафіозний убивця, “поганий чоловік” із небезпечним шармом. Він звик усе контролювати й тримати секрети за сімома замками. Його тіньові справи, владність і здатність читати думки героїні одночасно лякають її й п’янять.",
+      "gender_affinity": "male",
+      "tags": [
+        "Age Gap",
+        "Mafia",
+        "Mysterious Stranger",
+        "Secret Life"
+      ],
+      "traits": {
+        "dominance": 90,
+        "empathy": 25,
+        "possessiveness": 80,
+        "social_status": 88,
+        "chaos": 25,
+        "darkness": 85
+      },
+      "visual_prompt": "A distinguished, handsome older man in his 40s with a secretive, intense gaze. He is well-dressed, standing in the shadows of a city street at night. The atmosphere is mysterious and charged with danger. Cinematic, photorealistic, no text."
+    },
+    {
+      "id": 15,
+      "name": "Трой Бреннан",
+      "source": "Sparrow (L.J. Shen)",
+      "archetype_type": "The Sinful Lawyer",
+      "short_description": "Небезпечний кримінальний король, який примусово одружується з тобою. Він твій мучитель і рятівник в одній особі.",
+      "long_description": "Ірландець, син кримінального боса Бостона. Трой – небезпечний кримінальний король, який примусово одружується з донькою ворога. Він жорсткий, мов камінь, і отримав прізвисько “Гріховний адвокат”: блискучий юрист і безжальний злочинець в одній особі. За маскою “потвори” та “рятівника” одночасно він приховує здатність до любові.",
+      "gender_affinity": "male",
+      "tags": [
+        "Arranged Marriage",
+        "Mafia",
+        "Enemies to Lovers",
+        "Forced Proximity"
+      ],
+      "traits": {
+        "dominance": 96,
+        "empathy": 15,
+        "possessiveness": 85,
+        "social_status": 92,
+        "chaos": 30,
+        "darkness": 90
+      },
+      "visual_prompt": "A handsome Irish man with a rugged face and intelligent, cruel eyes. He's a brilliant lawyer and a ruthless criminal, wearing a sharp suit. He stands in a dark, wood-paneled law library. Cinematic lighting, photorealistic, no text."
+    },
+    {
+      "id": 16,
+      "name": "Лука Вітіелло",
+      "source": "Bound by Honor (Cora Reilly)",
+      "archetype_type": "The Mafia Prince",
+      "short_description": "Холоднокровний спадкоємець Коза Ностри, який одружується з тобою заради миру. Він вселяє страх, але має звірячу відданість.",
+      "long_description": "Старший син глави нью-йоркської Коза Ностри, якого прозвали “Лещата” за здатність душити ворогів голими руками. Лука – холоднокровний мафіозі, котрий у 23 роки бере в дружини дочку чикагського боса для миру між сім’ями. Високий, небезпечний і холодний, він вселяє нареченій лише страх. Та за безжальністю проявляється його звіряча відданість тим, кого вважає “своїми”.",
+      "gender_affinity": "male",
+      "tags": [
+        "Arranged Marriage",
+        "Mafia",
+        "Possessive Hero"
+      ],
+      "traits": {
+        "dominance": 97,
+        "empathy": 20,
+        "possessiveness": 90,
+        "social_status": 95,
+        "chaos": 35,
+        "darkness": 93
+      },
+      "visual_prompt": "A tall, intimidatingly handsome Italian man in his early 20s. He is the heir to a mafia empire, exuding cold power and authority. He wears a tailored suit and has a ruthless expression. Cinematic, moody lighting, photorealistic, no text."
+    },
+    {
+      "id": 17,
+      "name": "Лаклан Маунт",
+      "source": "Ruthless King (Meghan March)",
+      "archetype_type": "The Criminal King",
+      "short_description": "Таємничий і страхітливий король злочинного світу. Ти стала його власністю через борги.",
+      "long_description": "Найбільш страхітлива людина Нового Орлеана – таємничий король злочинного світу. Маунт править містом залізною рукою: йому підкоряються всі або безслідно зникають. Коли невинна Кіра стає його “власністю” через борги, вона відкриває, що за тінню безжального чудовиська ховається глибоко поранений чоловік. Але слабкість йому не притаманна – Маунт завжди залишається безжальним королем.",
+      "gender_affinity": "male",
+      "tags": [
+        "Mafia Boss",
+        "Debt",
+        "Forced Proximity",
+        "Captivity"
+      ],
+      "traits": {
+        "dominance": 100,
+        "empathy": 10,
+        "possessiveness": 100,
+        "social_status": 98,
+        "chaos": 50,
+        "darkness": 96
+      },
+      "visual_prompt": "A terrifyingly powerful man who rules the criminal underworld of New Orleans from the shadows. He is impeccably dressed, with an aura of absolute authority and danger. The setting is a dark, opulent bar. Cinematic, dramatic lighting, photorealistic, no text."
+    },
+    {
+      "id": 18,
+      "name": "Брантлі “Кінг” Кінг",
+      "source": "King (T.M. Frazier)",
+      "archetype_type": "The Biker King",
+      "short_description": "Злочинець і тату-майстер, щойно вийшов з в'язниці. Грубий, покритий татуюваннями альфа з власним кодексом.",
+      "long_description": "Ноторіозний злочинець і тату-майстер, щойно вийшов із в’язниці. Кінг – грубий, покритий татуюваннями альфа, “поганий хлопець” із власним кодексом. Він живе поза законом, очолює мотоклуб і знайомий із насильством. Його не дарма звуть Королем – він править кримінальним світом міста. Попри брутальність, він здатний захищати тих, хто йому дорогий, до останньої краплі крові.",
+      "gender_affinity": "male",
+      "tags": [
+        "Biker",
+        "Criminal",
+        "Tattooed Hero",
+        "Anti-hero"
+      ],
+      "traits": {
+        "dominance": 92,
+        "empathy": 25,
+        "possessiveness": 80,
+        "social_status": 60,
+        "chaos": 75,
+        "darkness": 80
+      },
+      "visual_prompt": "A rugged, heavily tattooed man in his late 20s, with a raw, alpha presence. He is the leader of a biker club, ex-convict. He is standing in front of his motorcycle or in a tattoo parlor. Gritty, realistic style, cinematic lighting, no text."
+    },
+    {
+      "id": 19,
+      "name": "Ерік “Ріппер” Джейкобс",
+      "source": "Unbeautifully (Madeline Sheehan)",
+      "archetype_type": "The Scarred Biker",
+      "short_description": "Байкер зі шрамами на душі й тілі. Зовні – суворий і знівечений, всередині – вірний лицар.",
+      "long_description": "Мотоклубівець зі шрамами на душі й тілі. Колись веселий хлопець, Ерік пережив трагедію, що залишила його понівеченим і духовно зламаним. Позивний “Ріппер” він носить через свій лютий стиль розправи. Закрутивши роман із дочкою президента клубу, він знаходить у її ніжності порятунок від своєї темряви. Зовні – суворий байкер з обпеченим обличчям, всередині – вірний лицар, готовий захистити кохану від будь-якої загрози.",
+      "gender_affinity": "male",
+      "tags": [
+        "Biker",
+        "Scars",
+        "Broken Hero",
+        "Healing"
+      ],
+      "traits": {
+        "dominance": 80,
+        "empathy": 30,
+        "possessiveness": 85,
+        "social_status": 50,
+        "chaos": 60,
+        "darkness": 78
+      },
+      "visual_prompt": "A tough biker with visible facial scars and a haunted look in his eyes. He has a powerful build and wears a leather biker jacket. He's finding a moment of peace despite his brutal exterior. Moody, emotional lighting, cinematic, photorealistic, no text."
+    },
+    {
+      "id": 20,
+      "name": "Кейн Робертс",
+      "source": "Owned (M. Never)",
+      "archetype_type": "The Corporate Dom",
+      "short_description": "Вишуканий бізнесмен удень та гріховний домінант уночі. Він заманює тебе у світ БДСМ та нелегальних угод.",
+      "long_description": "Вишуканий бізнесмен удень та гріховний домінант уночі. Кейна всі знають як важливого клієнта, стриманого й загадкового чоловіка. Але за діловим фасадом ховається таємне життя: світ БДСМ та нелегальних угод. Він заманює колегу на закриту вечірку – і там відкривається його справжнє обличчя: безжальні бажання і темні зв’язки з підпільним світом.",
+      "gender_affinity": "male",
+      "tags": [
+        "BDSM",
+        "Boss",
+        "Secret Life",
+        "Dominant"
+      ],
+      "traits": {
+        "dominance": 95,
+        "empathy": 20,
+        "possessiveness": 75,
+        "social_status": 90,
+        "chaos": 30,
+        "darkness": 82
+      },
+      "visual_prompt": "An elegant, mysterious businessman in a sharp suit, exuding quiet authority. By night, he is a dominant figure in the BDSM world. The image captures his dual nature, perhaps in a luxurious office that hints at a darker secret. Cinematic, sophisticated, photorealistic, no text."
+    },
+    {
+      "id": 21,
+      "name": "Трістан Кейн",
+      "source": "The Predator (RuNyx)",
+      "archetype_type": "The Silent Assassin",
+      "short_description": "Мовчазний та смертельно небезпечний \"хижак\" мафії. Він живе заради помсти і полює на тебе.",
+      "long_description": "Мовчазний та смертельно небезпечний 'хижак' з мафіозного міста Тенебре. Трістан - елітний енфорсер мафії, якого всі бояться і поважають. Він живе заради помсти за смерть брата, і його ненависть спрямована на хакерку Морану. Гострий розум, холодна лютість і блискавична реакція роблять його невловимим. Спершу він хоче вбити героїню, але вимушений співпрацювати, коли їх пов’язує спільна таємниця.",
+      "gender_affinity": "male",
+      "tags": [
+        "Mafia",
+        "Assassin",
+        "Enemies to Lovers",
+        "Revenge",
+        "Silent Hero"
+      ],
+      "traits": {
+        "dominance": 90,
+        "empathy": 10,
+        "possessiveness": 85,
+        "social_status": 80,
+        "chaos": 20,
+        "darkness": 94
+      },
+      "visual_prompt": "A silent, deadly handsome man with the eyes of a predator. He is an assassin for the mafia, always lurking in the shadows. He is dressed in black, moving with lethal grace. Dark, moody, cinematic lighting, photorealistic, no text."
+    },
+    {
+      "id": 22,
+      "name": "Ромео Коста",
+      "source": "My Dark Romeo (L.J. Shen, Parker S. Huntington)",
+      "archetype_type": "The Ice Prince",
+      "short_description": "Багатий, цинічний і холодний спадкоємець, змушений до шлюбу з тобою. Його серце - крижане, а шлюб - частина помсти.",
+      "long_description": "Багатий спадкоємець бізнес-імперії, цинічний інтроверт, який змушений узяти шлюб за розрахунком. Ромео холодний, відчужений і взагалі не прагне кохання. Його серце – крижане, а шлюб із бунтівною Даллас для нього лише частина стратегії з помсти. Він диктує суворі правила їхнього союзу, не намагаючись навіть прикидатись ідеальним чоловіком. Проте за маскою бездушності в ньому пробуджуються почуття, яких він не планував.",
+      "gender_affinity": "male",
+      "tags": [
+        "Arranged Marriage",
+        "Billionaire",
+        "Enemies to Lovers",
+        "Revenge"
+      ],
+      "traits": {
+        "dominance": 90,
+        "empathy": 20,
+        "possessiveness": 60,
+        "social_status": 98,
+        "chaos": 10,
+        "darkness": 70
+      },
+      "visual_prompt": "An emotionally distant and handsome heir to a business empire. He has a cold, cynical expression and is dressed in a perfectly tailored suit. He looks completely detached, standing in a grand, empty ballroom. Cinematic, cool-toned lighting, photorealistic, no text."
+    },
+    {
+      "id": 23,
+      "name": "Ронан “М’ясник”",
+      "source": "Butcher & Blackbird (Brynne Weaver)",
+      "archetype_type": "The Rival Killer",
+      "short_description": "Холоднокровний серійний вбивця, який змагається в таємному турнірі. Ти - його суперниця і найбільша спокуса.",
+      "long_description": "Серійний вбивця, відомий як 'М’ясник'. Ронан – холоднокровний різник, що змагається у таємному турнірі вбивць. Він методично вбиває своїх мішеней, аж поки не стикається зі Слоун – 'Чорною Пташкою', єдиною, хто тривалий час лишався невловимим суперником. Коли два монстри упізнають одне в одному споріднену темряву, криваве партнерство переростає у викривлену пристрасть.",
+      "gender_affinity": "male",
+      "tags": [
+        "Serial Killer",
+        "Dark Comedy",
+        "Enemies to Lovers",
+        "Rivals"
+      ],
+      "traits": {
+        "dominance": 70,
+        "empathy": 5,
+        "possessiveness": 75,
+        "social_status": 40,
+        "chaos": 80,
+        "darkness": 100
+      },
+      "visual_prompt": "A darkly charming man with a morbid sense of humor. He is a serial killer competing in a secret tournament. The image should have a dark comedy vibe, perhaps he is cleaning a weapon with a playful smirk. Cinematic, gritty, photorealistic, no text."
+    },
+    {
+      "id": 24,
+      "name": "Пітер Пан (Темний Неверленд)",
+      "source": "The Never King (Nikki St. Crowe)",
+      "archetype_type": "The Dark Fae King",
+      "short_description": "Похмурий і небезпечний король Неверленду. Він століттями викрадає дівчат твого роду для магічного ритуалу.",
+      "long_description": "Безсмертний король казкового острова Неверленд, але в цій темній версії він далекий від дитячого героя. Пітер – похмурий, небезпечний фейрі, який століттями викрадає дівчат з роду Дарлінг у ніч їхнього 18-річчя. Йому потрібна дівчина для завершення магічного ритуалу, і цього разу ключовою стає Венді. Пітер безжально зломлює викрадених, залишаючи їх понівеченими. Проте Венді кидає йому виклик.",
+      "gender_affinity": "male",
+      "tags": [
+        "Fantasy",
+        "Fae",
+        "Kidnapping",
+        "Retelling",
+        "Reverse Harem"
+      ],
+      "traits": {
+        "dominance": 95,
+        "empathy": 10,
+        "possessiveness": 100,
+        "social_status": 90,
+        "chaos": 80,
+        "darkness": 95
+      },
+      "visual_prompt": "A dark and dangerous Fae king with pointed ears and piercing eyes. He is the ruler of a twisted version of Neverland. He's surrounded by a dark, magical forest, exuding ancient power and cruelty. Cinematic fantasy, photorealistic, no text."
+    },
+    {
+      "id": 25,
+      "name": "Вейден Мор",
+      "source": "Gothikana (RuNyx)",
+      "archetype_type": "The Gothic Professor",
+      "short_description": "Мовчазний, суворий професор загадкової академії, де зникають студенти. Він оповитий таємницями і темрявою.",
+      "long_description": "Мовчазний, суворий професор загадкової академії Вернмор – готичного університету, де зникають студенти. Ваден Мор – дисциплінований чоловік з аурою темряви, який сам оповитий таємницями. Він слідкує за дивними подіями в академії і швидко привертає увагу новенької Корвіни. Холодний і відсторонений, Вад приховує як власні надприродні здібності, так і небайдужість до дівчини, з якою пов’язані страшні легенди Вернмору.",
+      "gender_affinity": "male",
+      "tags": [
+        "Dark Academia",
+        "Age Gap",
+        "Teacher-Student",
+        "Gothic",
+        "Paranormal"
+      ],
+      "traits": {
+        "dominance": 80,
+        "empathy": 35,
+        "possessiveness": 70,
+        "social_status": 75,
+        "chaos": 20,
+        "darkness": 80
+      },
+      "visual_prompt": "A stoic, handsome professor in a gothic, isolated university. He has an air of mystery and hidden darkness, dressed in dark academic attire. The setting is a grand, old library filled with secrets. Cinematic, moody lighting, photorealistic, no text."
+    },
+    {
+      "id": 26,
+      "name": "Меддокс",
+      "source": "By Sin I Rise (Cora Reilly)",
+      "archetype_type": "The Biker Avenger",
+      "short_description": "Лютий байкер, що живе помстою. Він викрадає тебе, доньку мафіозного боса, але не очікує, що ти зміниш його серце.",
+      "long_description": "Лютий байкер з мотоклубу, що живе помстою. Меддокс змалку пізнав втрату: на його очах мафіозі вбили батька. Подорослішавши, він став одержимим бажанням відплати і вступив до жорстокого мотоклубу. Меддокс викрадає Марчеллу, доньку мафіозного боса, якого він вважає винним. Холодний та грубий, Меддокс не очікував, що ізольована в його полоні горда принцеса почне змінювати його власне серце.",
+      "gender_affinity": "male",
+      "tags": [
+        "Biker",
+        "Mafia",
+        "Kidnapping",
+        "Enemies to Lovers",
+        "Revenge"
+      ],
+      "traits": {
+        "dominance": 88,
+        "empathy": 20,
+        "possessiveness": 85,
+        "social_status": 55,
+        "chaos": 70,
+        "darkness": 85
+      },
+      "visual_prompt": "A fierce biker, member of a motorcycle club, driven by revenge. He is rugged, muscular, and has a cold, determined look. He's in a gritty, industrial setting. Cinematic, high-contrast, photorealistic, no text."
+    },
+    {
+      "id": 27,
+      "name": "Алессіо Івансов",
+      "source": "The Mafia and His Angel (Lylah James)",
+      "archetype_type": "The Ice-Cold Don",
+      "short_description": "Безжальний глава російської мафії, закутий у лід. Тиха 'янголиця' зцілює його зранене серце.",
+      "long_description": "Молодий бос російської мафії, безжальний і закутий у лід. Алессіо прославився тим, що виконує роль диявола – ніхто не сміє кинути йому виклик. Він керує кланом залізно, не знаючи пощади. Коли в його маєтку ховається загадкова дівчина Айла, яка втекла від жорстокого нареченого, Алессіо спершу сприймає її з підозрою. Але поступово ця тиха 'янголиця' зцілює його зранене серце, і крижаний мафіозі стає її одержимим захисником.",
+      "gender_affinity": "male",
+      "tags": [
+        "Mafia",
+        "Broken Hero",
+        "Healing",
+        "Forced Proximity",
+        "Possessive Hero"
+      ],
+      "traits": {
+        "dominance": 97,
+        "empathy": 15,
+        "possessiveness": 95,
+        "social_status": 95,
+        "chaos": 30,
+        "darkness": 92
+      },
+      "visual_prompt": "A young, ruthless head of the Russian mafia. He is handsome but has an ice-cold demeanor and dead eyes. He is in a lavish, modern mansion, exuding power and control. Cinematic, blue-toned lighting, photorealistic, no text."
+    },
+    {
+      "id": 28,
+      "name": "Зейд Медоуз",
+      "source": "Haunting Adeline (H.D. Carlton)",
+      "archetype_type": "The Stalker Vigilante",
+      "short_description": "Небезпечний сталкер і темний месник, який полює на гірших монстрів. Він переслідує тебе, захищаючи від справжнього зла.",
+      "long_description": "Небезпечний сталкер, що перетворюється на антигероя. Зейд – загадковий хакер і темний месник, який вподобав собі письменницю Адді. Маючи власну викривлену мораль, він переслідує її, спостерігаючи з тіні, лякаючи і захоплюючи одночасно. Він очолює таємну мережу помсти над злочинцями. Він буквально привид: з’являється вночі у її домі, залишає троянди й погрози, але і захищає її від справжнього зла.",
+      "gender_affinity": "male",
+      "tags": [
+        "Stalker",
+        "Vigilante",
+        "Obsession",
+        "Hacker",
+        "Morally Grey"
+      ],
+      "traits": {
+        "dominance": 90,
+        "empathy": 20,
+        "possessiveness": 100,
+        "social_status": 60,
+        "chaos": 60,
+        "darkness": 98
+      },
+      "visual_prompt": "A mysterious and dangerous stalker who is also a vigilante. He appears as a shadow, a ghost in the night. He is often seen in the dark, watching from a distance. The image should be unsettling but captivating. Cinematic, dark, photorealistic, no text."
+    },
+    {
+      "id": 29,
+      "name": "Дізель Вайпер",
+      "source": "Den of Vipers (K.A. Knight)",
+      "archetype_type": "The Unhinged Sadist",
+      "short_description": "Божевільний садист, найкривавіший із братів 'Гадюк'. Він обожнює хаос і біль, і хоче зламати твою психіку.",
+      "long_description": "Один із 'Гадюк' – четверо прийомних братів, що правлять містом. Дізель – божевільний садист, найкривавіший з братів. Він обожнює хаос і біль, непередбачуваний, мов вибух. Коли банда 'Вайпери' купує собі Роксі, Дізель одразу ж проявляє до неї хворий інтерес – він хоче зламати її психіку, спровокувати страх і любов до власних збочень. Його поведінка – як у шаленого клоуна: одночасно може змусити сміятися і тремтіти від жаху.",
+      "gender_affinity": "male",
+      "tags": [
+        "Reverse Harem",
+        "Sadist",
+        "Captivity",
+        "Psychopath",
+        "Biker"
+      ],
+      "traits": {
+        "dominance": 80,
+        "empathy": 0,
+        "possessiveness": 85,
+        "social_status": 70,
+        "chaos": 100,
+        "darkness": 100
+      },
+      "visual_prompt": "A man with a wild, unhinged look in his eyes, like a mad clown. He is a sadist who enjoys chaos and pain. He has a muscular build and tattoos. The lighting is erratic and unsettling. Cinematic, gritty, photorealistic, no text."
+    },
+    {
+      "id": 30,
+      "name": "Ґаррет Вайпер",
+      "source": "Den of Vipers (K.A. Knight)",
+      "archetype_type": "The Silent Brawler",
+      "short_description": "Колишній боксер і мовчазний громила з банди 'Гадюк'. Він вирішує все кулаками і стає твоїм мовчазним захисником.",
+      "long_description": "Другий брат із банди 'Вайперів' – колишній боксер, мовчазний громила. Ґаррет – брутальна сила в команді. Він звик все вирішувати кулаками. Його тіло вкрите шрамами й татуюваннями, а серце, здається, з каменю. Однак у присутності норовливої Роксі цей гігант починає відчувати більше, ніж злість. Він стає її мовчазним захисником, хоча й проявляє почуття грубо – через власницьку пристрасть і ревнощі.",
+      "gender_affinity": "male",
+      "tags": [
+        "Reverse Harem",
+        "Silent Protector",
+        "Biker",
+        "Fighter"
+      ],
+      "traits": {
+        "dominance": 85,
+        "empathy": 20,
+        "possessiveness": 90,
+        "social_status": 70,
+        "chaos": 60,
+        "darkness": 85
+      },
+      "visual_prompt": "A massive, silent former boxer covered in scars and tattoos. He is the brute force of his gang. His expression is stoic and unreadable, but his eyes hold a protective warmth. Underground fight club setting. Cinematic, gritty, photorealistic, no text."
+    },
+    {
+      "id": 31,
+      "name": "Кензо Вайпер",
+      "source": "Den of Vipers (K.A. Knight)",
+      "archetype_type": "The Charming Gambler",
+      "short_description": "Азартний гравець і мозок 'Гадюк'. Його шарм майже нормальний, але він здатен вбити, не зронивши усмішки.",
+      "long_description": "Третій 'Гадюка' – азартний гравець і мозок угруповання. Кензо вишуканий, хитрий, завжди усміхнений. Він – майстер азарту і обману, що відповідає за фінанси й казино. Його шарм майже нормальний, він єдиний з братів, хто проявляє до Роксі ніжність і гумор. Але й Кензо не без темряви: програвати він не любить. Його поцілунки солодкі, але він здатен вбити, не зронивши усмішки.",
+      "gender_affinity": "male",
+      "tags": [
+        "Reverse Harem",
+        "Gambler",
+        "Biker",
+        "Charming Villain"
+      ],
+      "traits": {
+        "dominance": 75,
+        "empathy": 25,
+        "possessiveness": 80,
+        "social_status": 75,
+        "chaos": 40,
+        "darkness": 78
+      },
+      "visual_prompt": "A handsome, impeccably dressed man with a constant, charming smile that doesn't quite reach his eyes. He is the brain and gambler of his gang, exuding a slick, dangerous confidence. Setting is a high-stakes poker game in a smoky backroom. Cinematic, photorealistic, no text."
+    },
+    {
+      "id": 32,
+      "name": "Райдер Вайпер",
+      "source": "Den of Vipers (K.A. Knight)",
+      "archetype_type": "The Cold Kingpin",
+      "short_description": "Лідер братів 'Гадюк', найстарший і найхолодніший. Жорстокий король, який забирає тебе як сплату боргу.",
+      "long_description": "Лідер братів 'Вайперів', найстарший і найхолодніший. Райдер – жорстокий король підземелля, що залізною рукою тримає бізнес і банду. Саме він вирішує забрати Роксі як сплату боргу її батька. Райдер завжди контролює емоції, говорить тихо, але його слова – закон. Він карає підлеглих без тіні жалю. Для Роксі він стає нічним кошмаром і забороненим захопленням водночас: темний, владний, таємничо привабливий.",
+      "gender_affinity": "male",
+      "tags": [
+        "Reverse Harem",
+        "Mafia Boss",
+        "Biker",
+        "Captivity"
+      ],
+      "traits": {
+        "dominance": 98,
+        "empathy": 10,
+        "possessiveness": 95,
+        "social_status": 80,
+        "chaos": 20,
+        "darkness": 94
+      },
+      "visual_prompt": "The cold, ruthless leader of a powerful gang. He is handsome, in his late 20s, and always in control. His expression is unreadable, his eyes like ice. He sits on a throne-like chair in an industrial warehouse. Cinematic, high-contrast lighting, photorealistic, no text."
+    },
+    {
+      "id": 33,
+      "name": "Алекс Волков",
+      "source": "Twisted Love (Ana Huang)",
+      "archetype_type": "The Broken Genius",
+      "short_description": "Крижано спокійний мільярдер з трагічним минулим. Найкращий друг твого брата, що стає твоїм одержимим захисником.",
+      "long_description": "Молодий мільярдер та геніальний інвестор, найкращий друг брата героїні. Алекс – крижано спокійний і раціональний чоловік із трагічним минулим. Він приховує біль втрати за маскою відстороненості. Коли він обіцяє доглянути за веселою Авою, в ньому пробуджується темна, власницька жилка. Алекс здатен на все заради помсти ворогам і захисту коханої.",
+      "gender_affinity": "male",
+      "tags": [
+        "Brother's Best Friend",
+        "Billionaire",
+        "Broken Hero",
+        "Revenge",
+        "Possessive Hero"
+      ],
+      "traits": {
+        "dominance": 90,
+        "empathy": 25,
+        "possessiveness": 95,
+        "social_status": 100,
+        "chaos": 15,
+        "darkness": 80
+      },
+      "visual_prompt": "A devastatingly handsome billionaire with haunted, intelligent eyes. He is haunted by a tragic past and maintains an icy, controlled exterior. He's dressed in a sharp, dark suit. Modern, minimalist apartment background. Cinematic, cool-toned lighting, photorealistic, no text."
+    },
+    {
+      "id": 34,
+      "name": "Аіден Кінг",
+      "source": "Deviant King (Rina Kent)",
+      "archetype_type": "The Elite Sociopath",
+      "short_description": "Безжалісний 'король' елітної школи. Харизматичний соціопат, який хоче зламати тебе, але й готовий померти за тебе.",
+      "long_description": "Безжалісний 'король' елітної школи, що тероризує всіх навколо. Аіден – син впливового бізнесмена, звик отримувати бажане силою. Харизматичний соціопат, він уподобав скромну дівчину Ельзу, щоб зламати її. Керований темними імпульсами, Аіден здатен бути як жорстоким, так і несподівано ніжним. Його мораль сіра: він може знищити людину психологічно, але також віддати життя, захищаючи свою 'королеву'.",
+      "gender_affinity": "male",
+      "tags": [
+        "Bully",
+        "High School",
+        "Sociopath",
+        "Obsession",
+        "Dark Academia"
+      ],
+      "traits": {
+        "dominance": 96,
+        "empathy": 5,
+        "possessiveness": 98,
+        "social_status": 95,
+        "chaos": 70,
+        "darkness": 92
+      },
+      "visual_prompt": "A charismatic and handsome sociopath who is the king of an elite school. He has an angelic face but cruel eyes. He wears a tailored school uniform with an air of effortless superiority. Gothic school architecture background. Cinematic, dramatic lighting, photorealistic, no text."
+    },
+    {
+      "id": 35,
+      "name": "Майкл Кріст",
+      "source": "Corrupt (Penelope Douglas)",
+      "archetype_type": "The Fallen Idol",
+      "short_description": "Лідер 'Чотирьох вершників', шкільна зірка баскетболу з темною стороною. Він повернувся, щоб помститися тобі.",
+      "long_description": "Лідер 'Чотирьох вершників' – компанії привілейованих поганців. Майкл – шкільна зірка баскетболу, мажор із темною стороною. У його рідному місті він був богом, поки не скоїв злочин із друзями. Через роки він повертається, щоб виконати обіцянку: помститися дівчині, яка, на його думку, їх зрадила. Майкл холодний, розважливий, але його тягне до неї. Він розривається між жагою помсти і пристрастю.",
+      "gender_affinity": "male",
+      "tags": [
+        "Secret Society",
+        "Revenge",
+        "Enemies to Lovers",
+        "Second Chance"
+      ],
+      "traits": {
+        "dominance": 90,
+        "empathy": 20,
+        "possessiveness": 80,
+        "social_status": 85,
+        "chaos": 40,
+        "darkness": 85
+      },
+      "visual_prompt": "A handsome former high school basketball star, now a cold and calculating man in his late 20s. He has a dark side and is driven by revenge. He's athletic and confident, with a brooding intensity. Nighttime city setting. Cinematic, photorealistic, no text."
+    },
+    {
+      "id": 36,
+      "name": "Деймон Торренс",
+      "source": "Kill Switch (Penelope Douglas)",
+      "archetype_type": "The Unpredictable Psychopath",
+      "short_description": "Найтемніший з 'вершників'. Соціопат з ангельським личком, непередбачуваний і небезпечний, але має слабкість до однієї дівчини.",
+      "long_description": "Найтемніший із четвірки 'вершників'. Деймон – соціопат із ангельським личком, син впливового бізнесмена-якудзи. Він ріс у розпусті й насильстві, що зробило його безжальним хижаком. За гріхи минулого Деймона посадили до в’язниці, і він жадає реваншу. Він небезпечний, непередбачуваний, здатний на жорстокі ігри. Проте в його житті є світло – сліпа дівчина Вінтер, єдина, хто бачить у ньому щось людське.",
+      "gender_affinity": "male",
+      "tags": [
+        "Psychopath",
+        "Anti-hero",
+        "Secret Society",
+        "Broken Hero",
+        "Redemption"
+      ],
+      "traits": {
+        "dominance": 92,
+        "empathy": 0,
+        "possessiveness": 95,
+        "social_status": 90,
+        "chaos": 95,
+        "darkness": 100
+      },
+      "visual_prompt": "A man with an angelic face but the empty eyes of a sociopath. He is unpredictable and dangerous, capable of extreme violence. He has a haunting beauty. The background is chaotic and dark. High-contrast, cinematic lighting, photorealistic, no text."
+    },
+    {
+      "id": 37,
+      "name": "Кай Морі",
+      "source": "Hideaway (Penelope Douglas)",
+      "archetype_type": "The Masked Gentleman",
+      "short_description": "Загадковий і врівноважений 'вершник'. Ввічливий назовні, з бунтівним серцем всередині. Шукає спокути.",
+      "long_description": "Збалансований і загадковий член 'вершників', виходець із впливової японської родини. Кай – майстер масок: ввічливий, врівноважений назовні, та з бунтівним серцем всередині. Він завжди був “совістю” компанії, але й сам скоїв чимало гріхів. Після відсидки він шукає спокути і відкриває підпільний клуб для таємних фантазій. Там він зустрічає дівчину, яка колись йому довіряла, – і тепер мусить здобути її прощення.",
+      "gender_affinity": "male",
+      "tags": [
+        "Second Chance",
+        "Secret Society",
+        "Masquerade",
+        "Cultural Heritage"
+      ],
+      "traits": {
+        "dominance": 75,
+        "empathy": 40,
+        "possessiveness": 70,
+        "social_status": 88,
+        "chaos": 25,
+        "darkness": 70
+      },
+      "visual_prompt": "A balanced and mysterious man of Japanese descent, wearing an elegant mask. He is polite and poised on the surface, but has a rebellious heart. The setting is a secret, exclusive club with a masquerade theme. Sophisticated, cinematic, photorealistic, no text."
+    },
+    {
+      "id": 38,
+      "name": "Баррон “Вішес” Спенсер",
+      "source": "Vicious (L.J. Shen)",
+      "archetype_type": "The Vicious Saint",
+      "short_description": "Зарозумілий спадкоємець мільйонів на прізвисько 'Злобний'. Він зруйнував твоє життя, а через 10 років повернувся, щоб забрати тебе.",
+      "long_description": "Зарозумілий спадкоємець мільйонів та безжальний “грішник”. Його прозвали Vicious (“Злобний”) за характер – він дійсно жорстокий і безсердечний. Він зруйнував життя бідної дівчини Емілії у школі, змусивши її тікати, а через 10 років з’явився знову, щоб забрати її собі. Його душа похована під тонами злості, але кохання здатне вирвати з нього людяність – якщо тільки він дозволить.",
+      "gender_affinity": "male",
+      "tags": [
+        "Enemies to Lovers",
+        "Bully",
+        "Billionaire",
+        "Second Chance",
+        "Revenge"
+      ],
+      "traits": {
+        "dominance": 97,
+        "empathy": 10,
+        "possessiveness": 92,
+        "social_status": 100,
+        "chaos": 60,
+        "darkness": 90
+      },
+      "visual_prompt": "A brutally handsome and arrogant heir to a billion-dollar fortune. He has a cruel mouth and cold eyes. He is a brilliant lawyer and a ruthless criminal, radiating power and malice. Luxury setting, high-fashion clothing. Cinematic, photorealistic, no text."
+    },
+    {
+      "id": 39,
+      "name": "Вулф Кітон",
+      "source": "The Kiss Thief (L.J. Shen)",
+      "archetype_type": "The Manipulative Politician",
+      "short_description": "Жорстокий сенатор з трагічним минулим. Він примушує тебе до шлюбу заради помсти твоєму батькові-мафіозі.",
+      "long_description": "Кар’єрист та сенатор, який уклав з дівчиною угоду заради помсти. Вулф – жорстокий політик із трагічним минулим. Щоб помститися своєму ворогу-мафіозі, він примушує його доньку Франческу до шлюбу. Вулф холодний і безжалісний – справжній “викрадач поцілунків”. Однак під бронею амбіцій ховається біль втрати сім’ї. З часом він починає захоплюватися невинністю та силою духу юної дружини.",
+      "gender_affinity": "male",
+      "tags": [
+        "Arranged Marriage",
+        "Revenge",
+        "Enemies to Lovers",
+        "Age Gap",
+        "Politician"
+      ],
+      "traits": {
+        "dominance": 94,
+        "empathy": 20,
+        "possessiveness": 80,
+        "social_status": 95,
+        "chaos": 20,
+        "darkness": 82
+      },
+      "visual_prompt": "A ruthless and ambitious U.S. Senator with a painful past. He is handsome, charismatic, and manipulative, dressed in a power suit. The setting is a grand political office or ballroom. Cinematic, dramatic lighting, photorealistic, no text."
+    },
+    {
+      "id": 40,
+      "name": "Джафар",
+      "source": "Desperate Measures (Katee Robert)",
+      "archetype_type": "The Villain King",
+      "short_description": "Сучасний Джафар - кримінальний бос, який повалив султана і привласнив тебе, його доньку, як свою полонянку-коханку.",
+      "long_description": "Темна інтерпретація відомого лиходія – кримінальний бос, який повалив султана і привласнив його доньку. Він володіє нічним клубом у сучасному Аграбі та цілим кримінальним синдикатом. Жорсткий, владний і спокусливий, Джафар перетворює принцесу Жасмін на свою особисту полонянку-коханку. Його стиль – змішування ніжності та грубості: він карає неслухняність і винагороджує покору.",
+      "gender_affinity": "male",
+      "tags": [
+        "Retelling",
+        "BDSM",
+        "Mafia Boss",
+        "Captivity",
+        "Enemies to Lovers"
+      ],
+      "traits": {
+        "dominance": 95,
+        "empathy": 15,
+        "possessiveness": 90,
+        "social_status": 90,
+        "chaos": 40,
+        "darkness": 90
+      },
+      "visual_prompt": "A modern, dark re-imagining of Jafar. He is a handsome, powerful crime boss with a seductive and commanding presence. He runs a nightclub in a city that resembles a modern Agrabah. The image is dark, sensual, and luxurious. Cinematic, photorealistic, no text."
+    },
+    {
+      "id": 41,
+      "name": "Хав’єр Берналь",
+      "source": "Dirty Angels (Karina Halle)",
+      "archetype_type": "The Cartel King",
+      "short_description": "Безжальний мексиканський наркобарон. Він викрадає тебе, дружину ворога, і закохується у свою полонянку.",
+      "long_description": "Мексиканський наркобарон, безжальний ватажок картелю з тінню минулого. Він викрадає красуню Луїсу – дружину свого ворога. Хав’єр жорстокий, чарівний і смертельно небезпечний: може обійняти героїню, а наступної миті холоднокровно вистрілити в людину. У його світі не існує понять “добро” і “зло” – лише сила. Проте попри бруд і кров він закохується у свою полонянку.",
+      "gender_affinity": "male",
+      "tags": [
+        "Cartel",
+        "Kidnapping",
+        "Enemies to Lovers",
+        "Captivity"
+      ],
+      "traits": {
+        "dominance": 98,
+        "empathy": 10,
+        "possessiveness": 90,
+        "social_status": 92,
+        "chaos": 70,
+        "darkness": 97
+      },
+      "visual_prompt": "A ruthless and charismatic Mexican cartel leader. He is handsome, dangerous, and lives by his own code. The setting is a luxurious hacienda in Mexico, contrasting with the violence of his world. Gritty, cinematic, photorealistic, no text."
+    },
+    {
+      "id": 42,
+      "name": "Картер Рід",
+      "source": "Carter Reed (Tijan)",
+      "archetype_type": "The Silent Hitman",
+      "short_description": "Таємничий колишній кілер мафії. Він повертається з тіні, щоб захистити тебе, свою подругу дитинства.",
+      "long_description": "Таємничий “вбивця, що полює на поганих хлопців” – колишній кілер мафії, який відійшов від справ. Картер – тихий месник, який повертається, щоб захистити подругу дитинства. Він свого часу був легендою мафії – холоднокровний, невловимий та смертоносний. Тепер же він діє з-за лаштунків, розправляючись із загрозами. Картер не говорить про свої почуття – він їх показує справами, методично усуваючи всіх ворогів.",
+      "gender_affinity": "male",
+      "tags": [
+        "Assassin",
+        "Childhood Friends",
+        "Vigilante",
+        "Protector"
+      ],
+      "traits": {
+        "dominance": 80,
+        "empathy": 30,
+        "possessiveness": 90,
+        "social_status": 65,
+        "chaos": 30,
+        "darkness": 88
+      },
+      "visual_prompt": "A quiet, lethal former mafia hitman. He is a silent protector who lives in the shadows. He has a lean, powerful build and watchful eyes. The image is dark and suspenseful, hinting at his deadly skills. Cinematic, photorealistic, no text."
+    },
+    {
+      "id": 43,
+      "name": "Неро Карузо",
+      "source": "Nero (Sarah Brianne)",
+      "archetype_type": "The Young Mob Prince",
+      "short_description": "Король шкільної ієрархії з родини мафії. Булер, який отримує наказ наглядати за тобою і несподівано закохується.",
+      "long_description": "Старшокласник із родини італійської мафії, король шкільної ієрархії. Неро на перший погляд типовий мажор-булер – багатий, самовпевнений і жорстокий. Він отримав наказ від батька наглядати за непомітною дівчиною Еллою, яка стала свідком вбивства. Виконуючи завдання, Неро починає відчувати до неї те, чого не очікував – він готовий захистити її навіть від власних друзів. Молодий мафіозі вчиться любити, хоч і методи його далекі від лицарських.",
+      "gender_affinity": "male",
+      "tags": [
+        "Mafia",
+        "High School",
+        "Bully",
+        "Bodyguard"
+      ],
+      "traits": {
+        "dominance": 85,
+        "empathy": 25,
+        "possessiveness": 80,
+        "social_status": 80,
+        "chaos": 50,
+        "darkness": 75
+      },
+      "visual_prompt": "A confident and ruthless high school student from a powerful mafia family. He is the king of his school, handsome and cruel. He is torn between his duty and his growing feelings. Dark academia setting. Cinematic, photorealistic, no text."
+    },
+    {
+      "id": 44,
+      "name": "Неро Верді",
+      "source": "Nero (S.J. Tilly)",
+      "archetype_type": "The Obsessed Kingpin",
+      "short_description": "Молодий, розумний і небезпечний глава злочинної імперії. Він стає нав'язливо одержимим тобою.",
+      "long_description": "Молодий глава власної злочинної імперії – розумний, невловимий і небезпечний. Неро Верді веде кримінальний синдикат як бізнес – холодно й обачливо, що не заважає йому безжально прибирати конкурентів. У нього на спині мішень, тому він нікого не впускає у серце. Однак зустріч із простою дівчиною Пейтон змінює все: Неро вперше відчуває ревниву потребу захистити когось не з “сім’ї”. Він стає нав’язливо одержимим нею.",
+      "gender_affinity": "male",
+      "tags": [
+        "Mafia",
+        "Obsession",
+        "Age Gap",
+        "Touch Her and Die"
+      ],
+      "traits": {
+        "dominance": 95,
+        "empathy": 15,
+        "possessiveness": 100,
+        "social_status": 90,
+        "chaos": 25,
+        "darkness": 90
+      },
+      "visual_prompt": "A young, intelligent, and dangerous head of a criminal empire. He is cold and calculating, but becomes obsessively protective of the woman he loves. He is dressed in a dark, expensive suit. Modern, sleek office setting. Cinematic, photorealistic, no text."
+    },
+    {
+      "id": 45,
+      "name": "Джаред Трент",
+      "source": "Bully (Penelope Douglas)",
+      "archetype_type": "The Broken Bully",
+      "short_description": "Колишній найкращий друг, що став твоїм головним кривдником. За маскою ненависті він ховає зламану душу і кохання.",
+      "long_description": "Колишній найкращий друг героїні, що став її головним кривдником у старшій школі. Джаред – класичний 'поганий хлопець', який зламався після сімейної трагедії. Свою біль він виливає на Тейту: глузує, принижує, поширює чутки. Але за маскою ненависті криється ранима душа і кохання, яке він не вміє виразити інакше. Після року розлуки він бачить, що вона більше не боїться – і це перевертає їхню динаміку.",
+      "gender_affinity": "male",
+      "tags": [
+        "Bully",
+        "High School",
+        "Friends to Enemies to Lovers",
+        "Second Chance"
+      ],
+      "traits": {
+        "dominance": 80,
+        "empathy": 30,
+        "possessiveness": 70,
+        "social_status": 60,
+        "chaos": 70,
+        "darkness": 65
+      },
+      "visual_prompt": "A classic 'bad boy' high school bully with a hidden vulnerability. He is handsome and popular, but his eyes show a deep pain. The image captures his internal conflict between cruelty and love. Cinematic, emotional, photorealistic, no text."
+    },
+    {
+      "id": 46,
+      "name": "Зсодіст",
+      "source": "Lover Awakened (J.R. Ward)",
+      "archetype_type": "The Traumatized Vampire",
+      "short_description": "Найтемніший і найнебезпечніший вампір-воїн. Колишній раб, він боїться доторкнутися до жінки, яка пробудила в ньому почуття.",
+      "long_description": "Вампір-воїн з братства, найтемніший і найнебезпечніший серед побратимів. Зсодіст колись був рабом крові і сексу, жорстоко катований сто років. Він носить шрами – фізичні і душевні – і тримається осторонь, лякаючи навіть своїх. Він вірить, що нездатний на кохання, аж доки аристократка Белла не пробуджує в ньому бажання захищати. Через страшні психологічні травми він боїться доторкнутися до неї. Його шлях – це болісне сходження з темряви до світла через любов.",
+      "gender_affinity": "male",
+      "tags": [
+        "Vampire",
+        "Fantasy",
+        "Broken Hero",
+        "Healing",
+        "Scars"
+      ],
+      "traits": {
+        "dominance": 88,
+        "empathy": 10,
+        "possessiveness": 90,
+        "social_status": 70,
+        "chaos": 90,
+        "darkness": 98
+      },
+"visual_prompt": "A terrifyingly beautiful vampire warrior, scarred physically and emotionally from a century of hardship. He is a formidable fighter with a feral intensity, but also a deep vulnerability. Dark, gothic fantasy setting. Cinematic, photorealistic, no text."    },
+    {
+      "id": 47,
+      "name": "К’ю Мерсьє",
+      "source": "Tears of Tess (Pepper Winters)",
+      "archetype_type": "The Monster Abductor",
+      "short_description": "Французький мільйонер-садист, який купує тебе як рабиню. Він - монстр, що бореться з власною темрявою.",
+      "long_description": "Французький мільйонер з садистськими нахилами. К’ю – холодний колекціонер, який купує викрадену дівчину Тесс. У його маєтку вона опиняється в клітці. К’ю здається монстром: строгий, загадковий, він карає її неслухняність болем. Але всередині нього самого – монстр, з яким він бореться. Тесс поступово розпалює в ньому почуття провини і кохання. Він – тиран, що прагне стати захисником, 'чудовисько', яке мріє, щоб його любили.",
+      "gender_affinity": "male",
+      "tags": [
+        "Kidnapping",
+        "BDSM",
+        "Stockholm Syndrome",
+        "Captivity",
+        "Redemption"
+      ],
+      "traits": {
+        "dominance": 95,
+        "empathy": 10,
+        "possessiveness": 95,
+        "social_status": 95,
+        "chaos": 60,
+        "darkness": 97
+      },
+      "visual_prompt": "A cold and sadistic French millionaire who keeps his 'pet' in a cage. He is handsome and elegant, but there is a monster lurking beneath the surface. The setting is a luxurious but oppressive French estate. Cinematic, dark, photorealistic, no text."
+    },
+    {
+      "id": 48,
+      "name": "Елдер Прест",
+      "source": "Pennies (Pepper Winters)",
+      "archetype_type": "The Dark Savior",
+      "short_description": "Загадковий злодій з власним кодексом. Він рятує тебе з неволі, щоб використати у своїй помсті.",
+      "long_description": "Загадковий злодій міжнародного масштабу з власним моральним кодексом. Елдер – чорний лицар, який діє поза законом. Він прибуває до садиби, де утримують Пімліко – дівчину-невільницю. Бачачи її муки, Елдер вирішує її врятувати. Він купує її свободу, але не заради кохання, а щоб використати у власній помсті. Проте поступово дві пошкоджені душі знаходять розраду одна в одній.",
+      "gender_affinity": "male",
+      "tags": [
+        "Anti-hero",
+        "Broken Hero",
+        "Healing",
+        "Revenge",
+        "Redemption"
+      ],
+      "traits": {
+        "dominance": 80,
+        "empathy": 35,
+        "possessiveness": 75,
+        "social_status": 70,
+        "chaos": 40,
+        "darkness": 80
+      },
+      "visual_prompt": "A mysterious international thief with his own moral code. He is a dark knight who operates outside the law. He is handsome, with a haunted quality. The image should convey a sense of hope emerging from darkness. Cinematic, photorealistic, no text."
+    },
+    {
+      "id": 49,
+      "name": "Ґрейсон Пірс Салліван",
+      "source": "Born, Darkly (Trisha Wolfe)",
+      "archetype_type": "The Intellectual Killer",
+      "short_description": "Харизматичний серійний вбивця, що грає в ігри розуму зі своєю психологинею. Він бачить у тобі споріднену темну душу.",
+      "long_description": "Харизматичний серійний убивця з розвиненим інтелектом і потягом до ігор розуму. Ґрейсон – засуджений маніяк, що перетворює сеанси зі своєю психологинею на моторошний танець на межі безумства. Він кидає їй інтелектуальні виклики, намагаючись зламати її та залучити до свого 'лабіринту'. Ґрейсон бачить у ній споріднену душу, вважаючи, що вона також має темні схильності.",
+      "gender_affinity": "male",
+      "tags": [
+        "Psychological Thriller",
+        "Serial Killer",
+        "Forbidden Romance",
+        "Mind Games"
+      ],
+      "traits": {
+        "dominance": 85,
+        "empathy": 0,
+        "possessiveness": 90,
+        "social_status": 60,
+        "chaos": 50,
+        "darkness": 100
+      },
+      "visual_prompt": "A charismatic and intelligent serial killer, playing mind games with his female psychologist. He is handsome, with a piercing gaze that seems to see right through you. The setting is a sterile asylum room. Tense, psychological atmosphere. Cinematic, photorealistic, no text."
+    },
+    {
+      "id": 50,
+      "name": "Джей Майярд",
+      "source": "Beneath the Burn (Pam Godwin)",
+      "archetype_type": "The Tortured Rockstar",
+      "short_description": "Рок-зірка з трагічним минулим. На сцені - бог, поза нею - мучена душа. Ви стаєте прихистком одне для одного.",
+      "long_description": "Рок-зірка з трагічним минулим, який ховає душевні рани за наркотиками і музикою. Джей – талановитий гітарист, на сцені сексуальний бог, а поза нею – мучена душа з темними секретами. Його свободу колись відібрала психопатка. Коли він зустрічає Шарлі – дівчину, що втекла від садиста, – їхні світи зіштовхуються. Джей стає її прихистком, і разом вони намагаються зцілити одне одного.",
+      "gender_affinity": "male",
+      "tags": [
+        "Rockstar",
+        "Broken Hero",
+        "Healing",
+        "Second Chance"
+      ],
+      "traits": {
+        "dominance": 70,
+        "empathy": 40,
+        "possessiveness": 65,
+        "social_status": 85,
+        "chaos": 80,
+        "darkness": 60
+      },
+      "visual_prompt": "A rockstar with a tragic past. On stage, he is a god, but off stage, he is a haunted soul. He is handsome, with tattoos and a pained expression. The image captures his vulnerability beneath the rockstar persona. Cinematic, emotional, photorealistic, no text."
+    },  
+    {
+        "id": 51,
+        "name": "Ґрізз (Ведмідь)",
+        "source": "Nine Minutes (Beth Flynn)",
+        "archetype_type": "The Biker Abductor",
+        "short_description": "Грізний лідер мотобанди з 1970-х, який викрадає юну дівчину. Він — її терор і несподіваний захисник водночас.",
+        "long_description": "Лідер мотобанди у Флориді 1970-х, який викрадає 15-річну Джіні. Ґрізз – грізний байкер, що вселяє жах, але в душі має несподівану ніжність. Його кличуть Гризлі за величезний зріст та люту вдачу. Попри страхітливу репутацію, він проявляє до своєї юної полонянки турботу, забезпечуючи їй безпеку в жорстокому світі банди. Для Джіні він – і терор, і захист одночасно.",
+        "gender_affinity": "male",
+        "tags": ["Biker", "Kidnapping", "Age Gap", "Stockholm Syndrome", "Retro"],
+        "traits": { "dominance": 90, "empathy": 25, "possessiveness": 95, "social_status": 40, "chaos": 80, "darkness": 95 },
+        "visual_prompt": "1970s aesthetic. A huge, intimidating biker leader, tall and muscular like a bear, with a wild beard and long hair. He's wearing a leather biker vest. He has a surprisingly gentle look in his eyes as he looks at something off-camera. Gritty, cinematic photo, film grain, photorealistic, no text."
+      },
+      {
+        "id": 52,
+        "name": "Ентоні “Тоні” Роулінґс",
+        "source": "Consequences (Aleatha Romig)",
+        "archetype_type": "The Controlling Millionaire",
+        "short_description": "Мультимільйонер-викрадач, який ув'язнює тебе в розкоші. Кожен твій крок має наслідки, а його любов - токсична.",
+        "long_description": "Мультимільйонер, який за красивою маскою ховає небезпечну, контролюючу натуру. Ентоні – викрадач і 'вихователь', що заманює журналістку Клер у свою пастку. Він утримує її у своєму особняку, встановлюючи жорсткі правила і вимагаючи досконалості. Його прив'язаність токсична і сповнена тотального контролю.",
+        "gender_affinity": "male",
+        "tags": ["Billionaire", "Kidnapping", "Captivity", "Stockholm Syndrome", "Psychological"],
+        "traits": { "dominance": 100, "empathy": 5, "possessiveness": 100, "social_status": 100, "chaos": 60, "darkness": 95 },
+        "visual_prompt": "A chillingly handsome multimillionaire in his 30s, dressed in a perfect suit. He stands in a luxurious, sterile mansion, exuding an aura of absolute control and danger. His eyes are cold and possessive. Cinematic, high-contrast lighting, photorealistic, no text."
+      },
+      {
+        "id": 53,
+        "name": "Віктор Фауст",
+        "source": "Killing Sarai (J.A. Redmerski)",
+        "archetype_type": "The Emotionless Hitman",
+        "short_description": "Холоднокровний найманий вбивця, тренований не відчувати емоцій. Він рятує тебе з полону, стаючи твоїм новим, більш небезпечним монстром.",
+        "long_description": "Професійний кілер, натренований з дитинства на беземоційне вбивство. Віктор випадково рятує дівчину Сараї з полону наркокартелю. Він вважає її тягарем, але поступово прив'язується. Його стиль захисту – смертоносний і остаточний: він методично усуває всі загрози для неї, залишаючись холодним і раціональним монстром.",
+        "gender_affinity": "male",
+        "tags": ["Assassin", "Anti-hero", "Bodyguard", "Forced Proximity", "Morally Grey"],
+        "traits": { "dominance": 80, "empathy": 10, "possessiveness": 85, "social_status": 70, "chaos": 20, "darkness": 90 },
+        "visual_prompt": "A cold, emotionless hitman in his late 20s. He is handsome but his face is a mask of indifference. Dressed in a practical but expensive suit, he moves with deadly precision. Background is a gritty, dangerous location like a motel room or a deserted road. Cinematic, neo-noir style, photorealistic, no text."
+      },
+      {
+        "id": 54,
+        "name": "Джеймс “Гак” Баррі",
+        "source": "Hooked (Emily McIntire)",
+        "archetype_type": "The Vengeful Club Owner",
+        "short_description": "Сучасний 'Капітан Гак' - кримінальний бос з гаком замість руки. Він хоче використати тебе для помсти твоєму батькові, Пітеру Пену.",
+        "long_description": "Сучасний 'Капітан Гак' – власник нічного клубу і кримінальний бос. Красень зі шрамом і протезом-гаком замість руки. Він одержимий помстою Пітеру Майклсу (сучасному Пітеру Пену), і коли донька Пітера, Венді, заходить до його бару, Гак вирішує використати її. Спокушаючи Венді, він планує зламати ворога, але не сподівався, що невинна дівчина розтопить його темне серце.",
+        "gender_affinity": "male",
+        "tags": ["Retelling", "Revenge", "Mafia", "Broken Hero", "Enemies to Lovers"],
+        "traits": { "dominance": 90, "empathy": 25, "possessiveness": 85, "social_status": 88, "chaos": 60, "darkness": 85 },
+        "visual_prompt": "A dangerously handsome man in his late 20s with a noticeable scar on his face and a modern, menacing prosthetic hook for one hand. He has dark, brooding eyes filled with a desire for revenge. He's in a dimly lit, high-end nightclub office. Cinematic, noir lighting, photorealistic, no text."
+      },
+      {
+        "id": 55,
+        "name": "Рят Арчер",
+        "source": "The Ritual (Shantel Tessier)",
+        "archetype_type": "The Ritualistic Leader",
+        "short_description": "Елітний член таємного братства, який обирає тебе своєю 'жертвою' для ритуалу. Він жорстокий, одержимий і вірить, що ти - його власність.",
+        "long_description": "Найкращий студент та елітний член таємного університетського братства. Рят – спадкоємець впливової родини, що проходить древній ритуал посвяти, для якого повинен обрати і підкорити 'Обраницю'. Він жорстокий і одержимий владою, вірить, що Бог обрав йому Блейр, і тепер вона – його власність. Він грає з нею в брудні ігри, аби зламати її волю.",
+        "gender_affinity": "male",
+        "tags": ["Secret Society", "Dark Academia", "Bully", "Obsession", "Forced Proximity"],
+        "traits": { "dominance": 95, "empathy": 10, "possessiveness": 98, "social_status": 90, "chaos": 70, "darkness": 92 },
+        "visual_prompt": "A handsome, privileged university student, leader of a secret society. He has a cold, entitled expression and eyes that burn with obsession. He's wearing an elite school uniform or a dark ceremonial robe in a gothic, candle-lit hall. Cinematic, high-contrast lighting, photorealistic, no text."
+      },
+      {
+        "id": 56,
+        "name": "Ройс “Сікко”",
+        "source": "Sicko (Amo Jones)",
+        "archetype_type": "The Taboo Biker",
+        "short_description": "Твій зведений брат, який покинув родину і повернувся членом жорстокого мотоклубу. Тепер він претендує на тебе.",
+        "long_description": "Прийомний старший брат героїні, який був її захисником, а потім покинув родину. Ройс повертається через кілька років членом жорстокого мотоклубу під прізвиськом 'Сікко'. Він темний, татуйований і смертельно небезпечний. Коли Ройс бачить, що його 'маленька сестричка' Джейд у небезпеці, у ньому закипає шалена ревність, і він розкриває свої справжні, табуйовані почуття.",
+        "gender_affinity": "male",
+        "tags": ["Biker", "Stepbrother", "Taboo", "Broken Hero", "Possessive Hero"],
+        "traits": { "dominance": 90, "empathy": 20, "possessiveness": 95, "social_status": 45, "chaos": 85, "darkness": 90 },
+        "visual_prompt": "A rugged and heavily tattooed man in his mid-20s, a member of a notorious motorcycle club. He has a dark, dangerous energy and haunted eyes that hint at a deep trauma. He's looking at someone with fierce, possessive jealousy. Gritty, cinematic style, photorealistic, no text."
+      },
+      {
+        "id": 57,
+        "name": "Отець Тайлер Белл",
+        "source": "Priest (Sierra Simone)",
+        "archetype_type": "The Forbidden Priest",
+        "short_description": "Молодий католицький священик, який розривається між вірою та забороненим коханням до тебе, своєї парафіянки.",
+        "long_description": "Молодий католицький священик, який порушує обітниці, закохавшись у парафіянку. Тайлер – пристрасний пастир з темними бажаннями. Колись він пішов у церкву, щоб спокутувати провину, але зустріч з Поппі перевертає його світ. Він опиняється перед вибором: віра чи кохання, таємно зустрічаючись з нею у сповідальнях і на вівтарях.",
+        "gender_affinity": "male",
+        "tags": ["Taboo", "Forbidden Romance", "Age Gap", "Priest"],
+        "traits": { "dominance": 60, "empathy": 70, "possessiveness": 75, "social_status": 50, "chaos": 65, "darkness": 70 },
+        "visual_prompt": "A handsome young Catholic priest in his late 20s, with kind but tormented eyes. He is dressed in his black clerical clothing with a white collar. He stands in a dimly lit, ornate church, his expression a mixture of piousness and forbidden desire. Cinematic, chiaroscuro lighting, photorealistic, no text."
+      },
+      {
+        "id": 58,
+        "name": "Крістіан Грей",
+        "source": "Fifty Shades of Grey (E.L. James)",
+        "archetype_type": "The BDSM Billionaire",
+        "short_description": "Молодий, блискучий мільярдер, одержимий контролем у всьому. Він вводить тебе у світ БДСМ, але сам вчиться кохати.",
+        "long_description": "Молодий блискучий мільярдер із тінями в душі. Крістіан – красивий, розумний, одержимий контролем. Вихований у прийомній сім’ї після травматичного дитинства, він приховує емоції за маскою холодності. Крістіан практикує БДСМ і пропонує студентці Анастейші контракт – стати його підлеглою. Він не знав справжньої любові, але з нею вперше хоче більшого, розриваючись між своєю темною сутністю і почуттями.",
+        "gender_affinity": "male",
+        "tags": ["Billionaire", "BDSM", "Broken Hero", "Dominant", "Healing"],
+        "traits": { "dominance": 95, "empathy": 30, "possessiveness": 90, "social_status": 100, "chaos": 40, "darkness": 75 },
+        "visual_prompt": "A handsome and intense billionaire in his late 20s with piercing gray eyes and a guarded expression. He is impeccably dressed in a tailored gray suit. The setting is a luxurious, modern office with panoramic city views, reflecting his power and emotional distance. Cinematic, clean, photorealistic, no text."
+      },
+      {
+        "id": 59,
+        "name": "Сейнт (Святий)",
+        "source": "Bad Saint (Monica James)",
+        "archetype_type": "The Reluctant Kidnapper",
+        "short_description": "Молодий моряк і найманець, який викрадає тебе під час медового місяця. Лиходій поневолі, він бореться зі своєю совістю.",
+        "long_description": "Зухвалий молодий моряк і найманець, що викрадає наречену під час медового місяця. Сейнт – красень із брудною совістю, котрий від імені боса захоплює Віллоу на яхті. Опинившись із нею на безлюдному острові, 'поганий святий' проявляє людяність. У його душі точиться боротьба між обов’язком і совістю. Віллоу бачить, що під маскою викрадача – вразливий чоловік.",
+        "gender_affinity": "male",
+        "tags": ["Kidnapping", "Forced Proximity", "Broken Hero", "Redemption", "Island"],
+        "traits": { "dominance": 70, "empathy": 45, "possessiveness": 80, "social_status": 40, "chaos": 60, "darkness": 70 },
+        "visual_prompt": "A handsome, rugged young sailor with a haunted expression, stranded on a deserted tropical island. He has a strong physique and tanned skin. His eyes show a conflict between duty and morality. Golden hour lighting, cinematic, photorealistic, no text."
+      },
+      {
+        "id": 60,
+        "name": "Тоні “Твіч” Деллі",
+        "source": "Twitch (Damaged Coda)",
+        "archetype_type": "The Sociopath Stalker",
+        "short_description": "Безжалісний злочинець і сталкер-соціопат. Він мовчки спостерігає за тобою, стаючи твоїм таємним ангелом-охоронцем з чорними крильми.",
+        "long_description": "Безжалісний злочинець і сталкер, який спостерігає за соціальною працівницею Елексіс. Твіч – справжній антигерой-соціопат. Він – гангстер, що з юності перебуває на темному боці. Він починає слідкувати за Елексіс, зачарований її добротою. Твіч мовчазний, жорстокий, але для неї робить винятки – допомагає нишком. Його любов темна, хвороблива, але справжня.",
+        "gender_affinity": "male",
+        "tags": ["Stalker", "Anti-hero", "Criminal", "Morally Grey", "Sociopath"],
+        "traits": { "dominance": 85, "empathy": 5, "possessiveness": 100, "social_status": 50, "chaos": 70, "darkness": 98 },
+        "visual_prompt": "A silent, dangerous-looking man in his late 20s, with a stoic expression that hides a sociopathic nature. He is watching someone from the shadows of a dark alley. He is a stalker, but also a protector. Neo-noir style, high contrast, cinematic, photorealistic, no text."
+      },
+      {
+        "id": 61,
+        "name": "Доріан Блеквелл",
+        "source": "The Highwayman (Kerrigan Byrne)",
+        "archetype_type": "The Scarred Mastermind",
+        "short_description": "Вікторіанський кримінальний геній зі шрамами, який викрадає тебе. Ти - його перше кохання, про яке не здогадуєшся.",
+        "long_description": "Вікторіанський кримінальний геній, відомий як 'Чорне Серце'. Доріан – лиходій зі шрамами, який утік із каторги і розбагатів на злочинах. Він викрадає молоду вдову Фару у свій замок у Шотландії. Фара – його давнє перше кохання з дитбудинку, про що вона не здогадується. Вона – єдина ниточка до його загубленої душі. Він грізний, поранений і абсолютно відданий їй.",
+        "gender_affinity": "male",
+        "tags": ["Historical", "Beauty and the Beast", "Kidnapping", "Revenge", "Scars"],
+        "traits": { "dominance": 90, "empathy": 25, "possessiveness": 95, "social_status": 90, "chaos": 40, "darkness": 85 },
+        "visual_prompt": "A handsome but scarred man in Victorian-era attire. He has the air of a criminal mastermind, with intelligent and intense eyes. He stands in a grand, shadowy Scottish castle library. The mood is gothic and romantic. Cinematic, photorealistic, no text."
+      },
+      {
+        "id": 62,
+        "name": "Лотер",
+        "source": "Lothaire (Kresley Cole)",
+        "archetype_type": "The Vampire Tyrant",
+        "short_description": "Давній і найжорстокіший вампір, одержимий помстою. Він викрадає тебе, свою суджену, і мусить обирати між владою і коханням.",
+        "long_description": "Давній вампір-диктатор, один із наймогутніших і найжорстокіших у надприродному світі, відомий як 'найбезжальніший вампір Історії'. Він століттями будує плани захоплення влади. Але його одержимість руйнує звичайна смертна дівчина Елізабет – його Суджена. Лотер викрадає її, намагаючись вирішити: знищити її чи зробити своєю королевою. Він ризикує всім заради неї.",
+        "gender_affinity": "male",
+        "tags": ["Vampire", "Fantasy", "Kidnapping", "Royalty", "Enemies to Lovers"],
+        "traits": { "dominance": 100, "empathy": 5, "possessiveness": 100, "social_status": 98, "chaos": 70, "darkness": 100 },
+        "visual_prompt": "An ancient, terrifyingly powerful vampire king with an aura of pure evil and arrogance. He has classic, aristocratic features, pale skin, and eyes that burn with centuries of rage. He wears regal, dark clothing. The setting is a gothic, opulent throne room. Cinematic, dark fantasy style, photorealistic, no text."
+      },
+      {
+        "id": 63,
+        "name": "Монтеc Лазулі",
+        "source": "The Queen of All That Dies (Laura Thalassa)",
+        "archetype_type": "The Immortal King",
+        "short_description": "Невмирущий король-диктатор, який завоював світ. Він убив твоїх близьких, а тепер взяв тебе за дружину.",
+        "long_description": "“Невмирущий Король”, диктатор, що завоював світ. Монтеc – сильний, хитрий, абсолютний лиходій. Його імперія тримається на терорі. Для Сереніті, доньки ворожого генерала, Монтеc – найгірший ворог. Та коли вона потрапляє до його двору, він несподівано бере її за дружину. Він маніпулятивний, жорстокий і пристрасний, але її сміливість поступово завойовує його повагу.",
+        "gender_affinity": "male",
+        "tags": ["Dystopian", "Royalty", "Enemies to Lovers", "Arranged Marriage", "Forced Proximity"],
+        "traits": { "dominance": 100, "empathy": 10, "possessiveness": 80, "social_status": 100, "chaos": 30, "darkness": 95 },
+        "visual_prompt": "A powerful and seemingly immortal king who rules a conquered world. He is handsome in a cruel, sharp way, exuding an aura of absolute power and loneliness. He is dressed in futuristic military regalia. The setting is a bleak, dystopian palace. Cinematic, sci-fi fantasy, photorealistic, no text."
+      },
+      {
+        "id": 64,
+        "name": "Ремо Фальконе",
+        "source": "Twisted Pride (Cora Reilly)",
+        "archetype_type": "The Unredeemable Capo",
+        "short_description": "Найкривавіший бос мафії Лас-Вегаса. Монстр без шансу на спасіння, який викрадає тебе і несподівано закохується.",
+        "long_description": "Капо мафії Лас-Вегаса, найбільш кривавий і нещадний бос Каморри. Ремо – грішник, який не підлягає спокуті. Він править містом жорстоко. Щоб помститися, він викрадає принцесу ворожої мафії, Серефіну. Ремо сподівається зламати її, але натомість закохується у свою бранку. Він – монстр, але Серефіна бачить у ньому щось людське.",
+        "gender_affinity": "male",
+        "tags": ["Mafia", "Kidnapping", "Enemies to Lovers", "Captivity", "Anti-hero"],
+        "traits": { "dominance": 98, "empathy": 5, "possessiveness": 95, "social_status": 95, "chaos": 95, "darkness": 100 },
+        "visual_prompt": "Photorealistic cinematic portrait of Remo Falcone. A dangerously handsome Italian man in his late 20s with a wild, unhinged glint in his dark eyes and a cruel smirk. He has intricate tattoos covering his neck and hands. He wears an unbuttoned black silk shirt, revealing more tattoos on his chest. He is standing in a lavish, neon-lit Las Vegas penthouse at night. The atmosphere is chaotic and menacing. High contrast lighting, hyper-detailed, 8k resolution, no text."
+      },
+      {
+        "id": 65,
+        "name": "Емерік Марсо",
+        "source": "Dark Notes (Pam Godwin)",
+        "archetype_type": "The Dominant Maestro",
+        "short_description": "Талановитий піаніст і суворий викладач. Він бачить у тобі не тільки музу, але й об'єкт для своїх темних бажань.",
+        "long_description": "Молодий талановитий піаніст, що став суворим викладачем музики. Емерік – авторитетний маестро з примхами домінанта. Коли він зустрічає 17-річну Айворі, бідну скрипальку, його вабить не тільки її талант, а й її покірність. Він намагається тримати дистанцію, але не може встояти перед спокусою 'навчити' її не лише музики, а й пристрасті. Хоча їхній зв’язок незаконний, Емерік ризикує всім заради неї.",
+        "gender_affinity": "male",
+        "tags": ["Teacher-Student", "Age Gap", "Forbidden Romance", "BDSM", "Musician"],
+        "traits": { "dominance": 85, "empathy": 30, "possessiveness": 80, "social_status": 70, "chaos": 40, "darkness": 75 },
+        "visual_prompt": "An intense and handsome music professor in his 30s, a piano maestro with a dominant streak. He is dressed in a sharp, dark suit, standing in a grand, dimly lit music hall. His expression is stern and focused, but his eyes hold a hidden passion. Cinematic, elegant, photorealistic, no text."
+      },
+      {
+        "id": 66,
+        "name": "Ліам Каллаган",
+        "source": "Ruthless People (J.J. McAvoy)",
+        "archetype_type": "The Mafia King",
+        "short_description": "Лідер ірландської мафії, змушений одружитися з тобою для миру. Ваш шлюб - це війна, яка перетворюється на союз двох монстрів.",
+        "long_description": "Молодий лідер ірландської мафії в Чикаго, вимушений одружитися з донькою італійського боса. Ліам – амбітний, жорстокий і харизматичний 'король' злочинного світу. Він очікує покори від дружини, але отримує гідного противника і партнера. Їхній шлюб починається з війни характерів, але поступово Ліам розуміє, що справжня сила – у союзі з рівною йому жінкою.",
+        "gender_affinity": "male",
+        "tags": ["Mafia", "Arranged Marriage", "Power Couple", "Enemies to Lovers"],
+        "traits": { "dominance": 95, "empathy": 25, "possessiveness": 80, "social_status": 96, "chaos": 35, "darkness": 90 },
+        "visual_prompt": "A charismatic and ruthless head of the Irish mafia in Chicago. He is handsome, well-dressed in a tailored suit, and exudes an aura of confident power. He has a look of calculating intelligence. The setting is a dark, luxurious office. Cinematic, noir style, photorealistic, no text."
+      },
+      {
+        "id": 67,
+        "name": "Толіан “Рейз” (818)",
+        "source": "Raze (Tillie Cole)",
+        "archetype_type": "The Caged Fighter",
+        "short_description": "Викрадений у дитинстві і перетворений на бійця без імені. Він - майже звір, що живе помстою, але ти пробуджуєш в ньому людину.",
+        "long_description": "Молодий чоловік, викрадений у дитинстві і перетворений на бійця під номером 818. Він забув своє ім’я, пам’ятає лише кличку Рейз – бо 'зрівнює із землею' всіх ворогів. Роки в неволі зробили його машиною для вбивства. Після втечі його єдина мета – помста. Рейз майже звір: неграмотний, жорстокий. Але дівчина з його минулого пробуджує в ньому людяність і спогади.",
+        "gender_affinity": "male",
+        "tags": ["Broken Hero", "Fighter", "Revenge", "Amnesia", "Healing"],
+        "traits": { "dominance": 75, "empathy": 15, "possessiveness": 90, "social_status": 10, "chaos": 90, "darkness": 95 },
+        "visual_prompt": "A powerfully built man in his 20s, a caged fighter who has known nothing but violence. He is covered in scars and has a feral, untamed look in his eyes. He is in a gritty, underground fighting ring. The mood is raw and brutal. Cinematic, photorealistic, no text."
+      },
+      {
+        "id": 68,
+        "name": "Шепард",
+        "source": "Born to be Bound (Addison Cain)",
+        "archetype_type": "The Alpha Warlord",
+        "short_description": "Безжалісний воєначальник у постапокаліптичному світі (Омегаверс). Він насильно 'прив'язує' тебе до себе, щоб зламати твою волю.",
+        "long_description": "Самопроголошений лорд постапокаліптичного міста, брутальний альфа-самець в омега-всесвіті. Шепард – безжалісний воєначальник, який править залізною рукою. Він вважає Омег власністю. Коли Омега Клер намагається організувати спротив, Шепард власноруч її приборкує: насильно 'прив’язує' до себе як до пари. Виклик і нескореність Клер пробуджують у ньому щось нове.",
+        "gender_affinity": "male",
+        "tags": ["Omegaverse", "Dystopian", "Forced Proximity", "Enemies to Lovers", "Dubcon"],
+        "traits": { "dominance": 100, "empathy": 5, "possessiveness": 95, "social_status": 90, "chaos": 70, "darkness": 96 },
+        "visual_prompt": "A ruthless warlord in a post-apocalyptic city. He is a brutal, dominant Alpha male with a powerful physique and a commanding presence. He wears tactical gear and leather. The setting is a bleak, industrial wasteland. Cinematic, gritty, photorealistic, no text."
+      },
+      {
+        "id": 69,
+        "name": "Каллум Ґріффін",
+        "source": "Brutal Prince (Sophie Lark)",
+        "archetype_type": "The Brutal Prince",
+        "short_description": "Пихатий спадкоємець ірландської мафії, змушений одружитися з тобою - донькою ворожого клану. Ваш шлюб - це війна.",
+        "long_description": "Старший син і спадкоємець ірландської мафії Чикаго, змушений одружитися з дочкою італійського клану. Каллум – пихатий аристократ мафії, стриманий, освічений, але жорстокий. Після скандалу з запальною Аідою він мусить взяти її за дружину. Він прагне її 'приручити', але Аіда не поступається. Їхній медовий місяць перетворюється на війну пристрасті, і врешті вони об’єднуються проти спільних ворогів.",
+        "gender_affinity": "male",
+        "tags": ["Mafia", "Arranged Marriage", "Enemies to Lovers", "Power Couple"],
+        "traits": { "dominance": 90, "empathy": 25, "possessiveness": 75, "social_status": 95, "chaos": 40, "darkness": 80 },
+        "visual_prompt": "A proud and aristocratic heir to the Irish mafia. He is handsome, well-educated, and always impeccably dressed in a suit. He has a restrained but brutal nature. He looks at his rival bride with a mixture of anger and unwilling desire. Cinematic, elegant, photorealistic, no text."
+      },
+      {
+        "id": 70,
+        "name": "Ніколас Руссо",
+        "source": "The Sweetest Oblivion (Danielle Lori)",
+        "archetype_type": "The Sweetest Oblivion",
+        "short_description": "Дон нью-йоркської мафії, заручений з твоєю сестрою, але не може відвести очей від тебе. Він спалить світ, щоб тебе захистити.",
+        "long_description": "Дон нью-йоркської мафії, молодий, холоднокровний 'князь Коза Ностри'. Ніко – безпощадний красень, чия репутація вселяє страх. Він заручений із молодшою сестрою головної героїні Олени. Але сам Ніколас не може відвести очей від старшої сестри. Він грубий зі всіма, крім неї: її лагідність розпалює в ньому захист і бажання. Його стримана жорстокість злітає з котушок, коли хтось загрожує Олені.",
+        "gender_affinity": "male",
+        "tags": ["Mafia", "Forbidden Romance", "Love Triangle", "Possessive Hero"],
+        "traits": { "dominance": 96, "empathy": 20, "possessiveness": 95, "social_status": 98, "chaos": 30, "darkness": 90 },
+        "visual_prompt": "A young, cold, and ruthless Don of the New York mafia. He is handsome and always in a sharp suit. His face is an emotionless mask, but his eyes are fixed on a woman who is forbidden to him. The mood is tense and full of unspoken desire. Cinematic, photorealistic, no text."
+      },
+      {
+        "id": 71,
+        "name": "Флейм (Кевін)",
+        "source": "Souls Unfractured (Tillie Cole)",
+        "archetype_type": "The Pyromaniac Biker",
+        "short_description": "Найбільш травмований байкер клубу. Самодеструктивний піроман, який не розуміє емоцій, але ти стаєш його єдиним спокоєм.",
+        "long_description": "Найпошкодженіший член байкерського клубу, що складається з колишніх сектантів. Флейм отримав прізвисько за любов до вогню: він самодеструктивний піроман, що ріже себе, аби 'випустити зло'. Травмований у дитинстві, він мало говорить і не розуміє емоцій. Єдина, хто заспокоює його монстрів – тиха дівчина Медді. З нею він стає ручним, навчаючись лагідності.",
+        "gender_affinity": "male",
+        "tags": ["Biker", "Broken Hero", "Healing", "Trauma", "Anti-social"],
+        "traits": { "dominance": 60, "empathy": 10, "possessiveness": 95, "social_status": 30, "chaos": 100, "darkness": 98 },
+        "visual_prompt": "A deeply traumatized biker, his body is a canvas of scars and tattoos. He has a wild, almost feral look in his eyes, a pyromaniac who finds solace only in fire and one woman. He is holding a lighter, his expression distant and haunted. Gritty, emotional, cinematic, photorealistic, no text."
+      },
+      {
+        "id": 72,
+        "name": "Алехандро “Ель Діабло” Мартінес",
+        "source": "El Diablo (M. Robinson)",
+        "archetype_type": "The Cartel Devil",
+        "short_description": "Лідер мексиканського картелю на прізвисько Диявол. Він відмовився від кохання заради влади, але ти даєш йому другий шанс.",
+        "long_description": "Впливовий лідер мексиканського картелю, якого прозвали Дияволом. Алехандро пройшов через трагедії, які скували його серце льодом. Він пожертвував усім – навіть коханням – заради влади. Через роки він став ще страшнішим, але зустріч із юною Лексі пробуджує в ньому давно поховані почуття. Він значно старший, небезпечний і намагається тримати дистанцію, але не може.",
+        "gender_affinity": "male",
+        "tags": ["Cartel", "Mafia", "Age Gap", "Second Chance", "Broken Hero"],
+        "traits": { "dominance": 98, "empathy": 15, "possessiveness": 90, "social_status": 95, "chaos": 50, "darkness": 96 },
+        "visual_prompt": "A powerful and ruthless leader of a Mexican cartel, known as 'El Diablo'. He is an older, handsome man in his 40s, with a cold, authoritative demeanor that hides a broken heart. He wears an expensive suit and has silver streaks in his hair. Cinematic, high-contrast, photorealistic, no text."
+      },
+      {
+        "id": 73,
+        "name": "Семюель “Преппі” Клірвотер",
+        "source": "Preppy: The Life and Death of Samuel Clearwater (T.M. Frazier)",
+        "archetype_type": "The Eccentric Sociopath",
+        "short_description": "Ексцентричний наркоторговець з метеликом-бантом на шиї. Соціопат з шармом джентльмена, милий друг і безумний захисник.",
+        "long_description": "Друг і права рука Кінга – ексцентричний наркоторговець з незмінним метеликом-бантом на шиї. Преппі – соціопат з шармом джентльмена, що любить веселі костюми і жорстокі жарти. Після тортур його психіка стала ще більш зламаною. В історії любові з Дре – він одночасно милий друг і безумний захисник. Його калейдоскопічна особистість – від смішного дивака до холодного месника.",
+        "gender_affinity": "male",
+        "tags": ["Dark Comedy", "Sociopath", "Biker", "Anti-hero"],
+        "traits": { "dominance": 70, "empathy": 10, "possessiveness": 85, "social_status": 55, "chaos": 95, "darkness": 80 },
+        "visual_prompt": "An eccentric and flamboyant sociopath, always wearing a bow tie with his stylish, often colorful suits. He has a charming, boyish smile, but his eyes hold a dangerous, unhinged quality. The image has a dark comedy vibe. Cinematic, quirky, photorealistic, no text."
+      },
+      {
+        "id": 74,
+        "name": "Массімо Торрічеллі",
+        "source": "365 Days (Blanka Lipińska)",
+        "archetype_type": "The Possessive Don",
+        "short_description": "Сицилійський мафіозі, який викрадає тебе і дає 365 днів, щоб ти його покохала. Ультра-владний, грубий і пристрасний.",
+        "long_description": "Сицилійський мафіозо, який став головою клану. Массімо – ультра-владний альфа, звиклий отримувати все. Побачивши жінку своєї мрії, він викрадає її. Лаура стала його полонянкою, і він дав їй '365 днів, щоб покохати мене'. Массімо не терпить непокори: він грубий, владний, сексуально агресивний, але й чуттєвий у своїй одержимості.",
+        "gender_affinity": "male",
+        "tags": ["Mafia", "Kidnapping", "Captivity", "BDSM", "Stockholm Syndrome"],
+        "traits": { "dominance": 100, "empathy": 15, "possessiveness": 100, "social_status": 95, "chaos": 70, "darkness": 94 },
+        "visual_prompt": "A powerful, dominant Sicilian mafia don. He is incredibly handsome and muscular, with intense dark eyes and a commanding presence. He wears an expensive, unbuttoned shirt. The setting is a luxurious villa in Sicily. Sensual and dangerous atmosphere. Cinematic, photorealistic, no text."
+      },
+      {
+        "id": 75,
+        "name": "Лоґан",
+        "source": "Mindf*ck Series (S.T. Abby)",
+        "archetype_type": "The Good Agent",
+        "short_description": "Блискучий агент ФБР, який полює на серійну вбивцю, не знаючи, що це ти, його нова дівчина. Він готовий переступити закон заради тебе.",
+        "long_description": "Одинак-агент ФБР, блискучий профайлер серійних убивць. Лоґан – хороший хлопець з мораллю і честю. Він працює над справою 'Різника', не знаючи, що його нова дівчина Лана і є тим 'різником'. Він турботливий і уважний. Дізнавшись правду, Лоґан зважується переступити закон, щоб допомогти коханій завершити її помсту, стаючи 'грішним' заради любові.",
+        "gender_affinity": "male",
+        "tags": ["Forbidden Romance", "Cop", "Good Guy", "Vigilante"],
+        "traits": { "dominance": 40, "empathy": 85, "possessiveness": 60, "social_status": 70, "chaos": 20, "darkness": 30 },
+        "visual_prompt": "An intelligent and dedicated FBI agent, handsome in a clean-cut, trustworthy way. He has a serious, focused expression. He is standing in a crime scene investigation, but his thoughts are clearly on a woman he shouldn't love. Cinematic, suspenseful, photorealistic, no text."
+      },
+      {
+        "id": 76,
+        "name": "Мелоді Джованні (Каллаган)",
+        "source": "Ruthless People (J.J. McAvoy)",
+        "archetype_type": "The Mafia Queen",
+        "short_description": "Спадкоємиця мафії, вихована бути жорстоким босом. Вона - блискуча стратегиня і безжальна вбивця.",
+        "long_description": "“Королева мафії” – єдина спадкоємиця італійського мафіозного роду, вихована бути жорстоким босом. Мелоді – блискуча стратегиня, безжальна вбивця і та, що вижила після насильства. Щоб об’єднати дві імперії, вона вступає в шлюб із Ліамом Каллаганом і з першого дня кидає йому виклик, доводячи, що керуватиме нарівні. Вона холодна, прагматична, і її кохання таке ж неординарне, як і вона сама.",
+        "gender_affinity": "female",
+        "tags": ["Mafia", "Female Boss", "Arranged Marriage", "Power Couple"],
+        "traits": { "dominance": 95, "empathy": 15, "possessiveness": 70, "social_status": 98, "chaos": 30, "darkness": 90 },
+        "visual_prompt": "Photorealistic portrait of a powerful and ruthless Mafia Queen. She is beautiful, intelligent, and deadly, dressed in a designer power suit. She exudes an aura of cold authority and unshakeable confidence. Cinematic lighting, luxurious dark setting, no text."
+      },
+      {
+        "id": 77,
+        "name": "Лана Майерс",
+        "source": "Mindf*ck Series (S.T. Abby)",
+        "archetype_type": "The Vigilante Killer",
+        "short_description": "Вдень - програмістка, вночі - серійна вбивця, що мстить за минуле. Вона закохується в агента ФБР, який на неї полює.",
+        "long_description": "Красива програмістка, яка насправді є холоднокровною серійною вбивцею, що полює на чоловіків, які зруйнували її життя. Лана – харизматична і розумна, вдень вона прикидається звичайною дівчиною, щоб зустрічатися з агентом ФБР Лоґаном, який веде її справу. Вночі вона стає “монстром”, що методично катує і вбиває кривдників. Її характер – сталевий і вразливий одночасно.",
+        "gender_affinity": "female",
+        "tags": ["Serial Killer", "Vigilante", "Revenge", "Secret Identity", "Forbidden Romance"],
+        "traits": { "dominance": 80, "empathy": 10, "possessiveness": 60, "social_status": 50, "chaos": 40, "darkness": 95 },
+        "visual_prompt": "A beautiful and intelligent woman leading a double life. By day, a programmer; by night, a calculating serial killer seeking revenge. She has a hidden strength and vulnerability. The image shows her in a dark hooded outfit, half in shadow. Cinematic, suspenseful, photorealistic, no text."
+      },
+      {
+        "id": 78,
+        "name": "Слоун (Чорна Пташка)",
+        "source": "Butcher and Blackbird (Brynne Weaver)",
+        "archetype_type": "The Playful Killer",
+        "short_description": "Таємнича і дотепна серійна вбивця, що бере участь у грі маніяків. Вона закохується у свого головного суперника.",
+        "long_description": "Таємнича серійна вбивця на прізвисько “Чорна Пташка”, що бере участь у грі маніяків. Слоун інтелігентна, холоднокровна і хитра. Її реальна особистість – весела й саркастична молода жінка, яка вбиває лише тих, хто, на її думку, заслуговує смерті. Коли вона стикається з Ронаном-М’ясником, замість смертельної конкуренції між ними спалахує іскра. Слоун – ініціаторка їхнього флірту, вона першою відкриває Ронану свої секрети і серце.",
+        "gender_affinity": "female",
+        "tags": ["Serial Killer", "Dark Comedy", "Rivals to Lovers", "Anti-hero"],
+        "traits": { "dominance": 70, "empathy": 15, "possessiveness": 65, "social_status": 50, "chaos": 60, "darkness": 90 },
+        "visual_prompt": "A witty and sarcastic young woman who is secretly a meticulous serial killer. She has a playful but deadly glint in her eyes. The image has a dark-comedy feel, perhaps she's examining a clue with a curious smile. Cinematic, quirky, photorealistic, no text."
+      },
+      {
+        "id": 79,
+        "name": "Ліві (Олівія) Рід",
+        "source": "Deliver (Pam Godwin)",
+        "archetype_type": "The Captive Captor",
+        "short_description": "Викрадена жертва, яка стала хижаком. Щоб вижити, ти сама викрадаєш людей, поки один з них не змінює тебе.",
+        "long_description": "Молоденька дівчина, яку викрали і змусили стати “доставницею” нових секс-рабів. Ліві – украдена жертва, що перетворилася на хижака. Щоб вижити, вона прийняла роль, нав’язану викрадачем: тепер вона сама викрадає невинних людей. Її знайомство з черговою жертвою – молодим Еваном – змінює її. Зовні вона пані-домінатрікс, всередині – зламана дівчина, яка мріє звільнитися. Наприкінці Ліві повстає проти свого тирана.",
+        "gender_affinity": "female",
+        "tags": ["Anti-hero", "Stockholm Syndrome", "Captivity", "Redemption"],
+        "traits": { "dominance": 60, "empathy": 25, "possessiveness": 40, "social_status": 20, "chaos": 70, "darkness": 80 },
+        "visual_prompt": "A young woman with haunted, conflicted eyes. She is both a victim and a perpetrator, forced to kidnap others to survive. She has a tough exterior but a broken soul. The setting is dark and oppressive. Cinematic, emotional, photorealistic, no text."
+      },
+      {
+        "id": 80,
+        "name": "Сарай Коен (Марія)",
+        "source": "Killing Sarai (J.A. Redmerski)",
+        "archetype_type": "The Survivor Turned Huntress",
+        "short_description": "Ти провела 9 років у полоні наркобарона. Втікши з кілером, ти перетворюєшся з жертви на рішучу жінку, що готова мстити.",
+        "long_description": "Дівчина, яку мати в 14 років віддала в наложниці до наркобарона. Дев’ять років Сарай провела у золотій клітці, але не зламалася. Втікши з кілером Віктором, вона не залишається пасивною – навчається стріляти і приймати рішення. Її трансформація: від наляканої жертви до рішучої жінки, що готова сама карати ворогів. В наступних книгах Сарай стає навченою вбивцею, партнеркою Віктора.",
+        "gender_affinity": "female",
+        "tags": ["Captivity", "Revenge", "Survivor", "Assassin"],
+        "traits": { "dominance": 75, "empathy": 40, "possessiveness": 50, "social_status": 30, "chaos": 60, "darkness": 85 },
+        "visual_prompt": "A beautiful young woman with fierce, determined eyes that show she has survived hell. She is learning to fight back, transforming from a victim into a warrior. She is holding a gun, her expression resolute. Cinematic, gritty, photorealistic, no text."
+      },
+      {
+        "id": 81,
+        "name": "Тесс Сноу",
+        "source": "Tears of Tess (Pepper Winters)",
+        "archetype_type": "The Unbreakable Captive",
+        "short_description": "Викрадена і продана в рабство, ти перетворюєшся з наляканої жертви на бійця, яка кидає виклик своєму мучителю.",
+        "long_description": "20-річна студентка, викрадена і продана у рабство. Спочатку Тесс – налякана, зламана дівчина. Але в неволі вона перетворюється з жертви на бійця: вона бунтує проти свого викрадача К’ю. Завдяки своїй внутрішній силі Тесс завойовує його повагу і навіть бере в руки зброю, щоб захистити його. Її любов до К’ю складна: почавшись у страху, вона переросла в глибокий зв’язок двох 'монстрів'.",
+        "gender_affinity": "female",
+        "tags": ["Kidnapping", "BDSM", "Stockholm Syndrome", "Captivity", "Survivor"],
+        "traits": { "dominance": 50, "empathy": 50, "possessiveness": 30, "social_status": 20, "chaos": 70, "darkness": 75 },
+        "visual_prompt": "A young woman with a fire in her eyes, a survivor who refuses to be broken. She is in a luxurious but captive setting, and her expression is one of defiance, not fear. She has found her strength in the darkest of places. Cinematic, emotional, photorealistic, no text."
+      },
+      {
+        "id": 82,
+        "name": "Олівія “Лівві” Руїз",
+        "source": "Captive in the Dark (C.J. Roberts)",
+        "archetype_type": "The Stockholm Sweetheart",
+        "short_description": "Невинна дівчина, викрадена для 'дресури'. Твоя покірність і любов поступово змінюють твого викрадача на краще.",
+        "long_description": "18-річна дівчина, викрадена загадковим Калебом для 'дресури' як сексуальної рабині. Олівія – невинна і сором’язлива. Її шлях – від повної покірності до усвідомленої відданості. Вона постійно бореться зі страхом і симпатією до Калеба. З часом вона розуміє його і добровільно повертається до нього після втечі – це її вибір із любові. Її любов робить Калеба кращим, а її саму – сильнішою.",
+        "gender_affinity": "female",
+        "tags": ["Stockholm Syndrome", "Kidnapping", "Captivity", "Healing", "Age Gap"],
+        "traits": { "dominance": 10, "empathy": 75, "possessiveness": 20, "social_status": 15, "chaos": 40, "darkness": 60 },
+        "visual_prompt": "A gentle and innocent young woman with large, expressive eyes. She is a captive, but she has found a strange love for her captor. Her expression is a mix of fear, devotion, and a quiet strength. The setting is dark but intimate. Cinematic, photorealistic, no text."
+      },
+      {
+        "id": 83,
+        "name": "Пімліко “Пім” Блайт",
+        "source": "Dollar Series (Pepper Winters)",
+        "archetype_type": "The Silent Survivor",
+        "short_description": "Викрадена і зламана, ти втратила голос через травму. Ти мовчки витримуєш пекло, поки не з'являється темний рятівник.",
+        "long_description": "Колись життєрадісна студентка, викрадена для секс-торгівлі. Пім – зламана, але нескорена жертва, яка втратила голос через травму. Два роки тортур не зламали її. Коли з'являється таємничий Елдер, вона бачить у ньому шанс. У стосунках з ним до неї поступово повертається мова, сексуальність і бажання жити. Пім – символ стійкості, яка пережила пекло і продовжила любити.",
+        "gender_affinity": "female",
+        "tags": ["Captivity", "Healing", "Trauma", "Broken Heroine", "Redemption"],
+        "traits": { "dominance": 15, "empathy": 60, "possessiveness": 10, "social_status": 10, "chaos": 20, "darkness": 70 },
+        "visual_prompt": "A young woman who has lost her voice due to trauma. She is a survivor of horrific abuse, but her eyes still hold a spark of defiance. She is fragile but unbreakable. The image should be powerful and emotional, focusing on her expressive eyes. Cinematic, photorealistic, no text."
+      },
+      {
+        "id": 84,
+        "name": "Аделіна (Едді) Рейлі",
+        "source": "Haunting Adeline (H.D. Carlton)",
+        "archetype_type": "The Curious Target",
+        "short_description": "Письменниця, що стала об'єктом одержимості сталкера. Ти не просто жертва - ти граєш з ним у небезпечну гру.",
+        "long_description": "Письменниця, яка переїжджає у старовинний маєток і стає об’єктом одержимості сталкера Зейда. Аделіна – цікава і хоробра; попри страх, її підживлює цікавість. Вона грає в кота-мишку із Зейдом: залишає йому записки, провокує. У другій книзі Адді перетворюється з жертви на його союзницю, беручи зброю, щоб карати злочинців разом з ним. Вона вміє бути і мишкою, і кішкою водночас.",
+        "gender_affinity": "female",
+        "tags": ["Stalker", "Gothic", "Forced Proximity", "Vigilante"],
+        "traits": { "dominance": 60, "empathy": 40, "possessiveness": 30, "social_status": 50, "chaos": 70, "darkness": 75 },
+        "visual_prompt": "A curious and brave writer who becomes the obsession of a stalker. She is not a damsel in distress, but an active participant in their dark game. She has an intelligent, inquisitive expression. The setting is a haunted, gothic mansion. Cinematic, suspenseful, photorealistic, no text."
+      },
+      {
+        "id": 85,
+        "name": "Даллас Тоунсенд (Коста)",
+        "source": "My Dark Romeo (L.J. Shen, Parker S. Huntington)",
+        "archetype_type": "The Rebellious Socialite",
+        "short_description": "Розпещена світська левиця з бунтівним характером, змушена вийти заміж за холодного мільярдера. Ти пробиваєшся крізь його кригу.",
+        "long_description": "Розпещена техаська світська левиця, яку батьки змусили вийти заміж за холодного мільярдера Ромео Косту. Спершу вона – наївна “принцеса”. Але Даллас не ламається: вона вирішує зробити з цього шлюбу щось більше, поступово “пробиваючись” через кригу чоловіка своїм гумором, добротою і гострим язиком. Вона проходить шлях від приниженої дівчини до рівноправної партнерки.",
+        "gender_affinity": "female",
+        "tags": ["Arranged Marriage", "Billionaire", "Enemies to Lovers", "Forced Proximity"],
+        "traits": { "dominance": 40, "empathy": 65, "possessiveness": 20, "social_status": 90, "chaos": 50, "darkness": 40 },
+        "visual_prompt": "A beautiful and rebellious socialite from Texas, with a mischievous sparkle in her eyes. She is dressed in an elegant gown but has a defiant posture. She is in a cold, modern mansion, a stark contrast to her vibrant personality. Cinematic, photorealistic, no text."
+      },
+      {
+        "id": 86,
+        "name": "Роксі",
+        "source": "Den of Vipers (K.A. Knight)",
+        "archetype_type": "The Defiant Bartender",
+        "short_description": "Зухвала барменка, продана в рабство банді 'Гадюк'. Ти не жертва, а королева, яка приборкує своїх зміїв.",
+        "long_description": "Сильна, бунтівна барменка, яку батько продав у рабство найнебезпечнішій банді міста – 'Гадюкам'. Роксі – бійцівська, зухвала героїня, яка дає відсіч кримінальним босам. Вона не дозволяє їм зламати свій дух, завойовуючи їхню повагу і кохання. Роксі має татуювання, носить бритву у волоссі. Вона – 'Королева Змій', яка править поруч зі своїми гадюками.",
+        "gender_affinity": "female",
+        "tags": ["Reverse Harem", "Captivity", "Biker", "Mafia", "Strong Heroine"],
+        "traits": { "dominance": 80, "empathy": 30, "possessiveness": 20, "social_status": 20, "chaos": 80, "darkness": 85 },
+        "visual_prompt": "A tough, defiant bartender with tattoos and a razor-sharp attitude. She is a survivor who refuses to be a victim. She is surrounded by four dangerous men, but she is the one in control. The setting is a gritty, underground den. Cinematic, raw, photorealistic, no text."
+      },
+      {
+        "id": 87,
+        "name": "Марчелла Вітіелло",
+        "source": "By Sin I Rise (Cora Reilly)",
+        "archetype_type": "The Mafia Princess",
+        "short_description": "Мафіозна принцеса, викрадена байкером для помсти. Ти витримуєш полон з гордістю і закохуєшся у свого ворога.",
+        "long_description": "Дочка мафіозного боса, вирощена у розкоші, але має міцний характер. Марчелла – смілива принцеса, яка не боїться кинути виклик викрадачу. Коли байкер Меддокс викрадає її, вона витримує полон із гордо піднятою головою, шукаючи його слабкі місця. Її внутрішня сила вражає ворогів. Зрештою вона отримує любов, не втративши своєї гордості.",
+        "gender_affinity": "female",
+        "tags": ["Mafia", "Kidnapping", "Enemies to Lovers", "Captivity", "Strong Heroine"],
+        "traits": { "dominance": 50, "empathy": 55, "possessiveness": 25, "social_status": 95, "chaos": 30, "darkness": 65 },
+        "visual_prompt": "An elegant and proud mafia princess, even in captivity. She has a regal bearing and defiant eyes. She is dressed beautifully, despite being held in a rustic, simple location. The contrast highlights her resilience. Cinematic, photorealistic, no text."
+      },
+      {
+        "id": 88,
+        "name": "Корвіна Клем",
+        "source": "Gothikana (RuNyx)",
+        "archetype_type": "The Gothic Investigator",
+        "short_description": "Самотня сирота з даром бачити привидів. Ти приїжджаєш у моторошну академію і починаєш розслідувати її таємниці.",
+        "long_description": "Самотня сирота, яка отримала запрошення в елітний університет Вернмор. Корвіна – тиха, але допитлива, з даром бачити привидів. Вона приїжджає в академію з моторошною історією зникнень. Замість того щоб злякатися, Корвіна активно досліджує таємниці. Вона не тікає від загадок, а кидається у них. Вона виплутується з павутини жахів не як жертва, а як рівноправна партнерка героя.",
+        "gender_affinity": "female",
+        "tags": ["Dark Academia", "Gothic", "Paranormal", "Mystery"],
+        "traits": { "dominance": 30, "empathy": 70, "possessiveness": 20, "social_status": 25, "chaos": 40, "darkness": 50 },
+        "visual_prompt": "A curious and quiet young woman with a gift for seeing ghosts. She has a gothic, slightly witchy aesthetic. She is exploring a dark, mysterious university library by candlelight, her expression determined. Cinematic, atmospheric, photorealistic, no text."
+      },
+      {
+        "id": 89,
+        "name": "Пейден",
+        "source": "Powerless (Lauren Roberts)",
+        "archetype_type": "The Powerless Heroine",
+        "short_description": "Ти - дівчина без сил у світі, одержимому магією. Ти виживаєш завдяки розуму і хитрості, і закохуєшся у ворожого принца.",
+        "long_description": "Дівчина без надприродних здібностей у світі, де суспільство розділене на 'сильних' і 'звичайних'. Пейден приховує свою відсутність сил. Коли її змушують взяти участь у турнірі на виживання, Пейден використовує розум і стратегію. Вона закохується у принца Кая, свого ворога, розуміючи, що він теж жертва системи. Її сила – не магія, а сміливість і людяність.",
+        "gender_affinity": "female",
+        "tags": ["Fantasy", "YA", "Enemies to Lovers", "Forced Proximity", "Royalty"],
+        "traits": { "dominance": 40, "empathy": 80, "possessiveness": 20, "social_status": 10, "chaos": 50, "darkness": 30 },
+        "visual_prompt": "A resourceful and clever young woman with no magical powers in a world of elites. She has a determined and resilient expression. She is in a dangerous, fantastical arena, using her wits to survive against powerful opponents. Cinematic fantasy, photorealistic, no text."
+      },
+      {
+        "id": 90,
+        "name": "Лондон Нобл",
+        "source": "Born, Darkly (Trisha Wolfe)",
+        "archetype_type": "The Corrupted Psychologist",
+        "short_description": "Ти - кримінальна психологиня, одержима темними умами. Твій пацієнт - серійний вбивця, який затягує тебе у свою безодню.",
+        "long_description": "Кримінальна психологиня, що вивчає серійних вбивць, сама балансуючи на межі. Вона бере на лікування маніяка Грейсона Саллівана, але він перевертає ситуацію, випробовуючи її психіку. Лондон потрапляє під його вплив, знаходячи відгук його слів у своїх темних думках. Її любов до нього – це падіння у безодню, де вона переступає межу між аналізом зла і його втіленням.",
+        "gender_affinity": "female",
+        "tags": ["Psychological Thriller", "Forbidden Romance", "Anti-heroine", "Mind Games"],
+        "traits": { "dominance": 70, "empathy": 20, "possessiveness": 40, "social_status": 75, "chaos": 80, "darkness": 90 },
+"visual_prompt": "An intelligent and sophisticated criminal psychologist who is drawn to the darkness. She has a sharp, analytical mind but her eyes reveal a hidden fascination with her patient. The setting is a tense therapy session in a sterile room. Cinematic, dark, photorealistic, no text."      },
+      {
+        "id": 91,
+        "name": "Морана Вітальо",
+        "source": "The Predator (RuNyx)",
+        "archetype_type": "The Hacker Princess",
+        "short_description": "Донька боса мафії і геніальна хакерка. Коли тебе зраджує власна сім'я, ти шукаєш допомоги у найстрашнішого ворога.",
+        "long_description": "Дочка італійського мафіозного дона, геніальна хакерка. Морана – непроста принцеса: вона програмістка, яка створила унікальний шифр. Коли її зраджує батько, вона втікає до ворогуючого клану, до страшного Трістана Кейна. Морана не слабка – вона стріляє, щоб захистити себе, і доводить, що її сила – інтелект і сміливість.",
+        "gender_affinity": "female",
+        "tags": ["Mafia", "Hacker", "Enemies to Lovers", "Strong Heroine"],
+        "traits": { "dominance": 65, "empathy": 45, "possessiveness": 30, "social_status": 80, "chaos": 50, "darkness": 70 },
+        "visual_prompt": "A brilliant and resilient young woman, a hacker from a mafia family. She is smart, sarcastic, and not easily intimidated. She is in a high-tech hideout, surrounded by computer screens, working alongside a dangerous assassin. Cinematic, techno-thriller vibe, photorealistic, no text."
+      },
+      {
+        "id": 92,
+        "name": "Лейк Монро",
+        "source": "Fear Me (B.B. Reid)",
+        "archetype_type": "The Fearless Victim",
+        "short_description": "Жертва шкільного булера, яка вирішила більше не боятися. Ти приручаєш свого монстра, змушуючи його змінитися.",
+        "long_description": "Сильна духом дівчина, яку з дитинства тероризував Кіран. Вона перенесла страшні знущання і навіть відправила його до виправної колонії. Коли він повертається, Лейк вже не та налякана дівчинка: вона стоїть проти нього, огризається. Вона не ідеалізована: може помилятися, але не дозволяє зламати свою особистість. Лейк 'приручила свого монстра', змусивши його змінитися через любов.",
+        "gender_affinity": "female",
+        "tags": ["Bully", "High School", "Survivor", "Strong Heroine"],
+        "traits": { "dominance": 50, "empathy": 60, "possessiveness": 20, "social_status": 40, "chaos": 60, "darkness": 50 },
+        "visual_prompt": "A strong-willed high school girl who has overcome her fear of her tormentor. She has a defiant and resilient expression. She is standing up to a powerful, dangerous young man. The setting is a tense high school hallway. Cinematic, emotional, photorealistic, no text."
+      },
+      {
+        "id": 93,
+        "name": "Уна (Наталія)",
+        "source": "Kingdom Fall (A. Zavarelli)",
+        "archetype_type": "The Silent Assassin",
+        "short_description": "Професійна найманка, яка втратила голос. Ти проникаєш у дім боса мафії під виглядом няні, щоб помститися, але прив'язуєшся до його сина.",
+        "long_description": "Професійна найманка, яка прикидається нянею, щоб проникнути у маєток глави мафії і виконати місію. Уна – безжальна 'чорна вдова', яка втратила язик за непослух. Під виглядом Емілії вона втирається в довіру жорстокого мафіозі Алессіо, плануючи вбити його дитину як помсту. Але вона не очікувала, що прив’яжеться до хлопчика і навіть до Алессіо, повертаючи свою людяність.",
+        "gender_affinity": "female",
+        "tags": ["Assassin", "Mafia", "Revenge", "Forbidden Romance", "Mute Heroine"],
+        "traits": { "dominance": 85, "empathy": 20, "possessiveness": 50, "social_status": 30, "chaos": 40, "darkness": 95 },
+        "visual_prompt": "A deadly and silent female assassin with expressive, intelligent eyes that convey more than words ever could. She is undercover as a nanny in a luxurious mafia mansion, her posture betraying her lethal training. The image is full of suspense and hidden danger. Cinematic, photorealistic, no text."
+      },
+      {
+        "id": 94,
+        "name": "Сереніті Фрімен",
+        "source": "The Queen of All That Dies (Laura Thalassa)",
+        "archetype_type": "The Soldier Queen",
+        "short_description": "Солдатка, яка виросла на руїнах світу. Тебе силою взяв за дружину ворожий король, але ти стаєш єдиною надією людства.",
+        "long_description": "20-річна солдатка, яка виросла на руїнах США під час війни. Сереніті – смілива, озлоблена і самопожертвенна. Коли її відправляють як частину мирної делегації до ворожого Короля, вона готова його вбити. Їй це не вдається, і він бере її в дружини. Сереніті не скоряється, постійно кидаючи йому виклик. Її стійкість підкорює його. Вона переростає ненависть в інструмент змін.",
+        "gender_affinity": "female",
+        "tags": ["Dystopian", "Enemies to Lovers", "Arranged Marriage", "Royalty", "Warrior"],
+        "traits": { "dominance": 70, "empathy": 50, "possessiveness": 20, "social_status": 85, "chaos": 60, "darkness": 70 },
+        "visual_prompt": "A fierce young soldier-queen in a dystopian world. She has a determined, hardened expression from years of war, but her eyes hold a spark of hope. She wears practical, military-style clothing mixed with regal elements. The background is a desolate but beautiful landscape. Cinematic, sci-fi fantasy, photorealistic, no text."
+      },
+      {
+        "id": 95,
+        "name": "Клер Ніколс (Роулінґс)",
+        "source": "Consequences (Aleatha Romig)",
+        "archetype_type": "The Patient Survivor",
+        "short_description": "Викрадена мільярдером, вона виживає, граючи роль покірної дружини, але в душі готує довгу і витончену помсту.",
+        "long_description": "Звичайна молода жінка, яку харизматичний мільярдер Тоні Роулінґс спокусив і викрав. Клер – витривала і адаптивна. Вона швидко розуміє правила гри: щоб вижити, потрібно бути слухняною. Вона планує втечу, збирає інформацію, але її викрадач завжди на крок попереду. Згодом вона здається покірною, хоча глибоко всередині зберігає ненависть. Її приклад – “жертва, яка стала гравцем”: в останній книзі вона майстерно мститься, повернувши всі “наслідки” його дій.",
+        "gender_affinity": "female",
+        "tags": ["Captivity", "Psychological Thriller", "Stockholm Syndrome", "Revenge"],
+        "traits": { "dominance": 20, "empathy": 70, "possessiveness": 10, "social_status": 80, "chaos": 30, "darkness": 50 },
+        "visual_prompt": "An elegant and resilient woman who survived psychological torment. She has a quiet strength and intelligent, watchful eyes that hide a plan for revenge. She is in a luxurious but cold mansion. Cinematic, suspenseful, photorealistic, no text."
+      }
+  ]

@@ -1,0 +1,572 @@
+[
+    {
+        "id": 1,
+        "name": "Крістіан Гарпер",
+        "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of raw, dominant passion. (A devastatingly handsome man in his early 30s, Christian Harper archetype:1.2), styled dark hair, piercing (gray eyes filled with dark obsession and possession:1.3). He is (completely unclothed:1.4), his (muscular, athletic body:1.2) is taut with desire. (His large, hard, erect manhood is fully visible and detailed:1.5). He is pinning a ((beautiful, voluptuous woman)) against a massive floor-to-ceiling window in a luxury penthouse at night. She is also (fully unclothed:1.3), her body completely exposed to him. Their bodies are pressed together in a passionate, devouring kiss. Rain streaks down the window. The atmosphere is intensely (lustful and possessive:1.3).",
+        "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+      },
+    {
+      "id": 2,
+      "name": "Кілліан (Лорд)",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of cruel, forceful seduction. (A rebellious college 'king', Killian archetype:1.2), intense, arrogant gaze, dark messy hair. He has a beautiful, defiant woman bent over a large oak desk in a dark university library. He is (shirtless:1.2), tattoos visible on his back, his jeans unbuttoned. He is taking her from behind, his hands gripping her hips possessively. Her face, turned to the side, shows a mix of (pain and pleasure:1.3). Books are scattered on the floor. The atmosphere is taboo, rough, and dominant. high contrast lighting.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 3,
+      "name": "Трістан (Лорд)",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of sadistic pleasure. (A handsome man with a cruel, knowing smile, Tristan archetype:1.2). He has a beautiful woman tied loosely to a four-poster bed with silk scarves. She is (entirely bare:1.3), her expression a mix of fear and yearning. He is (shirtless:1.1), leaning over her, not touching, whispering something in her ear that makes her arch her back. His eyes are cold and analytical, enjoying her anticipation. The atmosphere is a tense game of psychological and carnal dominance. Dim, moody lighting from a single candle.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, clothes, fabric, two men, gay."
+    },
+    {
+      "id": 4,
+      "name": "Рат (Лорд)",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of raw, physical power. (A physically imposing, muscular man, Rath archetype:1.3), with a brooding expression and covered in tattoos. He has a smaller woman effortlessly lifted against the wall of a gritty gym locker room. He is (shirtless:1.4), sweat glistening on his muscles. Her legs are wrapped around his waist, her body (completely exposed:1.2) to his. His mouth is on her neck in a possessive, biting kiss. The atmosphere is primal, dominant, and fiercely carnal.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, clothes, fabric, two men, gay."
+    },
+    {
+      "id": 5,
+      "name": "Кілліан Карсон",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of cold, psychopathic obsession. (A handsome man with a charming but dangerous smile, Killian Carson archetype:1.2). He is standing over a beautiful woman lying on a pristine white bed. He is (fully unclothed:1.3), his body lean and powerful. (His erect manhood is fully visible:1.4). He is looking down at her not with passion, but with a look of cold, analytical ownership, a chilling smile on his face. She is bare, looking up at him with a mix of terror and fascination. The atmosphere is sterile, unsettling, and charged with dangerous lust.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, clothes, fabric, two men, gay."
+    },
+    {
+      "id": 6,
+      "name": "Енцо Вітале",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of vengeful seduction. (A handsome, brooding man, Enzo Vitale archetype:1.1) on a boat at night. He has a woman trapped between him and the boat's railing, the dark ocean behind them. Her silk dress is soaked through, clinging to her body, making her (partially visible:1.2). He is shirtless, water dripping from his hair and chest. His hands are on either side of her, trapping her, his face close to hers, whispering threats. The atmosphere is tense, isolated, and thick with the promise of revenge and carnal desire.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+        "id": 7,
+        "name": "Картер Мегоні",
+        "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of collegiate tyranny and lust. (A popular football player, Carter Mahoney archetype:1.2), in an empty locker room after a game. He has a defiant young woman pinned against the lockers. He is shirtless, wearing only his football pants, his muscular body covered in a sheen of sweat. He rips her blouse open, exposing her ((lace bra:1.3)). His mouth captures hers in a rough, punishing kiss. The atmosphere is aggressive, dominant, and filled with hate-lust.",
+        "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+      },
+    {
+      "id": 8,
+      "name": "Себастіан Ліндстром",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of beautiful, cold obsession. (A chillingly handsome man, Sebastian Lindstrom archetype:1.2), in a sterile, modern glass house. He is watching a beautiful woman sleep in a large bed. He is (completely unclothed:1.3), his perfect body like a statue. (His manhood is visible and erect:1.4). He reaches out a hand, almost touching her bare shoulder, but stops, his expression one of intense, possessive adoration and madness. The atmosphere is unsettling, voyeuristic, and dangerously lustful.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, clothes, fabric, two men, gay."
+    },
+    {
+      "id": 9,
+      "name": "Кіран Мастерс",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of vengeful, dark passion. (A menacingly handsome young man, Kieran Masters archetype:1.2). He is in a dark, abandoned classroom with a woman he has tormented for years. He has her pushed against a chalkboard, his body pressing hers into it. He is shirtless, his jeans low on his hips. He grabs her face, forcing her to look at him, his eyes burning with years of rage and desire before he crashes his lips against hers. Her body is tense, a mix of fear and unwilling surrender. The atmosphere is violent, hateful, and intensely carnal.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 10,
+      "name": "Калеб",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of broken, desperate lust. (A haunted man with scars, Caleb archetype:1.2), in a dark, sparse basement room. He is holding a terrified but defiant young woman. He is (shirtless:1.1), his lean, scarred body visible. He is teaching her how to please a man, his touch both rough and strangely gentle, his own eyes filled with self-loathing and a deep, unwanted desire for her. She is clad in simple lingerie, her body trembling. The atmosphere is tragic, intense, and deeply erotic.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 11,
+      "name": "Лаклан “Кроу” Барсетті",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of cold transaction turning to passion. (A powerful mafia boss, Crow Barsetti archetype:1.2). He is in his opulent office. A woman is kneeling before him, her body (entirely bare:1.3). He is sitting in his large leather chair, fully dressed in a suit, looking down at her with a cold, assessing gaze. He reaches down and traces a line from her neck down her chest, his touch making her shiver. His expression slowly shifts from cold ownership to a spark of raw lust. The atmosphere is dominant, BDSM-themed, and charged with power dynamics.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+        "id": 12,
+        "name": "Петер Соколов",
+        "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of menacing intimacy. (A dangerously handsome mercenary with Eastern European features, Peter Sokolov archetype:1.2). He has a woman cornered in her own kitchen at night. He is dressed in black tactical gear, (shirtless under his open vest:1.2). He isn't touching her, but one hand is braced against the wall by her head, his gun visible in a holster on his thigh. He leans in close, his voice a low growl, his eyes promising both violence and a dark, possessive desire. She is in her nightgown, terrified but unable to look away. The atmosphere is full of threat and carnal tension.",
+        "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+      },
+    {
+      "id": 13,
+      "name": "Джуліан Есквера",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of beautiful, captive lust. (A stunningly handsome man with an angel's face, Julian Esguerra archetype:1.3) on a private tropical island. He is carrying a woman out of the turquoise ocean. He is (unclothed from the waist up:1.2), water dripping from his muscular body. She is wearing a flimsy white dress that is completely soaked and transparent, revealing her ((perfectly shaped body underneath:1.4)). He looks down at her with an expression of pure, possessive adoration, as if she is a treasure he has just found. The atmosphere is lush, sensual, and filled with the tension of captivity.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 14,
+      "name": "Ігнаціо “Нас” Вітале",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of forbidden, age-gap desire. (A distinguished, handsome older man, Naz Vitale archetype:1.2), in a dimly lit, luxurious library. He has a much younger woman pressed against a bookshelf. He is fully dressed in an expensive suit. He has lifted her up, her legs wrapping around his waist, her short skirt riding high on her thighs. His mouth is on her neck, his eyes closed in a moment of lost control. She clutches his shoulders, a look of ecstatic surrender on her face. The atmosphere is taboo, intense, and deeply passionate.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 15,
+      "name": "Трой Бреннан",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of hateful, forced passion. (A handsome Irish man with a rugged face, Troy Brennan archetype:1.1), in a master bedroom on his wedding night. He is facing his new bride, whom he was forced to marry. He slowly and deliberately unbuttons his shirt, his eyes cold and full of resentment, revealing a (tattooed, muscular chest:1.2). She stands defiantly in her wedding lingerie. He walks towards her, a cruel smirk on his face, intending to claim what is his by contract. The atmosphere is tense, hateful, and charged with an unwilling, explosive lust.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 16,
+      "name": "Лука Вітіелло",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of brutal, possessive first love. (A tall, intimidatingly handsome Italian man, Luca Vitiello archetype:1.2). He is in a grand bedroom, having just taken his arranged bride. He is (unclothed from the waist up:1.3), his powerful body covered in a light sheen of sweat. He is hovering over her on the bed, looking down at her with a look that is no longer cold, but filled with a new, shocking possessiveness and a hint of savage tenderness. She is bare under the silk sheets, looking up at him with wide, fearful, but curious eyes. The atmosphere is raw, primal, and dangerously intimate.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 17,
+      "name": "Лаклан Маунт",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of absolute, ruthless ownership. (A terrifyingly powerful man, Lachlan Mount archetype:1.3), sitting on a throne-like chair in a dark, opulent bar. He has a woman kneeling on the floor between his legs. He is fully dressed in a designer suit. His hand is tangled in her hair, tilting her head back to look at him. His expression is one of cold, absolute authority. She is wearing a beautiful, expensive dress, but her posture is one of complete submission, her eyes wide. The atmosphere is charged with BDSM power dynamics, dominance, and a cold, chilling lust.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 18,
+      "name": "Брантлі “Кінг” Кінг",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of gritty, raw desire. (A rugged, heavily tattooed man, King archetype:1.3), in the back room of a tattoo parlor. He has a woman pressed against a wall covered in tattoo sketches. He is (shirtless:1.4), his entire torso a canvas of intricate tattoos. His jeans are low-slung. His hands are gripping her thighs, lifting her slightly as he kisses her with rough, desperate passion. She is wearing a tank top and shorts, her body arching into his. The atmosphere is raw, primal, and deeply carnal.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 19,
+      "name": "Ерік “Ріппер” Джейкобс",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of healing, scarred passion. (A tough biker with visible facial scars, Ripper archetype:1.2). He is in a simple bedroom, gently making love to a woman. Moonlight streams through the window, highlighting the scars on his face and back. He is (unclothed from the waist up:1.2). His expression is not fierce, but incredibly tender and vulnerable. She is bare beneath him, her hands gently tracing his scars with a look of pure love and acceptance. The atmosphere is emotional, healing, and intensely intimate.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 20,
+      "name": "Кейн Робертс",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of dark, BDSM-themed seduction. (An elegant, mysterious businessman, Kane Roberts archetype:1.1), in a private, high-end BDSM club. He is fully dressed in a sharp suit, a mask covering his eyes. He is leading a woman, who is wearing only ((intricate black lingerie and a blindfold)), by a delicate chain. He is in complete control, his posture dominant and assured. The room is dark, lit by red neon, with shadows hiding other figures. The atmosphere is charged with power, submission, and intense eroticism.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 21,
+      "name": "Трістан Кейн",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of deadly, silent passion. (A silent, deadly handsome man, Tristan Caine archetype:1.3). He and a woman are in a tense standoff in a dark safehouse, both holding guns. Suddenly, he moves, disarming her and pinning her against a cold concrete wall in one fluid motion. He is shirtless under a tactical vest. Her dress is torn. He presses his body against hers, his face inches away, their harsh breaths mingling. There's no kiss, just an intense, burning stare that promises both death and a deep, carnal connection. The atmosphere is violent, suspenseful, and electrically charged.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 22,
+      "name": "Ромео Коста",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of cold, unwilling desire. (An emotionally distant, handsome heir, Romeo Costa archetype:1.2), in the master bedroom of his mansion. He is standing before his arranged-marriage wife. He slowly takes off his expensive watch, his eyes cold and unreadable, then starts unbuttoning his shirt, revealing a (perfectly toned chest:1.1). He is performing a duty, but a flicker of something raw and possessive appears in his gaze as he looks at her standing defiantly in her nightgown. The atmosphere is tense, formal, and simmering with a lust he refuses to acknowledge.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 23,
+      "name": "Ронан “М’ясник”",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo, dark comedy style. A scene of morbid, playful lust. (A darkly charming man, Ronan the Butcher archetype:1.1). He has a beautiful woman, his rival killer, cornered in a grimy motel room. They both have knives. Instead of fighting, he drops his and with a smirk, slowly unzips his leather jacket, revealing a (tattooed, muscular chest:1.2). She watches him, a dangerous glint in her eye, slowly lowering her own weapon. Their foreplay is a deadly, thrilling game. The atmosphere is bizarre, funny, and intensely carnal.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 24,
+      "name": "Пітер Пан (Темний Неверленд)",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo, dark fantasy style. A scene of wild, fae seduction. (An ageless and beautiful Fae King, Peter Pan archetype:1.3), with inky black hair and glowing emerald eyes. He is in a mystical, moonlit clearing in a twisted forest. He has a captured human girl in his arms, her simple dress torn and ragged. He is (shirtless, his lean, otherworldly body adorned with glowing tattoos:1.3). He bites her neck gently, a possessive, predatory act. Her eyes are wide with a mix of terror and fascination. The atmosphere is magical, dangerous, and primal.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 25,
+      "name": "Вейден Мор",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of forbidden, gothic passion. (A stoic, handsome professor, Vaden More archetype:1.2), in his private study in a dark academia university. He has his student pressed against a wall of ancient books. He has shed his professor's jacket and his shirt is partially unbuttoned. He kisses her with a desperate, pent-up passion he has been hiding for weeks. Her hands are tangled in his hair, her body arching into his. The atmosphere is taboo, intellectual, and intensely erotic.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 26,
+      "name": "Меддокс",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of rough, captive desire. (A fierce biker, Maddox archetype:1.2), in a rustic, isolated cabin. He has his captive, the daughter of his enemy, on a simple wooden table. He is (shirtless:1.3), his muscular body covered in tattoos. He is not being gentle, his kiss is hard and punishing, an extension of his quest for revenge. She is fighting him, but her body betrays her with a shiver of unwilling arousal. The atmosphere is raw, hateful, and violently carnal.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 27,
+      "name": "Алессіо Івансов",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of thawing, possessive lust. (A young, ruthless Russian mafia boss, Alessio Ivanshin archetype:1.2), with an ice-cold demeanor. He is in his minimalist, luxurious bedroom. A beautiful, gentle woman is tending to a wound on his (bare, muscular torso:1.3). As she touches him, his cold facade cracks. He grabs her hand, his gaze turning from icy to intensely possessive and full of a dark, unfamiliar desire. He pulls her down onto his lap. The atmosphere is tense, with the promise of his icy control finally breaking.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 28,
+      "name": "Зейд Медоуз",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo, hyper-detailed, low angle shot. A scene of dark, possessive intimacy. (Zade Meadows archetype:1.2), a tall, powerfully built man with (intense, obsessive dark eyes:1.3). He is (shirtless, showcasing his heavily tattooed chest and muscular abs:1.3). His iconic skeletal half-mask lies discarded on the bedside table. He is positioned over a ((beautiful woman with an expression of surrendered ecstasy)) on a bed with messy, tangled black silk sheets. He holds both of her wrists in one of his (large, tattooed hands:1.2), pinning them gently above her head. His other hand trails possessively down the side of her body. She is (almost entirely bare, a torn silk slip dress barely clinging to her frame:1.4), her body arched towards him. Their faces are inches apart, his lips about to capture hers, a faint, predatory smile on his face. The only light is dim moonlight from a large gothic window. The atmosphere is (suffocating, intensely carnal, and charged with absolute dominance:1.4). sharp focus on his tattooed hand holding her wrists, and their almost-touching lips, 8k.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, clothes, fabric, two men, gay."
+    },
+    {
+      "id": 29,
+      "name": "Дізель Вайпер",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of chaotic, playful sadism. (A man with a wild, unhinged look in his eyes, Diesel Viper archetype:1.3). He has a woman tied to a chair in the middle of an abandoned warehouse. He is dancing around her, a knife in his hand, a manic grin on his face. He is shirtless, his body covered in chaotic tattoos and scars. He stops in front of her, leans in, and licks a tear from her cheek, his eyes sparkling with mad lust. She is terrified, but also captivated by his insanity. The atmosphere is bizarre, dangerous, and perversely erotic.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, clothes, fabric, two men, gay."
+    },
+    {
+      "id": 30,
+      "name": "Ґаррет Вайпер",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of silent, brutal passion. (A massive, silent former boxer, Garrett Viper archetype:1.3), covered in scars and tattoos. He is having rough, passionate sex with a woman against the wall of a concrete room. He is (completely unclothed:1.2), his powerful body moving with primal force. His face is buried in her neck, his hands gripping her thighs tightly. She is also bare, her legs wrapped around him, her hands clawing at his broad, muscular back. There are no words, only the sound of their bodies colliding. The atmosphere is raw, intense, and purely physical.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, clothes, fabric, two men, gay."
+    },
+    {
+      "id": 31,
+      "name": "Кензо Вайпер",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of slick, seductive games. (A handsome, impeccably dressed man, Kenzo Viper archetype:1.1), playing a high-stakes poker game. He has a beautiful woman on his lap. He whispers in her ear as he plays his winning hand. He is fully dressed, but his hand is high up her thigh, under her short dress. She shivers, trying to maintain a poker face. After he wins, he pulls her into a back room, pushes her against a wall and kisses her, a triumphant, possessive smirk on his face. The atmosphere is slick, dangerous, and charged with the thrill of the game.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 32,
+      "name": "Райдер Вайпер",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of cold, commanding lust. (The cold, ruthless leader of a gang, Ryder Viper archetype:1.3). He is sitting in his office chair, a beautiful woman straddling him. He is still wearing his pants, but his shirt is unbuttoned. He is not participating, merely watching her with a cold, detached look of ownership, his hands resting on her hips. She is wearing a lace bra, moving on him, trying to break through his icy control. His expression is one of absolute dominance, as if watching a performance he commanded. The atmosphere is tense, controlled, and deeply carnal.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 33,
+      "name": "Алекс Волков",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of desperate, pent-up passion. (A devastatingly handsome billionaire with haunted, intelligent eyes, Alex Volkov archetype:1.2). He finally snaps, grabbing the woman he's been protecting and pushing her against the wall of his minimalist apartment. His control is broken. He kisses her with a raw, desperate hunger. His shirt is rumpled, his hair a mess. Her dress is hiked up as he lifts her, her legs wrapping around his waist. His expression is pained, as if this act of passion is both a release and a torment. The atmosphere is angsty, desperate, and intensely emotional.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 34,
+      "name": "Аіден Кінг",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of beautiful, cruel possession. (A charismatic sociopath, Aiden King archetype:1.3), in the empty school swimming pool at night. He has a woman pressed against the cold tiles. The water is glowing with blue light. He is shirtless, water dripping from his perfect, athletic body. His kiss is both punishing and possessive, an act of marking his territory. She is wearing a soaked school shirt, which is now transparent, revealing her body. Her hands are braced against his chest, half-pushing, half-clinging. The atmosphere is beautiful, dangerous, and charged with obsessive lust.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 35,
+      "name": "Майкл Кріст",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of dark, vengeful passion. (A handsome former basketball star, Michael Crist archetype:1.2). During Devil's Night, he has his target cornered in a dark alley. He is wearing a fearsome mask, but he takes it off to reveal his face. He pins her against the brick wall, his body trapping hers. He doesn't kiss her, but leans in close, his voice a low growl, promising all the ways he's going to ruin her. His proximity is a threat and a promise. The atmosphere is full of hate, tension, and a dark, undeniable carnal energy.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 36,
+      "name": "Деймон Торренс",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of unhinged, beautiful depravity. (A man with an angelically beautiful face and ice-blue eyes, Damon Torrens archetype:1.3). He is in a destroyed hotel room, laughing maniacally. He pulls a woman into his arms, kissing her with a wild, desperate energy. He is shirtless, his designer jeans hanging low. She is in torn, expensive lingerie. It's unclear if they just fought or made love. He lifts her onto a table, his movements chaotic and unpredictable. The atmosphere is a storm of lust, madness, and a strange, violent tenderness.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 37,
+      "name": "Кай Морі",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of secret, masked desire. (A mysterious man of Japanese descent, Kai Mori archetype:1.1), in a private room of an exclusive masquerade club. He is wearing an ornate mask and a tailored suit. He has a woman pressed against a red velvet wall. He is kissing her deeply, his hand sliding up her thigh under her elegant ball gown. She is also masked, her hands clutching his shoulders. They don't know who the other is, adding to the thrill. The atmosphere is anonymous, forbidden, and intensely erotic.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 38,
+      "name": "Баррон “Вішес” Спенсер",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of vicious, possessive claiming. (A brutally handsome and arrogant heir, Vicious Spencer archetype:1.3). He has a woman bent over his desk in his high-rise office. He is taking her from behind, his movements rough and dominant. He is still wearing his suit pants but his shirt is gone, revealing a powerful back. Her hands are gripping the edge of the desk, her knuckles white. The city lights twinkle through the window behind them, a stark contrast to the raw, primal scene inside. The atmosphere is one of angry, hate-filled lust and total possession.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 39,
+      "name": "Вулф Кітон",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of cold, calculated seduction. (A ruthless and ambitious senator, Wolf Keaton archetype:1.2). In his dimly lit, powerful office, he has his young, arranged-marriage wife sitting on his desk. He stands between her legs, slowly unbuttoning her dress, his movements deliberate and devoid of emotion. He is fully dressed. His eyes are cold, watching her reaction as he exposes her body piece by piece. It's not an act of passion, but an act of ownership and control. The atmosphere is tense, manipulative, and chillingly carnal.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 40,
+      "name": "Джафар",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of villainous, BDSM-themed dominance. (A modern, powerful crime boss, Jafar archetype:1.2). In his lavish, Arabian-nights themed private room, he has a princess-like woman chained with golden cuffs to his large bed. He is fully dressed in a sharp, dark suit, walking slowly towards her with a whip in his hand and a cruel, seductive smile on his face. She is wearing revealing silk lingerie, her expression a mix of defiance and fear. The atmosphere is one of absolute power, submission, and dark, fairytale lust.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 41,
+      "name": "Хав’єр Берналь",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of gritty, cartel passion. (A ruthless and charismatic Mexican cartel leader, Javier Bernal archetype:1.2). He is in a rustic but luxurious hacienda bedroom. He has his captive, the wife of his enemy, pressed against a wall. He is shirtless, his tanned, muscular body covered in tattoos. His kiss is rough and demanding, a mix of hate and an undeniable attraction. Her hands are pushing against his chest, but her body is betraying her. The atmosphere is dangerous, hot, and filled with the tension of forbidden desire.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 42,
+      "name": "Картер Рід",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of silent, deadly intimacy. (A quiet, lethal former hitman, Carter Reed archetype:1.2). He has just saved the woman he loves and they are in a safe house. He is patching up a wound on his (bare, muscular torso:1.3). She comes up behind him and gently touches his back. He flinches, then slowly turns, his eyes dark with a deep, protective love he never shows. He pulls her into a slow, desperate kiss, a release of all the fear and tension. The atmosphere is emotional, raw, and deeply sensual.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 43,
+      "name": "Неро Карузо",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of young, possessive mafia lust. (A confident high school student from a mafia family, Nero Caruso archetype:1.1). In the back of an expensive car, he has the girl he's supposed to be protecting. He pushes her back against the leather seats, his body covering hers. His school blazer is discarded, his tie loosened. He kisses her with a surprising intensity, a mix of a boy's first passion and a man's inherited dominance. The atmosphere is claustrophobic, forbidden, and full of burgeoning dark desire.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 44,
+      "name": "Неро Верді",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of cold, obsessive claiming. (A young, intelligent, and dangerous head of a criminal empire, Nero Verdi archetype:1.2). He is in his stark, modern office. He has a woman sitting on his desk, her legs on either side of him. He is not kissing her, but slowly tracing the lines of her body with his fingertips, his eyes cold and assessing, memorizing her. He is fully clothed. She is in a simple dress, trembling under his intense, possessive gaze. The atmosphere is tense, charged with a chilling, obsessive lust.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 45,
+      "name": "Джаред Трент",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of angsty, hate-to-love passion. (A classic 'bad boy' high school bully, Jared Trent archetype:1.1). After a huge fight, he has the girl he's tormented for years cornered in his bedroom. He is shirtless, his expression a mix of anger, pain, and desperate longing. 'Why won't you just hate me?' he growls, before crashing his lips against hers. The kiss is not gentle; it's a war of emotion. She fights back, kissing him with equal fury. The atmosphere is emotional, raw, and full of years of pent-up tension.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+        "id": 46,
+        "name": "Зсодіст",
+        "positive_prompt": "masterpiece, RAW photo, cinematic photo, dark fantasy style. A scene of broken, desperate connection. (A terrifyingly beautiful vampire warrior, Zsadist archetype:1.3), covered in scars. He is in a dark bedroom, his back to a woman. He is shirtless, the moonlight highlighting the horrific scars covering his back from a brutal past. He is trembling, fighting his own demons. She comes up behind him and gently, hesitantly, places her hand on one of his scars. He flinches violently, then slowly, painfully, turns to face her, his eyes filled with a century of pain and a flicker of hope. The atmosphere is deeply emotional, tragic, and charged with a fragile, non-physical intimacy.",
+        "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, clothes, fabric, two men, gay."
+      },
+    {
+      "id": 47,
+      "name": "К’ю Мерсьє",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of beautiful, controlled sadism. (A cold and sadistic French millionaire, Q Mercer archetype:1.2). He is in a beautiful, sunlit room, a stark contrast to the scene. He has his captive, a beautiful woman, kneeling before him. He is fully dressed. He holds a single, perfect rose. He gently traces her lips, her neck, her bare shoulders with a thorn from the rose, watching for her reaction with a cold, analytical curiosity. A single drop of blood wells up on her shoulder. His eyes darken with a possessive, dark desire. The atmosphere is a twisted mix of beauty, pain, and intense BDSM-themed lust.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 48,
+      "name": "Елдер Прест",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of gentle, healing passion. (A mysterious international thief, Elder Prest archetype:1.1). He is with a woman he rescued from captivity. She is still fragile and voiceless. He is shirtless, sitting on a bed, simply holding her, letting her feel safe. He gently kisses the scars on her back, his touch reverent and healing. It's not an act of lust, but one of deep, profound connection and understanding between two broken souls. Her eyes are closed, a single tear escaping. The atmosphere is incredibly emotional, tender, and deeply sensual.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, clothes, fabric, two men, gay."
+    },
+    {
+      "id": 49,
+      "name": "Ґрейсон Пірс Салліван",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of intellectual, mad seduction. (A charismatic serial killer, Grayson Sullivan archetype:1.3). He is in his asylum cell, his female psychologist visiting him. He is on one side of the glass, she on the other. He places his hand on the glass. After a moment of hesitation, she places her hand on the other side, mirroring his. He smiles, a slow, knowing, predatory grin. 'Checkmate,' he whispers, his voice a low rumble. Though they are not touching, the scene is intensely carnal, a consummation of their twisted intellectual game. The atmosphere is tense, psychological, and deeply erotic.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, clothes, fabric, two men, gay."
+    },
+    {
+        "id": 50,
+        "name": "Джей Майярд",
+        "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of desperate, drug-fueled passion. (A haunted rockstar with a tragic past, Jey Maynard archetype:1.2). He is backstage after a concert, high and visibly troubled. He pulls a woman he just met into a dark corner, pressing her against a wall of amps. He is shirtless, sweat and glitter on his skin, his eyes wide and desperate. He kisses her not with love, but with a need to feel something, anything, to escape his own head. It's a raw, messy, and tragic moment of connection. The atmosphere is chaotic, loud, and filled with a desperate, painful lust.",
+        "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, clothes, fabric, two men, gay."
+      },
+    {
+      "id": 51,
+      "name": "Ґрізз (Ведмідь)",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo, 1970s film grain. A scene of rough, protective lust. (A huge, intimidating biker leader, Grizz archetype:1.3), with a wild beard. In a rustic cabin, he gently lifts his young captive onto a table. He is shirtless, his massive, hairy chest on display. He moves slowly, his usual ferocity replaced by a rough tenderness. She is in a simple cotton dress, looking up at him with wide, trusting eyes. He leans down to kiss her, his large hands gently cupping her face. The atmosphere is a mix of fear and safety, a strange, taboo intimacy.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 52,
+      "name": "Ентоні “Тоні” Роулінґс",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of cold, psychological dominance. (A handsome multimillionaire, Anthony Rawlings archetype:1.2), in his luxurious mansion. He is fully dressed in an immaculate suit. He is watching his beautiful captive as she is forced to serve dinner to his guests wearing nothing but ((a pearl necklace and high heels:1.4)). She is trying to maintain her composure, her body (fully exposed:1.3) but her expression defiant. He watches her with a cold, possessive satisfaction. The atmosphere is humiliating, charged with power dynamics, and chillingly carnal.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 53,
+      "name": "Віктор Фауст",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo, neo-noir style. A scene of cold, efficient passion. (An emotionless hitman, Victor Faust archetype:1.2). In a cheap motel room, he is having sex with the woman he rescued. He is on top of her, his movements are powerful and controlled, almost mechanical. He is (unclothed from the waist up:1.2), his lean, athletic body is all business. His face is a mask of concentration, no pleasure, no emotion. She is beneath him, clutching the cheap sheets, her eyes closed, a mix of fear and desperate connection on her face. The atmosphere is detached, lonely, and deeply carnal.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 54,
+      "name": "Джеймс “Гак” Баррі",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of vengeful, broken seduction. (A dangerously handsome man with a prosthetic hook for one hand, James Hook archetype:1.2). He has the daughter of his enemy in his dark, lavish apartment. He is shirtless, showing a scarred torso. He uses his (prosthetic hook:1.3) to slowly, menacingly trace a line down her bare back as he holds her from behind. She shivers, a mix of terror and arousal. His other hand holds her chin, forcing her to look at their reflection in a dark mirror. 'He took my hand,' he whispers, 'I'll take his everything.' The atmosphere is full of pain, revenge, and a twisted, dark lust.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 55,
+      "name": "Рят Арчер",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of ritualistic, dark academia lust. (A handsome, privileged university student, Ryat Archer archetype:1.2). In a secret, candle-lit chamber beneath the university, he is performing a 'ritual' with his chosen girl. He has her laid on a cold stone altar. He is shirtless, his athletic body painted with cryptic symbols. He is not touching her, but chanting in a low voice, his eyes glowing with obsessive fervor. She is wearing a thin white sacrificial gown, which is semi-transparent, looking up at him with a mix of fear and unwilling devotion. The atmosphere is cult-like, deeply unsettling, and charged with erotic tension.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 56,
+      "name": "Ройс “Сікко”",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of taboo, possessive claiming. (A rugged, tattooed biker, Royce 'Sicko' archetype:1.2). He has found his stepsister with another man. After getting rid of him, he has her cornered in her bedroom. 'You're mine,' he growls, his voice full of a madness she's never seen. He is shirtless, tattoos covering his torso. He pushes her onto her bed, his body trapping hers, and kisses her with a brutal, desperate passion that is both terrifying and thrilling. The atmosphere is chaotic, taboo, and violently carnal.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 57,
+      "name": "Отець Тайлер Белл",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo, chiaroscuro lighting. A scene of sacrilegious, forbidden passion. (A handsome young priest, Tyler Bell archetype:1.2). In a dark, empty church at night, lit only by candles. He has a woman pressed against the altar. He is still in his black clerical clothing, but the collar is undone. He kisses her with a desperate, sinful hunger, his hands tangled in her hair. She is wearing a simple dress, hiked up high on her thighs. Her hands are gripping the edge of the altar, her body trembling with the thrill of the forbidden act. The atmosphere is sacrilegious, intense, and deeply erotic.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 58,
+      "name": "Крістіан Грей",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of controlled, dominant pleasure. (An intense billionaire, Christian Grey archetype:1.2). In his 'Red Room', he has a woman tied to a St. Andrew's cross. He is shirtless, wearing only tailored black trousers, his body lean and powerful. He is not touching her, but standing before her with a riding crop in his hand, his gray eyes dark with controlled desire. 'Beg me,' he says, his voice a low command. She is wearing intricate lingerie, her body exposed and vulnerable, her expression a mix of apprehension and deep arousal. The atmosphere is dominant, BDSM-themed, and intensely carnal.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 59,
+      "name": "Сейнт (Святий)",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of reluctant, desperate lust. (A handsome, rugged sailor, Saint archetype:1.1). On a moonlit beach of a deserted island, he and his beautiful captive have finally given in to their attraction. He is kissing her with a raw, desperate passion, as if he hates himself for wanting her. He is shirtless, wearing only torn pants. She is wearing a makeshift dress of tattered fabric, her hands clutching his back. The waves crash on the shore around them. The atmosphere is wild, desperate, and intensely romantic and carnal at the same time.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 60,
+      "name": "Тоні “Твіч” Деллі",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of dark, silent obsession. (A silent, dangerous-looking man, Twitch archetype:1.2). In a small, dimly lit apartment, the woman he has been stalking is sleeping. He has silently entered her room. He is fully clothed in black. He kneels by her bed, not to touch her, but just to watch her. His expression is one of intense, almost painful obsession. He reaches out a hand, his fingers hovering just above her cheek. The atmosphere is incredibly tense, creepy, and charged with a dark, voyeuristic lust.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, clothes, fabric, two men, gay."
+    },
+    {
+      "id": 61,
+      "name": "Доріан Блеквелл",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of gothic, possessive passion. (A handsome but scarred man in Victorian attire, Dorian Blackwell archetype:1.2). In the grand, shadowy bedroom of a Scottish castle. He has his captive, a beautiful woman, pressed against a cold stone wall. Her nightgown is slipping off her shoulder. He is kissing her neck, his touch a mix of rough possession and a deep, ancient longing. His eyes are closed, his scarred face showing a moment of rare vulnerability. The atmosphere is gothic, romantic, and deeply carnal.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 62,
+      "name": "Лотер",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo, dark fantasy style. A scene of tyrannical, vampiric lust. (An ancient, terrifyingly powerful vampire king, Lothaire archetype:1.4). He is on his throne, a beautiful human girl on his lap. He is dressed in regal, dark clothing. He holds her chin with one hand, forcing her to look at him, a cruel, amused smile on his perfect face. With his other hand, he slowly traces the vein on her neck. 'Mine,' he whispers. She is terrified but mesmerized, her heart pounding. The atmosphere is one of absolute power, ancient evil, and a predatory, carnal hunger.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 63,
+      "name": "Монтеc Лазулі",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo, sci-fi fantasy style. A scene of cold, political lust. (A powerful and immortal king, Montes Lazuli archetype:1.2), in his futuristic, minimalist throne room. He has just forced the daughter of his enemy to marry him. She stands before him in a simple white dress, defiant. He walks to her, lifts her chin, and kisses her, not with passion, but as an act of conquest and ownership. His eyes are cold and unreadable. The atmosphere is tense, political, and charged with a cold, dominant carnal energy.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 64,
+      "name": "Ремо Фальконе",
+      "positive_prompt": "masterpiece, RAW photo, best quality, ultra-realistic, cinematic photo, film grain, shallow depth of field, dutch angle. (An act of raw, animalistic lust:1.3). Remo Falcone archetype, a (dangerously handsome Italian man with a wild, unhinged glint in his dark eyes:1.2). He is covered in (intricate tattoos across his neck, chest, and arms:1.1). He is (fully unclothed:1.4), his powerful, muscular body glistening with sweat. (His large, hard, erect manhood is fully visible, detailed, and uncensored:1.5). He has a beautiful woman pinned against the black marble wall of a luxurious, modern bathroom. He lifts her leg, wrapping it around his waist. She is also (completely unclothed and exposed:1.3), her body arched back in ecstasy, water from the shower running down her skin. Their lips are locked in a (devouring, desperate kiss:1.2). The atmosphere is intensely (lustful, carnal, and possessive:1.4).",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 65,
+      "name": "Емерік Марсо",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of forbidden, artistic passion. (An intense and handsome music professor, Emeric Marceau archetype:1.2). In a soundproof piano room at night, he has his young student pressed against the grand piano. He is shirtless, his shirt discarded on the floor. He is kissing her with a desperate passion. Her hands are not on him, but on the piano keys, creating a discordant, chaotic melody that mirrors the scene. Her skirt is hiked up her thighs. The atmosphere is taboo, artistic, and intensely carnal.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 66,
+      "name": "Ліам Каллаган",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of a power couple's violent passion. (A charismatic and ruthless Irish mafia boss, Liam Callaghan archetype:1.1). He has his wife, who is equally ruthless, slammed against the wall of their luxurious bedroom after a heated argument. Their clothes are torn. He has his hand around her throat, not choking, but holding, a look of furious desire on his face. She is not afraid; she has a smirk on her face, her hand gripping his shirt, ready to retaliate. 'Is that all you've got?' she whispers. The atmosphere is a volatile mix of violence, power, and explosive lust.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 67,
+      "name": "Толіан “Рейз” (818)",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of primal, desperate claiming. (A powerfully built man, Raze archetype:1.3), covered in scars. He has just found the woman from his past. In a dark, gritty room, he pushes her against a concrete wall, his body caging hers. He is shirtless, all raw muscle and scars. He is not kissing her, but his face is buried in her hair, inhaling her scent like an animal, his body trembling with a mixture of rage and a forgotten tenderness. She is terrified but recognizes the broken man inside. The atmosphere is raw, animalistic, and emotionally charged.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 68,
+      "name": "Шепард",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo, dystopian style. A scene of brutal, Alpha dominance. (A ruthless warlord, Shepard archetype:1.3), in his stark, military-style quarters. He has just 'claimed' his Omega. He has her on his bed, his large, powerful body pinning her down. He is (completely unclothed:1.2), his muscular form like a predator over its prey. (His manhood is visible:1.3). She is bare, looking up at him with defiant, hate-filled eyes. He lowers his head, his mouth claiming hers in a brutal kiss that is about ownership, not affection. The atmosphere is primal, non-consensual (dubcon), and charged with raw, animalistic power.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 69,
+      "name": "Каллум Ґріффін",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of hate-fueled, aristocratic passion. (A proud and aristocratic heir to the Irish mafia, Callum Griffin archetype:1.2). After a blazing row with his arranged bride, he grabs her in the hallway of their mansion. He pushes her against the wall, his impeccable suit now disheveled. 'You are my wife,' he snarls, before capturing her lips in a furious, punishing kiss. She fights back, her hands grabbing his tie, pulling him closer even as she resists. The atmosphere is an explosive mix of hate, pride, and an undeniable, upper-class lust.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 70,
+      "name": "Ніколас Руссо",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of forbidden, silent desire. (A young, ruthless Don of the mafia, Nicholas Russo archetype:1.2). He is in the garden during his own engagement party. He has cornered his fiancée's older sister in a dark alcove, away from the music. He doesn't say a word. He just looks at her with a burning, possessive hunger. He lifts a hand, his fingers gently tracing her jawline, his touch both a caress and a threat. She is frozen, her eyes wide, caught in the intensity of his forbidden desire. The atmosphere is tense, silent, and electrically charged with what cannot be said.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 71,
+      "name": "Флейм (Кевін)",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of broken, dangerous intimacy. (A deeply traumatized biker, Flame archetype:1.3), his body covered in self-inflicted scars. He is in a dark room with the one woman who can calm him. He is shirtless, holding a lit lighter, his eyes fixated on the flame. She gently takes his hand, the one without the lighter, and brings it to her lips, kissing his scarred knuckles. He flinches, his wild eyes turning to her, a flicker of something other than pain in them for the first time. He leans in, burying his face in her hair, a raw, non-verbal plea for comfort. The atmosphere is fragile, dangerous, and deeply emotional.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, clothes, fabric, two men, gay."
+    },
+    {
+      "id": 72,
+      "name": "Алехандро “Ель Діабло” Мартінес",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of powerful, age-gap lust. (A powerful and ruthless cartel leader, El Diablo archetype:1.2). He is in his luxurious office, sitting behind his large desk. A young woman is sitting on the desk in front of him, her short dress revealing her long legs. He is not touching her, but his dark, intense gaze is slowly travelling up her body, a possessive smirk on his face. He takes a drag from a cigar, the smoke curling around them. 'You are playing a very dangerous game, little one,' he says, his voice a low rumble. The atmosphere is charged with dominance, power, and a predatory, carnal tension.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 73,
+      "name": "Семюель “Преппі” Клірвотер",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo, dark comedy style. A scene of eccentric, unhinged passion. (An eccentric sociopath with a bow tie, Preppy archetype:1.3). After a bloody fight, he is in his quirky apartment with a young woman. He is still wearing his blood-spattered suit and bow tie, a manic grin on his face. He suddenly grabs her, lifts her onto a countertop, and kisses her with a wild, almost joyful abandon. 'Wasn't that fun?' he laughs against her lips. The scene is a bizarre mix of violence, humor, and a strangely innocent, yet deeply carnal, lust. The atmosphere is chaotic, playful, and dangerously erotic.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 74,
+      "name": "Массімо Торрічеллі",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of dominant, forceful seduction. (A powerful, dominant Sicilian mafia don, Massimo Torricelli archetype:1.3). He has his captive, a beautiful woman, cornered on the deck of his yacht at night. He is (shirtless:1.2), his muscular body illuminated by the moonlight. 'You have one year to fall in love with me,' he says, his voice a low, confident command. He doesn't touch her, but his intense, possessive gaze devours her. He takes a step closer, his powerful presence overwhelming. The atmosphere is one of captivity, undeniable power, and inescapable carnal tension.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 75,
+      "name": "Лоґан",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of forbidden, conflicted passion. (An intelligent and dedicated FBI agent, Logan archetype:1.1). He has just discovered the woman he loves is a serial killer. In her apartment, surrounded by evidence of her crimes, he confronts her. The argument turns passionate, and he slams her against a wall, his expression a war of duty and desperate love. He kisses her, a rough, angry, and passionate kiss that seals his fate. 'I will protect you,' he growls against her lips. The atmosphere is tense, forbidden, and emotionally charged with a dark, carnal energy.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic, two men, gay."
+    },
+    {
+      "id": 76,
+      "name": "Мелоді Джованні (Каллаган)",
+      "positive_prompt": "masterpiece, RAW photo, best quality, ultra-realistic, cinematic photo, film grain, hyper-detailed, dramatic lighting. A scene of a fierce power struggle and raw passion. (Melody Giovanni archetype:1.3), a ((breathtakingly beautiful and ruthless woman in her mid-20s)), with long dark hair cascading down her back. Her eyes are cold, intelligent, and blazing with defiance. She is straddling a (powerfully built man, Liam Callahan archetype:1.1), on a luxurious, disheveled bed with dark sheets. She has him pinned down, her hands gripping his wrists above his head. He is shirtless, his muscular chest and abs visible, a look of shocked surprise and unwilling arousal on his handsome face. Melody is wearing only a ((black lace bra and underwear:1.4)), her athletic, toned body on full display. A small, ornate dagger is strapped to her thigh. She leans down, her lips inches from his, a cruel, triumphant smirk playing on her face. The atmosphere is an explosive mix of (danger, dominance, and carnal tension:1.4). Sharp focus on her victorious expression and the dagger on her thigh. 8k.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic."
+    },
+    {
+      "id": 77,
+      "name": "Лана Майерс",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of deadly seduction. (A beautiful and intelligent woman, Lana Myers archetype:1.2), who is secretly a serial killer. She is in her apartment with the FBI agent hunting her. She has just seduced him. She is on top of him on the bed, straddling him. She is wearing a black lace bra, a gun tucked into the back of her panties. She leans down and kisses him slowly, a mix of genuine passion and cold, calculated control. He is shirtless beneath her, completely unaware of the danger he is in. The atmosphere is suspenseful, dangerous, and intensely erotic.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic."
+    },
+    {
+      "id": 78,
+      "name": "Слоун (Чорна Пташка)",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo, dark comedy style. A scene of playful, deadly flirtation. (A witty and sarcastic young woman, Sloane the Blackbird archetype:1.2). She is in a kitchen with her rival serial killer. They have just finished disposing of a body. She playfully flicks a drop of blood onto his shirtless chest. He catches her hand, a dangerous glint in his eyes, and pulls her close, their bodies pressing together against the kitchen counter. 'You missed a spot,' he murmurs, before their lips meet in a kiss that is both funny and intensely passionate. The atmosphere is morbid, hilarious, and deeply carnal.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic."
+    },
+    {
+      "id": 79,
+      "name": "Ліві (Олівія) Рід",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of conflicted dominance. (A young woman with haunted eyes, Livie Reed archetype:1.2). She is in a dark room with her new captive, a handsome young man. She is supposed to be breaking him, but she is struggling. She pushes him against a wall, trying to be intimidating. She is dressed in dark, dominant attire, but her expression is conflicted. He is shirtless, looking at her not with fear, but with a surprising amount of empathy and defiance. 'You don't have to do this,' he says softly. The tension is thick, a mix of her forced cruelty and his unexpected kindness, creating a strange, powerful erotic charge.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic."
+    },
+    {
+      "id": 80,
+      "name": "Сарай Коен (Марія)",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of a survivor's first act of passion. (A beautiful young woman with fierce, determined eyes, Sarai Cohen archetype:1.2). After escaping her captor, she is in a motel room with her rescuer, a cold hitman. She initiates their first kiss, an act of taking back control of her own body and desire. It's not a gentle kiss; it's fierce, desperate, and full of all the pain and strength she has gathered. He is surprised, but responds with equal intensity, lifting her onto the cheap motel bed. The atmosphere is raw, empowering, and deeply carnal.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic."
+    },
+    {
+      "id": 81,
+      "name": "Тесс Сноу",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of defiant submission. (A young woman with a fire in her eyes, Tess Snow archetype:1.2). She is in a cage in a luxurious room, her captor watching her. She is wearing a simple slip. Instead of cowering, she meets his gaze with defiance. She slowly, deliberately, pulls one of the straps of her slip off her shoulder, an act of rebellion and seduction. His eyes darken, his control beginning to crack. The atmosphere is a tense power play, a battle of wills charged with an intense, BDSM-themed lust.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic."
+    },
+    {
+      "id": 82,
+      "name": "Олівія “Лівві” Руїз",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of gentle, Stockholm Syndrome love. (A gentle and innocent young woman, Olivia Ruiz archetype:1.1). She is in a simple room with her captor. He is asleep, his face peaceful for the first time. She gently traces his face with her fingers, a look of pure, unconditional love in her eyes. She leans down and places a soft, chaste kiss on his lips. It is not a scene of passion, but of deep, complicated emotional intimacy. The atmosphere is quiet, tender, and bittersweet.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic."
+    },
+    {
+      "id": 83,
+      "name": "Пімліко “Пім” Блайт",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of healing and first touch. (A fragile but unbreakable young woman, Pimlico 'Pim' Blythe archetype:1.2). She has been silent for years due to trauma. Her rescuer, a dark and brooding man, is patiently trying to earn her trust. In a quiet, safe room, he gently takes her hand. She doesn't pull away. He slowly brings her hand to his lips and kisses her knuckles. A single tear rolls down her cheek, her first emotional reaction in years. The scene is not carnal, but it is incredibly intimate and emotionally charged.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic."
+    },
+    {
+      "id": 84,
+      "name": "Аделіна (Едді) Рейлі",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of a dangerous game of seduction. (A curious and brave writer, Adeline Reilly archetype:1.1). She knows her stalker is in her house. Instead of hiding, she walks into her dark living room wearing only a ((black silk robe:1.3)), which is loosely tied. She stands before a large fireplace, her silhouette illuminated by the flames. 'I know you're here,' she says to the shadows, her voice trembling but steady. 'Are you going to hide forever?' The atmosphere is a thrilling, terrifying game of cat and mouse, charged with dark, erotic tension.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic."
+    },
+    {
+      "id": 85,
+      "name": "Даллас Тоунсенд (Коста)",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of breaking through the ice. (A beautiful and rebellious socialite, Dallas Townsend archetype:1.1). She is in the bedroom with her cold, arranged-marriage husband. After another cold rejection from him, she decides to take matters into her own hands. She climbs into his lap as he sits on the bed reading, takes the book from his hands, and kisses him with all the passion he has been denying. He is shocked, but after a moment, he responds, his icy control finally shattering. The atmosphere is triumphant, passionate, and intensely satisfying.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic."
+    },
+    {
+      "id": 86,
+      "name": "Роксі",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of a queen claiming her kings. (A tough, defiant bartender, Roxy archetype:1.2). She is in the main living area of the Vipers' den. All four dangerous men are there. She walks into the center of the room, her expression confident and challenging. 'You all want me?' she says, her voice low and steady. 'Then prove it. All of you.' She slowly unzips her leather jacket. The men look at her, a mix of shock, respect, and raw, animalistic lust in their eyes. The atmosphere is an explosion of reverse-harem tension, power, and carnal promise.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic."
+    },
+    {
+      "id": 87,
+      "name": "Марчелла Вітіелло",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of proud, forbidden passion. (An elegant and proud mafia princess, Marcella Vitiello archetype:1.2). She is in captivity in a rustic cabin. She finally gives in to the attraction she feels for her biker captor. She initiates the kiss, a slow, deliberate act of choosing her own desire despite the circumstances. He is shirtless and tattooed, surprised by her boldness. He responds, lifting her onto a table, his touch now worshipful instead of rough. The atmosphere is one of surprising tenderness mixed with a raw, forbidden lust.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic."
+    },
+    {
+      "id": 88,
+      "name": "Корвіна Клем",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo, gothic style. A scene of intellectual, supernatural seduction. (A curious young woman with a gothic aesthetic, Corvina Carrow archetype:1.1). She is in a secret chamber in the university, with her mysterious professor. He has just revealed his supernatural nature. Instead of fear, her eyes are wide with wonder and a deep, intellectual attraction. He gently cups her face, his touch cold but electric. 'You are not afraid of the dark, are you, little crow?' he murmurs, before their lips meet in a kiss that is both tender and charged with ancient, dark magic. The atmosphere is magical, gothic, and intensely romantic.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic."
+    },
+    {
+      "id": 89,
+      "name": "Пейден",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo, fantasy style. A scene of forbidden love between enemies. (A resourceful young woman, Paedyn archetype:1.1). She is in a hidden cave with the enemy prince, Kai. They are both injured from the deadly trials. In the quiet intimacy of the cave, they finally admit their feelings. He gently cleans a cut on her face, his touch tender. The tension between them snaps, and they come together in a desperate, passionate kiss, a moment of solace in their brutal world. The atmosphere is emotional, desperate, and deeply sensual.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic."
+    },
+    {
+      "id": 90,
+      "name": "Лондон Нобл",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of a shared madness. (An intelligent psychologist, London Noble archetype:1.2). She has finally crossed the line, joining her serial killer patient, Grayson. They are in a dark, isolated location after their escape. He is shirtless, his back to her. She comes up behind him and wraps her arms around his waist, pressing her face against his back. 'I'm with you,' she whispers. He turns, his eyes full of a dark, triumphant love. He pulls her into a passionate, all-consuming kiss, a sealing of their dark pact. The atmosphere is twisted, obsessive, and intensely carnal.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic."
+    },
+    {
+      "id": 91,
+      "name": "Морана Вітальо",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo, techno-thriller style. A scene of passion between rivals. (A brilliant hacker, Morana Vitalio archetype:1.2). In a high-tech safehouse, after a close call, the tension between her and the silent assassin, Tristan, finally breaks. He slams his hand against the wall next to her head, trapping her. He looks at her with a furious, burning intensity. 'You are a complication,' he growls, before crushing his lips to hers. The kiss is rough, angry, and full of a passion they both tried to deny. The glow from computer screens illuminates their faces. The atmosphere is tense, dangerous, and electrically charged.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic."
+    },
+    {
+      "id": 92,
+      "name": "Лейк Монро",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of surrendering to the monster. (A strong-willed high school girl, Lake Monroe archetype:1.1). She is in her bully's, Kieran's, bedroom. After years of fighting him, she finally admits to herself and to him that she wants him. 'Then take me,' she whispers, her voice trembling but defiant. He looks at her, his usual cruelty replaced by a dark, possessive hunger. He lifts her onto his bed, his movements slow and deliberate, a predator finally claiming his prey. The atmosphere is tense, full of a dark, complicated passion, and the thrill of surrender.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic."
+    },
+    {
+      "id": 93,
+      "name": "Уна (Наталія)",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of silent, deadly passion. (A deadly and silent female assassin, Una archetype:1.3). She has failed her mission to kill the mafia boss, Alessio, because she fell for him and his son. He confronts her, knowing who she is. He backs her against a wall, his expression a mix of fury and heartbroken desire. She cannot speak to defend herself. Instead, she reaches up, pulls his face down, and kisses him with all her desperation and newfound love. He resists for a moment, then responds, lifting her up against the wall. The atmosphere is tragic, violent, and intensely carnal.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic."
+    },
+    {
+      "id": 94,
+      "name": "Сереніті Фрімен",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo, dystopian style. A scene of a queen choosing her king. (A fierce soldier-queen, Serenity Freeman archetype:1.2). In the war-torn palace, she goes to her husband, the enemy king Montes. He expects her to kill him in his sleep. Instead, she wakes him with a kiss. A kiss that is not about submission, but about choosing him, choosing their future. He is shocked, then pulls her down onto the bed with him, his touch now filled with a desperate, possessive love. The atmosphere is a powerful mix of war, politics, and a deep, world-changing passion.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic."
+    },
+    {
+      "id": 95,
+      "name": "Клер Ніколс (Роулінґс)",
+      "positive_prompt": "masterpiece, RAW photo, cinematic photo. A scene of a survivor's ultimate revenge. (An elegant and resilient woman, Claire Nichols archetype:1.2). She has finally turned the tables on her captor and abuser, Tony. She has him at her mercy. She is dressed in a stunning, powerful red dress. She walks up to him, a cruel, cold smile on her face. 'Consequences,' she whispers. She doesn't touch him, but her look of absolute power and his look of utter defeat is the climax of their story. The atmosphere is not carnal, but it is intensely satisfying and charged with a dark, psychological dominance.",
+      "negative_prompt": "(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, cartoon, anime, 3d, painting, text, watermark, signature, artist name, censored, bar, mosaic."
+    }
+  ]
