@@ -4,25 +4,25 @@ import React, { useMemo, useState } from "react";
 
 function toAbsoluteUrl(relativeOrAbsolute) {
   if (!relativeOrAbsolute) return "";
-  if (relativeOrAbsolute.startsWith("http://") || relativeOrAbsolute.startsWith("https://")) {
+  if (
+    relativeOrAbsolute.startsWith("http://") ||
+    relativeOrAbsolute.startsWith("https://")
+  ) {
     return relativeOrAbsolute;
   }
-  // працює і локально, і на проді
-  return `${window.location.origin}${relativeOrAbsolute.startsWith("/") ? "" : "/"}${relativeOrAbsolute}`;
+  return `${window.location.origin}${
+    relativeOrAbsolute.startsWith("/") ? "" : "/"
+  }${relativeOrAbsolute}`;
 }
 
-export default function ShareButtons({ title, shareUrl, imageUrl }) {
+export default function ShareButtons({ title, shareUrl, archetypeId }) {
   const [msg, setMsg] = useState("");
+  const [variant, setVariant] = useState(1);
 
   const absShareUrl = useMemo(() => {
     if (typeof window === "undefined") return shareUrl;
     return toAbsoluteUrl(shareUrl);
   }, [shareUrl]);
-
-  const absImageUrl = useMemo(() => {
-    if (typeof window === "undefined") return imageUrl;
-    return toAbsoluteUrl(imageUrl);
-  }, [imageUrl]);
 
   const flash = (text) => {
     setMsg(text);
@@ -40,13 +40,16 @@ export default function ShareButtons({ title, shareUrl, imageUrl }) {
 
   const downloadImage = async () => {
     try {
+      const imagePath = `/images/archetypes/archetype_${archetypeId}(${variant}).png`;
+      const absImageUrl = toAbsoluteUrl(imagePath);
+
       const res = await fetch(absImageUrl);
       const blob = await res.blob();
       const url = URL.createObjectURL(blob);
 
       const a = document.createElement("a");
       a.href = url;
-      a.download = "dark-romance-result.png";
+      a.download = `dark-romance-archetype-${archetypeId}-${variant}.png`;
       document.body.appendChild(a);
       a.click();
       a.remove();
@@ -70,18 +73,42 @@ export default function ShareButtons({ title, shareUrl, imageUrl }) {
         url: absShareUrl,
       });
     } catch {
-      // користувач міг натиснути cancel — це ок
+      // cancel — ок
     }
   };
 
   return (
     <div>
+      {/* ВИБІР КАРТИНКИ */}
+      <div className="grid grid-cols-4 gap-2 mb-4">
+        {[1, 2, 3, 4].map((v) => {
+          const previewPath = `/images/archetypes/archetype_${archetypeId}(${v}).png`;
+          return (
+            <button
+              key={v}
+              onClick={() => setVariant(v)}
+              className={`rounded-lg overflow-hidden border-2 transition ${
+                variant === v
+                  ? "border-red-800"
+                  : "border-transparent hover:border-gray-500"
+              }`}
+            >
+              <img
+                src={previewPath}
+                alt={`Variant ${v}`}
+                className="w-full h-auto object-cover"
+              />
+            </button>
+          );
+        })}
+      </div>
+
       <div className="grid grid-cols-1 gap-3">
         <button
           onClick={nativeShare}
           className="w-full px-6 py-3 bg-red-800 hover:bg-red-700 text-white font-bold rounded-lg text-lg"
         >
-          Поділитися (телефон/браузер)
+          Поділитися (телефон / браузер)
         </button>
 
         <button
@@ -95,7 +122,7 @@ export default function ShareButtons({ title, shareUrl, imageUrl }) {
           onClick={downloadImage}
           className="w-full px-6 py-3 bg-gray-700 hover:bg-gray-600 text-white font-bold rounded-lg text-lg"
         >
-          Завантажити картинку (для сторіс/посту)
+          Завантажити картинку (варіант {variant})
         </button>
       </div>
 
@@ -103,7 +130,7 @@ export default function ShareButtons({ title, shareUrl, imageUrl }) {
         <p className="mt-3 text-sm text-gray-300">{msg}</p>
       ) : (
         <p className="mt-3 text-sm text-gray-500">
-          Instagram напряму з вебу “поширити” часто не дає — найнадійніше: завантаж картинку і залий вручну.
+          Обери картинку архетипу для сторіс або посту.
         </p>
       )}
     </div>
