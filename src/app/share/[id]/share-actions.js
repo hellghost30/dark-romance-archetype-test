@@ -1,24 +1,23 @@
-// src/app/share/[id]/share-actions.js
 "use client";
 
 import React, { useMemo, useState } from "react";
 
 /**
- * Компонент ShareActions дозволяє обрати одне з кількох зображень для завантаження
- * і поділитись результатом. Приймає:
- * - shareUrl: URL сторінки із результатом
- * - shareText: текст, який додається при копіюванні/шерінгу
- * - imageUrl: (за потреби) один URL зображення для сумісності з попередньою версією
- * - imageUrls: масив URL-ів зображень для вибору
+ * Компонент для шерінгу результату тесту.
+ *
+ * @param {string} shareUrl URL сторінки результату
+ * @param {string} shareText Текст для копіювання/шерінгу
+ * @param {string} imageUrl fallback-URL для єдиного зображення (старий підхід)
+ * @param {string[]} images масив URL-ів зображень (новий підхід). Якщо масив не передали, використовується imageUrl
  */
-export default function ShareActions({ shareUrl, shareText, imageUrl, imageUrls = [] }) {
+export default function ShareActions({ shareUrl, shareText, imageUrl, images }) {
   const [copied, setCopied] = useState(false);
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
-  // Якщо масив не передано, використовуємо одиночний imageUrl
-  const availableImages = imageUrls && imageUrls.length > 0 ? imageUrls : [imageUrl];
-  const selectedImageUrl = availableImages[selectedImageIndex];
+  // Якщо images передано, використовувати його, інакше створити масив із одного елемента imageUrl
+  const imageList = images?.length ? images : [imageUrl];
+  const [selectedIndex, setSelectedIndex] = useState(0);
 
+  // Текст для буферу обміну
   const fullText = useMemo(() => `${shareText}\n${shareUrl}`, [shareText, shareUrl]);
 
   const copyLink = async () => {
@@ -42,18 +41,21 @@ export default function ShareActions({ shareUrl, shareText, imageUrl, imageUrls 
   const nativeShare = async () => {
     if (!navigator.share) return;
     try {
-      await navigator.share({ title: "Dark Romance Archetype", text: fullText, url: shareUrl });
+      await navigator.share({
+        title: "Dark Romance Archetype",
+        text: fullText,
+        url: shareUrl,
+      });
     } catch {
-      /* користувач міг відхилити запит на шеринґ */
+      // user canceled or share failed – нічого не робимо
     }
   };
 
-  // Ім'я для завантажуваного файлу. Можна змінити за потреби.
-  const downloadName = "dark-romance-archetype.png";
+  // Ім'я файлу для завантаження. Додаємо індекс, щоб зображення не перекривали одне одного
+  const downloadName = `dark-romance-archetype-${selectedIndex + 1}.png`;
 
   return (
     <div className="space-y-3">
-      {/* Кнопка копіювання посилання */}
       <button
         onClick={copyLink}
         className="w-full px-6 py-3 bg-gray-700 hover:bg-gray-600 text-white font-bold rounded-lg text-lg"
@@ -61,7 +63,6 @@ export default function ShareActions({ shareUrl, shareText, imageUrl, imageUrls 
         {copied ? "Скопійовано ✅" : "Скопіювати посилання"}
       </button>
 
-      {/* Кнопка нативного шеринґу (мобільні пристрої) */}
       {typeof navigator !== "undefined" && navigator.share ? (
         <button
           onClick={nativeShare}
@@ -71,48 +72,39 @@ export default function ShareActions({ shareUrl, shareText, imageUrl, imageUrls 
         </button>
       ) : null}
 
-      {/* Блок вибору картинки, якщо зображень більше одного */}
-      {availableImages.length > 1 && (
-        <div className="flex flex-wrap justify-center gap-2 my-2">
-          {availableImages.map((img, idx) => (
-            <button
-              key={img}
-              type="button"
-              className={`border-2 rounded-md overflow-hidden ${
-                idx === selectedImageIndex ? "border-red-700" : "border-transparent"
-              }`}
-              onClick={() => setSelectedImageIndex(idx)}
-            >
-              <img
-                src={img}
-                alt={`archetype-${idx + 1}`}
-                className="w-16 h-16 object-cover"
-              />
-            </button>
-          ))}
-        </div>
-      )}
+      {/* Карусель зображень. Клік по мініатюрі змінює обране зображення */}
+      <div className="flex gap-2 overflow-x-auto mt-2">
+        {imageList.map((src, idx) => (
+          <img
+            key={`${src}-${idx}`}
+            src={src}
+            alt={`Зображення ${idx + 1}`}
+            onClick={() => setSelectedIndex(idx)}
+            className={`h-20 w-20 rounded-lg cursor-pointer object-cover ${
+              idx === selectedIndex ? "ring-2 ring-offset-1 ring-red-500" : "opacity-70 hover:opacity-100"
+            }`}
+          />
+        ))}
+      </div>
 
-      {/* Кнопка/посилання завантажити обрану картинку */}
+      {/* Посилання на завантаження вибраного зображення */}
       <a
-        href={selectedImageUrl}
+        href={imageList[selectedIndex]}
         download={downloadName}
         className="block w-full text-center px-6 py-3 bg-black/40 hover:bg-black/60 text-white font-bold rounded-lg text-lg"
       >
-        Завантажити обрану картинку (для Instagram)
+        Завантажити картинку (для Instagram)
       </a>
 
-      {/* Поради для Instagram */}
       <div className="mt-2 p-3 rounded-lg bg-black/30 text-sm text-gray-300">
         <p className="font-semibold mb-1">Порада для Instagram:</p>
         <ol className="list-decimal ml-5 space-y-1">
-          <li>Натисни “Завантажити обрану картинку”.</li>
+          <li>Натисни «Завантажити картинку».</li>
           <li>Залий її в сторіс/пост у Instagram.</li>
           <li>Посилання встав у біо/стікер-лінк (або просто додай в текст).</li>
         </ol>
       </div>
 
-      {/* Текст для копіювання */}
       <details className="mt-2">
         <summary className="cursor-pointer text-gray-400 hover:text-gray-200">
           Показати текст для копіювання
