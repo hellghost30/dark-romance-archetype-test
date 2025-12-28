@@ -1,10 +1,23 @@
- // src/app/share/[id]/share-actions.js
+// src/app/share/[id]/share-actions.js
 "use client";
 
 import React, { useMemo, useState } from "react";
 
-export default function ShareActions({ shareUrl, shareText, imageUrl }) {
+/**
+ * Компонент ShareActions дозволяє обрати одне з кількох зображень для завантаження
+ * і поділитись результатом. Приймає:
+ * - shareUrl: URL сторінки із результатом
+ * - shareText: текст, який додається при копіюванні/шерінгу
+ * - imageUrl: (за потреби) один URL зображення для сумісності з попередньою версією
+ * - imageUrls: масив URL-ів зображень для вибору
+ */
+export default function ShareActions({ shareUrl, shareText, imageUrl, imageUrls = [] }) {
   const [copied, setCopied] = useState(false);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+
+  // Якщо масив не передано, використовуємо одиночний imageUrl
+  const availableImages = imageUrls && imageUrls.length > 0 ? imageUrls : [imageUrl];
+  const selectedImageUrl = availableImages[selectedImageIndex];
 
   const fullText = useMemo(() => `${shareText}\n${shareUrl}`, [shareText, shareUrl]);
 
@@ -30,17 +43,17 @@ export default function ShareActions({ shareUrl, shareText, imageUrl }) {
     if (!navigator.share) return;
     try {
       await navigator.share({ title: "Dark Romance Archetype", text: fullText, url: shareUrl });
-    } catch {}
+    } catch {
+      /* користувач міг відхилити запит на шеринґ */
+    }
   };
 
-  // Для Instagram найреальніший UX з веба:
-  // 1) Скачати картинку
-  // 2) Вставити в сторіс вручну
-  // 3) Лінк/текст — кнопками нижче
+  // Ім'я для завантажуваного файлу. Можна змінити за потреби.
   const downloadName = "dark-romance-archetype.png";
 
   return (
     <div className="space-y-3">
+      {/* Кнопка копіювання посилання */}
       <button
         onClick={copyLink}
         className="w-full px-6 py-3 bg-gray-700 hover:bg-gray-600 text-white font-bold rounded-lg text-lg"
@@ -48,6 +61,7 @@ export default function ShareActions({ shareUrl, shareText, imageUrl }) {
         {copied ? "Скопійовано ✅" : "Скопіювати посилання"}
       </button>
 
+      {/* Кнопка нативного шеринґу (мобільні пристрої) */}
       {typeof navigator !== "undefined" && navigator.share ? (
         <button
           onClick={nativeShare}
@@ -57,23 +71,48 @@ export default function ShareActions({ shareUrl, shareText, imageUrl }) {
         </button>
       ) : null}
 
+      {/* Блок вибору картинки, якщо зображень більше одного */}
+      {availableImages.length > 1 && (
+        <div className="flex flex-wrap justify-center gap-2 my-2">
+          {availableImages.map((img, idx) => (
+            <button
+              key={img}
+              type="button"
+              className={`border-2 rounded-md overflow-hidden ${
+                idx === selectedImageIndex ? "border-red-700" : "border-transparent"
+              }`}
+              onClick={() => setSelectedImageIndex(idx)}
+            >
+              <img
+                src={img}
+                alt={`archetype-${idx + 1}`}
+                className="w-16 h-16 object-cover"
+              />
+            </button>
+          ))}
+        </div>
+      )}
+
+      {/* Кнопка/посилання завантажити обрану картинку */}
       <a
-        href={imageUrl}
+        href={selectedImageUrl}
         download={downloadName}
         className="block w-full text-center px-6 py-3 bg-black/40 hover:bg-black/60 text-white font-bold rounded-lg text-lg"
       >
-        Завантажити картинку (для Instagram)
+        Завантажити обрану картинку (для Instagram)
       </a>
 
+      {/* Поради для Instagram */}
       <div className="mt-2 p-3 rounded-lg bg-black/30 text-sm text-gray-300">
         <p className="font-semibold mb-1">Порада для Instagram:</p>
         <ol className="list-decimal ml-5 space-y-1">
-          <li>Натисни “Завантажити картинку”.</li>
+          <li>Натисни “Завантажити обрану картинку”.</li>
           <li>Залий її в сторіс/пост у Instagram.</li>
           <li>Посилання встав у біо/стікер-лінк (або просто додай в текст).</li>
         </ol>
       </div>
 
+      {/* Текст для копіювання */}
       <details className="mt-2">
         <summary className="cursor-pointer text-gray-400 hover:text-gray-200">
           Показати текст для копіювання
