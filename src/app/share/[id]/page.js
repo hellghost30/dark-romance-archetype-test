@@ -1,13 +1,12 @@
-'use client';
+// src/app/share/[id]/page.js
+"use client";
 
 import React, { useMemo, useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import rawArchetypes from '@/data/archetypes.json';
 
-/**
- * Допоміжна функція для перетворення необроблених даних у масив архетипів.
- */
+// Допоміжна функція перетворює raw-об’єкт на масив архетипів
 function getArchetypesArray(raw) {
   if (Array.isArray(raw)) return raw;
   if (raw?.archetypes && Array.isArray(raw.archetypes)) return raw.archetypes;
@@ -17,9 +16,7 @@ function getArchetypesArray(raw) {
   return [];
 }
 
-/**
- * Побудова повного шляху на основі змінної середовища чи адреси сайту.
- */
+// Створює абсолютне посилання для поточної сторінки
 function buildShareUrl(path) {
   const base =
     process.env.NEXT_PUBLIC_SITE_URL ||
@@ -32,22 +29,20 @@ export default function SharePage() {
   const idRaw = params?.id;
 
   const [copied, setCopied] = useState(false);
-
-  // Контроль, щоб уникати помилок hydration
   const [mounted, setMounted] = useState(false);
   const [canNativeShare, setCanNativeShare] = useState(false);
-  // Стан для індексу обраного зображення (1‑4)
-  const [selectedImageIndex, setSelectedImageIndex] = useState(1);
 
+  // після монтування компонента перевіряємо підтримку navigator.share
   useEffect(() => {
     setMounted(true);
     setCanNativeShare(typeof navigator !== 'undefined' && !!navigator.share);
   }, []);
 
+  // перетворюємо дані з JSON у масив архетипів
   const archetypes = useMemo(() => getArchetypesArray(rawArchetypes), []);
+  // знаходимо потрібний архетип за id
   const archetype = useMemo(() => {
     if (!idRaw) return null;
-
     const idNum = Number(idRaw);
     return archetypes.find((a) => {
       const aIdNum = Number(a?.id);
@@ -56,13 +51,13 @@ export default function SharePage() {
     });
   }, [archetypes, idRaw]);
 
-  // Формуємо посилання для шерінгу тільки після маунтування
+  // формуємо URL для шарингу лише після монтування
   const shareLink = useMemo(() => {
     if (!mounted) return '';
     return buildShareUrl(`/share/${idRaw || ''}`);
   }, [idRaw, mounted]);
 
-  // Перевіряємо, чи передали ID
+  // якщо id відсутній
   if (!idRaw) {
     return (
       <main className="flex min-h-screen items-center justify-center bg-gray-800 p-4">
@@ -79,13 +74,15 @@ export default function SharePage() {
     );
   }
 
-  // Перевіряємо, чи існує архетип
+  // якщо архетип за id не знайдено
   if (!archetype) {
     return (
       <main className="flex min-h-screen items-center justify-center bg-gray-800 p-4">
         <div className="w-full max-w-md bg-gray-900 text-white rounded-lg shadow-2xl p-8 text-center">
           <h1 className="text-2xl font-serif">Результат не знайдено</h1>
-          <p className="text-gray-400 mt-2">Схоже, цього архетипу не існує або посилання некоректне.</p>
+          <p className="text-gray-400 mt-2">
+            Схоже, цього архетипу не існує або посилання некоректне.
+          </p>
           <Link href="/test">
             <button className="mt-6 px-6 py-3 bg-red-800 hover:bg-red-700 rounded-lg font-bold">
               Пройти тест
@@ -96,13 +93,13 @@ export default function SharePage() {
     );
   }
 
-  // Будуємо URL для поточного обраного зображення
-  const imageUrl = `/images/archetypes/archetype_${archetype.id}(${selectedImageIndex}).png`;
+  // беремо картинку з першого набору (1). За потреби можна додати селектор
+  const imageUrl = `/images/archetypes/archetype_${archetype.id}(1).png`;
 
   const title = archetype.name || 'Мій архетип';
   const subtitle = archetype.archetype_type || 'Dark Romance Archetype';
 
-  // Копіювання посилання
+  // копіює посилання в буфер
   const onCopy = async () => {
     try {
       const linkToCopy = shareLink || buildShareUrl(`/share/${idRaw || ''}`);
@@ -110,25 +107,29 @@ export default function SharePage() {
       setCopied(true);
       setTimeout(() => setCopied(false), 1200);
     } catch (e) {
-      prompt('Скопіюй посилання:', shareLink || buildShareUrl(`/share/${idRaw || ''}`));
+      prompt(
+        'Скопіюй посилання:',
+        shareLink || buildShareUrl(`/share/${idRaw || ''}`)
+      );
     }
   };
 
-  // Шерінг через рідний діалог
+  // викликає нативне меню шарингу (тільки на підтримуваних пристроях)
   const onNativeShare = async () => {
     try {
       if (!navigator.share) return;
       const url = shareLink || buildShareUrl(`/share/${idRaw || ''}`);
-
       await navigator.share({
         title: `Мій результат: ${title}`,
         text: `Я отримав архетип: ${title}. Пройди тест і дізнайся свій!`,
         url,
       });
-    } catch (e) {}
+    } catch (e) {
+      // ігноруємо помилку (користувач міг скасувати)
+    }
   };
 
-  // Завантаження обраного зображення
+  // завантажує картинку
   const onDownloadImage = async () => {
     try {
       const res = await fetch(imageUrl);
@@ -136,17 +137,23 @@ export default function SharePage() {
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
+      // даємо назву файлу для збереження
       a.download = `dark-romance-${archetype.id}.png`;
       document.body.appendChild(a);
       a.click();
       a.remove();
       URL.revokeObjectURL(url);
     } catch (e) {
-      alert('Не вдалося завантажити зображення. Перевір, чи файл існує.');
+      alert(
+        'Не вдалося завантажити зображення. Перевір, чи файл існує.'
+      );
     }
   };
 
-  const shareText = encodeURIComponent(`Я отримав архетип: ${title}. Пройди тест і дізнайся свій!`);
+  // для посилань у соцмережі використовуємо енкодинг параметрів
+  const shareText = encodeURIComponent(
+    `Я отримав архетип: ${title}. Пройди тест і дізнайся свій!`
+  );
   const shareUrlEnc = encodeURIComponent(shareLink || '');
 
   const telegramUrl = `https://t.me/share/url?url=${shareUrlEnc}&text=${shareText}`;
@@ -156,8 +163,8 @@ export default function SharePage() {
   return (
     <main className="flex min-h-screen items-center justify-center bg-gray-800 p-4">
       <div className="w-full max-w-md mx-auto bg-gray-900 text-white rounded-lg shadow-2xl overflow-hidden">
+        {/* картинка та назви */}
         <div className="relative">
-          {/* Відображення обраного фото */}
           <img
             src={imageUrl}
             alt={title}
@@ -173,30 +180,14 @@ export default function SharePage() {
         </div>
 
         <div className="p-6">
+          {/* інструкція для користувача */}
           <p className="text-gray-300">
-            Поділись своїм результатом з друзями. Для Instagram найзручніше: <b>скачати картинку</b> і залити в
-            сторіс/пост.
+            Поділись своїм результатом з друзями. Для Instagram найзручніше:{' '}
+            <b>завантажити картинку</b> і залити в сторіс/пост.
           </p>
 
-          {/* Блок вибору зображень (1‑4) */}
-          <div className="mt-4 flex justify-center gap-2">
-            {[1, 2, 3, 4].map((num) => (
-              <button
-                key={num}
-                onClick={() => setSelectedImageIndex(num)}
-                className={`px-3 py-1 rounded-md text-sm font-semibold ${
-                  selectedImageIndex === num
-                    ? 'bg-red-800 text-white'
-                    : 'bg-gray-700 text-gray-300 hover:bg-gray-600 hover:text-white'
-                }`}
-              >
-                {num}
-              </button>
-            ))}
-          </div>
-
+          {/* кнопки */}
           <div className="mt-5 space-y-3">
-            {/* Рідний діалог для шерінгу (для мобільних) */}
             {canNativeShare && (
               <button
                 onClick={onNativeShare}
@@ -206,7 +197,10 @@ export default function SharePage() {
               </button>
             )}
 
-            <button onClick={onCopy} className="w-full px-6 py-3 bg-gray-700 hover:bg-gray-600 rounded-lg font-bold">
+            <button
+              onClick={onCopy}
+              className="w-full px-6 py-3 bg-gray-700 hover:bg-gray-600 rounded-lg font-bold"
+            >
               {copied ? 'Скопійовано ✅' : 'Скопіювати посилання'}
             </button>
 
@@ -214,9 +208,10 @@ export default function SharePage() {
               onClick={onDownloadImage}
               className="w-full px-6 py-3 bg-gray-700 hover:bg-gray-600 rounded-lg font-bold"
             >
-              Скачати картинку (для Instagram)
+              Завантажити картинку (для Instagram)
             </button>
 
+            {/* соцмережі */}
             <div className="grid grid-cols-3 gap-3">
               <a
                 className="text-center px-4 py-3 bg-gray-800 hover:bg-gray-700 rounded-lg font-bold"
@@ -245,13 +240,13 @@ export default function SharePage() {
             </div>
           </div>
 
+          {/* нижній блок з кнопкою пройти тест – кнопку демо ми вилучили */}
           <div className="mt-6 border-t border-gray-800 pt-6 space-y-3">
             <Link href="/test">
               <button className="w-full px-6 py-3 bg-red-800 hover:bg-red-700 rounded-lg font-bold">
                 Пройти тест
               </button>
             </Link>
-            {/* Кнопку "Перейти на результати (демо)" прибрано згідно з вимогою */}
           </div>
         </div>
       </div>
