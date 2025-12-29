@@ -5,6 +5,9 @@ import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import rawArchetypes from '@/data/archetypes.json';
 
+/**
+ * Допоміжна функція для перетворення необроблених даних у масив архетипів.
+ */
 function getArchetypesArray(raw) {
   if (Array.isArray(raw)) return raw;
   if (raw?.archetypes && Array.isArray(raw.archetypes)) return raw.archetypes;
@@ -14,6 +17,9 @@ function getArchetypesArray(raw) {
   return [];
 }
 
+/**
+ * Побудова повного шляху на основі змінної середовища чи адреси сайту.
+ */
 function buildShareUrl(path) {
   const base =
     process.env.NEXT_PUBLIC_SITE_URL ||
@@ -27,9 +33,11 @@ export default function SharePage() {
 
   const [copied, setCopied] = useState(false);
 
-  // ✅ щоб не було hydration mismatch
+  // Контроль, щоб уникати помилок hydration
   const [mounted, setMounted] = useState(false);
   const [canNativeShare, setCanNativeShare] = useState(false);
+  // Стан для індексу обраного зображення (1‑4)
+  const [selectedImageIndex, setSelectedImageIndex] = useState(1);
 
   useEffect(() => {
     setMounted(true);
@@ -48,12 +56,13 @@ export default function SharePage() {
     });
   }, [archetypes, idRaw]);
 
-  // ✅ важливо: щоб SSR/CSR не відрізнялись, будуємо посилання тільки після mount
+  // Формуємо посилання для шерінгу тільки після маунтування
   const shareLink = useMemo(() => {
     if (!mounted) return '';
     return buildShareUrl(`/share/${idRaw || ''}`);
   }, [idRaw, mounted]);
 
+  // Перевіряємо, чи передали ID
   if (!idRaw) {
     return (
       <main className="flex min-h-screen items-center justify-center bg-gray-800 p-4">
@@ -70,6 +79,7 @@ export default function SharePage() {
     );
   }
 
+  // Перевіряємо, чи існує архетип
   if (!archetype) {
     return (
       <main className="flex min-h-screen items-center justify-center bg-gray-800 p-4">
@@ -86,11 +96,13 @@ export default function SharePage() {
     );
   }
 
-  const imageUrl = `/images/archetypes/archetype_${archetype.id}(1).png`;
+  // Будуємо URL для поточного обраного зображення
+  const imageUrl = `/images/archetypes/archetype_${archetype.id}(${selectedImageIndex}).png`;
 
   const title = archetype.name || 'Мій архетип';
   const subtitle = archetype.archetype_type || 'Dark Romance Archetype';
 
+  // Копіювання посилання
   const onCopy = async () => {
     try {
       const linkToCopy = shareLink || buildShareUrl(`/share/${idRaw || ''}`);
@@ -102,6 +114,7 @@ export default function SharePage() {
     }
   };
 
+  // Шерінг через рідний діалог
   const onNativeShare = async () => {
     try {
       if (!navigator.share) return;
@@ -115,6 +128,7 @@ export default function SharePage() {
     } catch (e) {}
   };
 
+  // Завантаження обраного зображення
   const onDownloadImage = async () => {
     try {
       const res = await fetch(imageUrl);
@@ -143,6 +157,7 @@ export default function SharePage() {
     <main className="flex min-h-screen items-center justify-center bg-gray-800 p-4">
       <div className="w-full max-w-md mx-auto bg-gray-900 text-white rounded-lg shadow-2xl overflow-hidden">
         <div className="relative">
+          {/* Відображення обраного фото */}
           <img
             src={imageUrl}
             alt={title}
@@ -163,8 +178,25 @@ export default function SharePage() {
             сторіс/пост.
           </p>
 
+          {/* Блок вибору зображень (1‑4) */}
+          <div className="mt-4 flex justify-center gap-2">
+            {[1, 2, 3, 4].map((num) => (
+              <button
+                key={num}
+                onClick={() => setSelectedImageIndex(num)}
+                className={`px-3 py-1 rounded-md text-sm font-semibold ${
+                  selectedImageIndex === num
+                    ? 'bg-red-800 text-white'
+                    : 'bg-gray-700 text-gray-300 hover:bg-gray-600 hover:text-white'
+                }`}
+              >
+                {num}
+              </button>
+            ))}
+          </div>
+
           <div className="mt-5 space-y-3">
-            {/* ✅ тепер без hydration mismatch */}
+            {/* Рідний діалог для шерінгу (для мобільних) */}
             {canNativeShare && (
               <button
                 onClick={onNativeShare}
@@ -215,17 +247,11 @@ export default function SharePage() {
 
           <div className="mt-6 border-t border-gray-800 pt-6 space-y-3">
             <Link href="/test">
-              <button className="w-full px-6 py-3 bg-red-800 hover:bg-red-700 rounded-lg font-bold">Пройти тест</button>
-            </Link>
-
-            {/* (демо) просто щоб не плутало — вказав partner=male */}
-            <Link
-              href={`/result?dominance=50&empathy=50&possessiveness=50&social_status=50&chaos=50&darkness=50&partner=male`}
-            >
-              <button className="w-full px-6 py-3 bg-gray-700 hover:bg-gray-600 rounded-lg font-bold">
-                Перейти на результати (демо)
+              <button className="w-full px-6 py-3 bg-red-800 hover:bg-red-700 rounded-lg font-bold">
+                Пройти тест
               </button>
             </Link>
+            {/* Кнопку "Перейти на результати (демо)" прибрано згідно з вимогою */}
           </div>
         </div>
       </div>
