@@ -163,9 +163,51 @@ export default function TestPage() {
         <h1 className="text-4xl font-serif">Ви вже використали свою безкоштовну спробу</h1>
         <p className="mt-4 text-lg text-gray-300">Придбайте підписку для доступу до повторних генерацій.</p>
 
-        <button className="mt-8 px-8 py-3 bg-red-800 hover:bg-red-700 text-white font-bold rounded-lg text-xl">
-          Придбати ({PRICE_UAH} грн)
-        </button>
+        <button
+  onClick={async () => {
+    try {
+      const res = await fetch("/api/liqpay/checkout", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ amount: PRICE_UAH }),
+      });
+
+      const json = await res.json();
+      if (!res.ok || !json?.data || !json?.signature) {
+        alert(json?.error || "Checkout error");
+        return;
+      }
+
+      // Створюємо форму і редіректимо на LiqPay
+      const form = document.createElement("form");
+      form.method = "POST";
+      form.action = "https://www.liqpay.ua/api/3/checkout";
+      form.acceptCharset = "utf-8";
+
+      const dataInput = document.createElement("input");
+      dataInput.type = "hidden";
+      dataInput.name = "data";
+      dataInput.value = json.data;
+
+      const sigInput = document.createElement("input");
+      sigInput.type = "hidden";
+      sigInput.name = "signature";
+      sigInput.value = json.signature;
+
+      form.appendChild(dataInput);
+      form.appendChild(sigInput);
+      document.body.appendChild(form);
+      form.submit();
+      form.remove();
+    } catch (e) {
+      alert("Не вдалося створити оплату. Перевір /api/liqpay/checkout та env на Render.");
+    }
+  }}
+  className="mt-8 px-8 py-3 bg-red-800 hover:bg-red-700 text-white font-bold rounded-lg text-xl"
+>
+  Придбати ({PRICE_UAH} грн)
+</button>
+
 
         <p className="mt-2 text-sm text-gray-500">(Сторінка оплати в розробці)</p>
       </main>
