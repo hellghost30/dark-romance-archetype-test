@@ -1,6 +1,6 @@
 // src/app/page.js (оновлена, робоча версія)
 'use client';
-import { useSession, signIn } from "next-auth/react";
+import { useSession, signIn, signOut } from "next-auth/react";
 import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from "react";
 
@@ -51,14 +51,14 @@ export default function HomePage() {
         </h1>
 
         <p className="mt-4 text-lg text-gray-300">
-          Пройди тест і дізнайся, який темний архетип з книжок та фільмів підходить саме тобі.
+          Пройди тест і дізнайся, який темний персонаж з книжок та фільмів підходить саме тобі.
         </p>
 
         {/* ✅ Вибір "кого шукаю" ДО старту */}
         <div className="mt-8 w-full max-w-md mx-auto bg-gray-800 rounded-xl p-6 shadow-2xl">
           <h2 className="text-2xl font-serif mb-2">Кого ти шукаєш?</h2>
           <p className="text-gray-300 mb-5 text-sm">
-            Це впливає на те, з якої категорії архетипів буде підібрано результат.
+            Це впливає на те, з якої категорії персонажів буде підібрано результат.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -114,9 +114,18 @@ export default function HomePage() {
         )}
 
         {session && (
-          <p className="mt-4 text-sm text-gray-400">
-            Вітаємо, {session.user.name}!
-          </p>
+          <>
+            <p className="mt-4 text-sm text-gray-400">
+              Вітаємо, {session.user.name}!
+            </p>
+
+            <button
+              onClick={() => signOut({ callbackUrl: "/" })}
+              className="mt-4 px-6 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg font-bold"
+            >
+              Вийти з акаунта
+            </button>
+          </>
         )}
       </div>
     </main>
