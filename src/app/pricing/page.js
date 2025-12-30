@@ -4,40 +4,41 @@ export const metadata = {
     description: "Перелік послуг та ціни в гривнях (UAH) для сервісу Dark Finder",
   };
   
-  const SERVICES = [
-    { name: "Онлайн-тест «Dark Finder»", price: 99 },
-    { name: "Повний доступ до результатів тесту", price: 149 },
-    { name: "Розширений профіль архетипів", price: 199 },
-  ];
-  
   export default function PricingPage() {
     return (
       <main className="min-h-screen bg-gray-900 text-white px-4 py-10">
         <div className="mx-auto w-full max-w-3xl">
           <h1 className="text-4xl font-serif font-bold mb-3">Послуги та ціни</h1>
+  
           <p className="text-gray-300 mb-8">
-            Нижче наведений перелік послуг сервісу <span className="font-semibold">Dark Finder</span> та їхня вартість.
-            Усі ціни вказані у гривнях (UAH).
+            Нижче наведена інформація про платну послугу сервісу{" "}
+            <span className="font-semibold">Dark Finder</span>. Усі ціни вказані у гривнях (UAH).
           </p>
   
-          <div className="space-y-4">
-            {SERVICES.map((s) => (
-              <div
-                key={s.name}
-                className="bg-black/20 rounded-xl p-6 border border-gray-800 flex items-center justify-between gap-4"
-              >
-                <div className="text-lg font-semibold">{s.name}</div>
-                <div className="text-xl font-bold whitespace-nowrap">{s.price} ₴</div>
+          {/* ЄДИНА ПОСЛУГА */}
+          <div className="bg-black/20 rounded-xl p-6 border border-gray-800 flex items-center justify-between gap-4">
+            <div>
+              <div className="text-lg font-semibold mb-1">
+                Підписка на 1 місяць
               </div>
-            ))}
+              <div className="text-gray-300 text-sm">
+                Безлімітна кількість проходжень тесту та доступ до результатів протягом 30 календарних днів з моменту оплати.
+              </div>
+            </div>
+  
+            <div className="text-2xl font-bold whitespace-nowrap">
+              49 ₴
+            </div>
           </div>
   
+          {/* ФОРМАТ НАДАННЯ ПОСЛУГ */}
           <div className="mt-10 bg-black/20 rounded-xl p-6 border border-gray-800">
             <h2 className="text-2xl font-serif mb-3">Формат надання послуг</h2>
             <ul className="list-disc list-inside text-gray-300 space-y-2">
-              <li>Послуги надаються онлайн у цифровому вигляді через сайт.</li>
-              <li>Доступ/результат надається після підтвердження оплати.</li>
-              <li>Оплата здійснюється безготівково через доступні на сайті платіжні сервіси.</li>
+              <li>Послуга надається онлайн у цифровому вигляді через сайт.</li>
+              <li>Доступ активується автоматично після підтвердження оплати.</li>
+              <li>Термін дії підписки — 30 календарних днів з моменту оплати.</li>
+              <li>Оплата здійснюється безготівково через платіжні сервіси, доступні на сайті.</li>
             </ul>
           </div>
         </div>
