@@ -12,7 +12,7 @@ const BYPASS_EMAILS = (process.env.NEXT_PUBLIC_BYPASS_EMAILS || '')
   .map((s) => s.trim().toLowerCase())
   .filter(Boolean);
 
-// ✅ Нова нижча ціна з env (або дефолт)
+// ✅ Ціна підписки (грн)
 const PRICE_UAH = Number(process.env.NEXT_PUBLIC_PRICE_UAH || 49);
 
 // ✅ ключ localStorage
@@ -24,8 +24,11 @@ export default function TestPage() {
   const [showPaywall, setShowPaywall] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
-  // ✅ NEW: преміум
+  // ✅ преміум (тепер може бути або старий isPremium, або активна підписка по даті)
   const [isPremium, setIsPremium] = useState(false);
+
+  // ✅ для кнопки оплати (щоб не клікали 100 раз)
+  const [isPaying, setIsPaying] = useState(false);
 
   // ✅ стать партнера: тепер підтягуємо ТІЛЬКИ з localStorage
   const [partnerGender, setPartnerGender] = useState(null); // 'male' | 'female' | null
@@ -60,11 +63,20 @@ export default function TestPage() {
     if (status === 'authenticated') {
       fetch('/api/user')
         .then(async (res) => {
-          if (!res.ok) return { freeAttemptsUsed: isBypassUser ? 0 : 1, isPremium: false };
+          if (!res.ok) return { freeAttemptsUsed: isBypassUser ? 0 : 1, isPremium: false, subscriptionActiveUntil: null };
           return await res.json();
         })
         .then((data) => {
-          const premium = Boolean(data?.isPremium);
+          // ✅ Визначаємо преміум:
+          // 1) якщо є subscriptionActiveUntil і вона в майбутньому => premium
+          // 2) інакше fallback на старе поле isPremium
+          let premiumByDate = false;
+          if (data?.subscriptionActiveUntil) {
+            const until = new Date(data.subscriptionActiveUntil).getTime();
+            premiumByDate = Number.isFinite(until) && until > Date.now();
+          }
+
+          const premium = Boolean(premiumByDate || data?.isPremium);
           setIsPremium(premium);
 
           // ✅ Paywall тільки якщо:
@@ -161,55 +173,43 @@ export default function TestPage() {
     return (
       <main className="flex min-h-screen flex-col items-center justify-center bg-gray-900 text-white p-8 text-center">
         <h1 className="text-4xl font-serif">Ви вже використали свою безкоштовну спробу</h1>
-        <p className="mt-4 text-lg text-gray-300">Придбайте підписку для доступу до повторних генерацій.</p>
+        <p className="mt-4 text-lg text-gray-300">Придбайте підписку на 1 місяць для безлімітного доступу.</p>
 
         <button
-  onClick={async () => {
-    try {
-      const res = await fetch("/api/liqpay/checkout", {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify({ amount: PRICE_UAH }),
-      });
+          onClick={async () => {
+            if (isPaying) return;
+            setIsPaying(true);
 
-      const json = await res.json();
-      if (!res.ok || !json?.data || !json?.signature) {
-        alert(json?.error || "Checkout error");
-        return;
-      }
+            try {
+              const res = await fetch('/api/mono/create-invoice', {
+                method: 'POST',
+                headers: { 'content-type': 'application/json' },
+                body: JSON.stringify({ amountUah: PRICE_UAH }),
+              });
 
-      // Створюємо форму і редіректимо на LiqPay
-      const form = document.createElement("form");
-      form.method = "POST";
-      form.action = "https://www.liqpay.ua/api/3/checkout";
-      form.acceptCharset = "utf-8";
+              const json = await res.json();
+              if (!res.ok || !json?.pageUrl) {
+                alert(json?.error || 'Не вдалося створити інвойс Monobank');
+                setIsPaying(false);
+                return;
+              }
 
-      const dataInput = document.createElement("input");
-      dataInput.type = "hidden";
-      dataInput.name = "data";
-      dataInput.value = json.data;
+              // ✅ редіректимо на сторінку оплати mono
+              window.location.href = json.pageUrl;
+            } catch (e) {
+              alert('Не вдалося створити оплату. Перевір /api/mono/create-invoice та env на Render.');
+              setIsPaying(false);
+            }
+          }}
+          className="mt-8 px-8 py-3 bg-red-800 hover:bg-red-700 text-white font-bold rounded-lg text-xl disabled:opacity-60"
+          disabled={isPaying}
+        >
+          {isPaying ? 'Переадресація...' : `Підписка на 1 місяць — ${PRICE_UAH} грн`}
+        </button>
 
-      const sigInput = document.createElement("input");
-      sigInput.type = "hidden";
-      sigInput.name = "signature";
-      sigInput.value = json.signature;
-
-      form.appendChild(dataInput);
-      form.appendChild(sigInput);
-      document.body.appendChild(form);
-      form.submit();
-      form.remove();
-    } catch (e) {
-      alert("Не вдалося створити оплату. Перевір /api/liqpay/checkout та env на Render.");
-    }
-  }}
-  className="mt-8 px-8 py-3 bg-red-800 hover:bg-red-700 text-white font-bold rounded-lg text-xl"
->
-  Придбати ({PRICE_UAH} грн)
-</button>
-
-
-        <p className="mt-2 text-sm text-gray-500">(Сторінка оплати в розробці)</p>
+        <p className="mt-3 text-xs text-gray-500">
+          Після оплати підписка активується автоматично.
+        </p>
       </main>
     );
   }

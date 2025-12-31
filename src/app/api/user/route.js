@@ -19,13 +19,14 @@ export async function GET() {
   try {
     const user = await prisma.user.findUnique({
       where: { email },
-      select: { freeAttemptsUsed: true, isPremium: true },
+      select: { freeAttemptsUsed: true, isPremium: true, subscriptionActiveUntil: true },
     });
 
     return new Response(
       JSON.stringify({
         freeAttemptsUsed: user?.freeAttemptsUsed ?? 0,
         isPremium: user?.isPremium ?? false,
+        subscriptionActiveUntil: user?.subscriptionActiveUntil ?? null,
       }),
       {
         status: 200,
