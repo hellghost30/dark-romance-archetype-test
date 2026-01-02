@@ -1,85 +1,92 @@
 // src/app/api/mono/webhook/route.js
 import prisma from "@/lib/prisma";
 
-// підписку даємо на 30 днів
-const DAYS = 30;
+const MONO_API_BASE = "https://api.monobank.ua/api/merchant";
 
-function addDays(date, days) {
-  const d = new Date(date);
-  d.setDate(d.getDate() + days);
-  return d;
+async function verifyWebhookSignature({ rawBody, xSign, token }) {
+  // Верифікація підпису через pubkey (ECDSA). Якщо щось не так — повернемо false.
+  try {
+    if (!xSign) return false;
+
+    const pubRes = await fetch(`${MONO_API_BASE}/pubkey`, {
+      method: "GET",
+      headers: { "X-Token": token },
+    });
+
+    if (!pubRes.ok) return false;
+    const pubKeyBase64 = await pubRes.text(); // base64-ключ
+    if (!pubKeyBase64) return false;
+
+    // Node crypto verify (SPKI ключ)
+    const { createVerify } = await import("crypto");
+
+    const pubKeyDer = Buffer.from(pubKeyBase64, "base64");
+
+    // Mono повертає DER-публічний ключ. Для verify треба PEM/SPKI.
+    // Робимо "-----BEGIN PUBLIC KEY-----" PEM з DER:
+    const pem =
+      "-----BEGIN PUBLIC KEY-----\n" +
+      pubKeyDer.toString("base64").match(/.{1,64}/g).join("\n") +
+      "\n-----END PUBLIC KEY-----\n";
+
+    const signature = Buffer.from(xSign, "base64");
+
+    const verifier = createVerify("SHA256");
+    verifier.update(rawBody);
+    verifier.end();
+
+    return verifier.verify(pem, signature);
+  } catch {
+    return false;
+  }
 }
 
 export async function POST(req) {
-  // TODO (рекомендовано): перевірка підпису X-Sign (ECDSA) через MONO_PUBLIC_KEY
-  // Поки що: обробляємо payload, щоб ти міг протестити end-to-end.
+  const token = process.env.MONO_MERCHANT_TOKEN;
+  if (!token) {
+    return new Response("Missing token", { status: 500 });
+  }
+
+  const rawBody = await req.text();
+  const xSign = req.headers.get("x-sign") || req.headers.get("X-Sign");
+
+  // Якщо X-Sign є — верифікуємо (рекомендовано)
+  if (xSign) {
+    const ok = await verifyWebhookSignature({ rawBody, xSign, token });
+    if (!ok) return new Response("Bad signature", { status: 401 });
+  }
 
   let data = null;
-  try {
-    data = await req.json();
-  } catch {
-    return new Response("Bad JSON", { status: 400 });
-  }
+  try { data = JSON.parse(rawBody); } catch {}
 
   const invoiceId = data?.invoiceId;
-  const status = data?.status; // очікуємо "success" при успішній оплаті
+  const status = data?.status; // success / processing / created / expired / failure ...
 
-  if (!invoiceId) return new Response("Missing invoiceId", { status: 400 });
+  if (!invoiceId) return new Response("No invoiceId", { status: 400 });
 
-  // Знаходимо Payment
+  // Оновлюємо платіж
   const payment = await prisma.payment.findUnique({
     where: { invoiceId },
-    include: { user: true },
+    select: { id: true, userId: true, status: true },
   });
 
-  if (!payment) {
-    // якщо немає такого invoiceId у нас — ігноруємо
-    return new Response("OK", { status: 200 });
-  }
-
-  // Оновлюємо payment payload / status
-  const newStatus = status || "unknown";
-
-  // якщо вже успішно оброблено — ідемпотентність
-  if (payment.status === "success") {
+  if (payment) {
     await prisma.payment.update({
       where: { invoiceId },
-      data: { payload: data },
+      data: {
+        status: status || payment.status,
+        webhookPayload: data, // якщо в тебе є таке поле; якщо ні — прибери цей рядок
+      },
     });
-    return new Response("OK", { status: 200 });
+
+    // Якщо успіх — активуємо преміум
+    if (status === "success") {
+      await prisma.user.update({
+        where: { id: payment.userId },
+        data: { isPremium: true },
+      });
+    }
   }
-
-  // Записуємо статус
-  await prisma.payment.update({
-    where: { invoiceId },
-    data: {
-      status: newStatus,
-      payload: data,
-      paidAt: newStatus === "success" ? new Date() : null,
-    },
-  });
-
-  // Якщо не success — нічого не активуємо
-  if (newStatus !== "success") {
-    return new Response("OK", { status: 200 });
-  }
-
-  // ✅ Активуємо підписку: subscriptionActiveUntil = max(now, current) + 30 days
-  const now = new Date();
-  const currentUntil = payment.user?.subscriptionActiveUntil
-    ? new Date(payment.user.subscriptionActiveUntil)
-    : null;
-
-  const base = currentUntil && currentUntil > now ? currentUntil : now;
-  const newUntil = addDays(base, DAYS);
-
-  await prisma.user.update({
-    where: { id: payment.userId },
-    data: {
-      subscriptionActiveUntil: newUntil,
-      isPremium: true, // можеш лишити як сумісність
-    },
-  });
 
   return new Response("OK", { status: 200 });
 }
