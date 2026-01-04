@@ -1,8 +1,9 @@
+// src/app/result/page.js
 'use client';
 
 import React, { useState, useEffect, Suspense, useRef } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
-import { useSession } from 'next-auth/react';
+import { useSession, signIn } from 'next-auth/react';
 import { findBestMatch } from '@/utils/matching';
 import Link from 'next/link';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -22,56 +23,143 @@ const PRICE_UAH = Number(process.env.NEXT_PUBLIC_PRICE_UAH || 49);
 const LAST_INVOICE_KEY = 'lastMonoInvoiceId';
 
 function ResultContent() {
-  const router = useRouter();
   const searchParams = useSearchParams();
-  const { data: session, status: sessionStatus } = useSession();
-
-  const [activeTab, setActiveTab] = useState('portrait');
-  const [matchedArchetype, setMatchedArchetype] = useState(null);
-  const [animatedScore, setAnimatedScore] = useState(0);
-  const [isLoading, setIsLoading] = useState(true);
-
-  // ✅ доступ
-  const [accessLoading, setAccessLoading] = useState(true);
-  const [isPremium, setIsPremium] = useState(false);
-  const [freeAttemptsUsed, setFreeAttemptsUsed] = useState(0);
-
-  // ✅ оплата
-  const [isPaying, setIsPaying] = useState(false);
-  const [isSyncing, setIsSyncing] = useState(false);
-
-  // ✅ tooltip "?"
-  const [showImageDisclaimer, setShowImageDisclaimer] = useState(false);
-  const disclaimerRef = useRef(null);
-
-  // ✅ щоб free attempt не інкрементилось 2 рази
-  const consumedFreeRef = useRef(false);
+  const router = useRouter();
+  const { data: session, status } = useSession();
 
   const userEmail = (session?.user?.email || '').toLowerCase();
   const isBypassUser = Boolean(userEmail && BYPASS_EMAILS.includes(userEmail));
+
+  // доступ
+  const [accessLoading, setAccessLoading] = useState(true);
+  const [isPremium, setIsPremium] = useState(false);
+
+  // pay states
+  const [isPaying, setIsPaying] = useState(false);
+  const [isSyncing, setIsSyncing] = useState(false);
+
+  // result ui
+  const [activeTab, setActiveTab] = useState('portrait');
+  const [matchedArchetype, setMatchedArchetype] = useState(null);
+  const [animatedScore, setAnimatedScore] = useState(0);
+  const [isCalcLoading, setIsCalcLoading] = useState(true);
+
+  // tooltip "?"
+  const [showImageDisclaimer, setShowImageDisclaimer] = useState(false);
+  const disclaimerRef = useRef(null);
 
   useEffect(() => {
     function handleOutsideClick(e) {
       if (!showImageDisclaimer) return;
       if (!disclaimerRef.current) return;
-      if (!disclaimerRef.current.contains(e.target)) {
-        setShowImageDisclaimer(false);
-      }
+      if (!disclaimerRef.current.contains(e.target)) setShowImageDisclaimer(false);
     }
-
     document.addEventListener('mousedown', handleOutsideClick);
     document.addEventListener('touchstart', handleOutsideClick, { passive: true });
-
     return () => {
       document.removeEventListener('mousedown', handleOutsideClick);
       document.removeEventListener('touchstart', handleOutsideClick);
     };
   }, [showImageDisclaimer]);
 
-  // ✅ 1) Рахуємо результат з querystring (як було)
+  // helper: load access
+  const loadAccess = async () => {
+    const res = await fetch('/api/user');
+    if (!res.ok) return { isPremium: false, subscriptionActiveUntil: null };
+    return await res.json();
+  };
+
+  // 1) auth gate
   useEffect(() => {
+    if (status === 'loading') return;
+
+    if (status === 'unauthenticated') {
+      // ✅ без авторизації результат теж не показуємо
+      signIn('google', { callbackUrl: window.location.href });
+      return;
+    }
+
+    if (status === 'authenticated') {
+      (async () => {
+        try {
+          const data = await loadAccess();
+
+          let premiumByDate = false;
+          if (data?.subscriptionActiveUntil) {
+            const until = new Date(data.subscriptionActiveUntil).getTime();
+            premiumByDate = Number.isFinite(until) && until > Date.now();
+          }
+
+          const premium = Boolean(premiumByDate || data?.isPremium);
+          setIsPremium(premium);
+        } finally {
+          setAccessLoading(false);
+        }
+      })();
+    }
+  }, [status]);
+
+  // 2) якщо повернулись з оплати — sync invoice і перезавантажити access
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    if (status !== 'authenticated') return;
+
+    const url = new URL(window.location.href);
+    const paid = url.searchParams.get('paid');
+    if (paid !== '1') return;
+
+    const invoiceId = window.localStorage.getItem(LAST_INVOICE_KEY);
+    if (!invoiceId) return;
+
+    (async () => {
+      try {
+        setIsSyncing(true);
+
+        const syncRes = await fetch('/api/mono/sync', {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ invoiceId }),
+        });
+
+        await syncRes.json().catch(() => null);
+
+        const data = await loadAccess();
+
+        let premiumByDate = false;
+        if (data?.subscriptionActiveUntil) {
+          const until = new Date(data.subscriptionActiveUntil).getTime();
+          premiumByDate = Number.isFinite(until) && until > Date.now();
+        }
+
+        const premium = Boolean(premiumByDate || data?.isPremium);
+        setIsPremium(premium);
+
+        // прибираємо paid=1 з URL
+        url.searchParams.delete('paid');
+        window.history.replaceState({}, '', url.toString());
+
+        // прибираємо invoiceId
+        window.localStorage.removeItem(LAST_INVOICE_KEY);
+      } finally {
+        setIsSyncing(false);
+      }
+    })();
+  }, [status]);
+
+  // 3) якщо доступ є — рахуємо результат
+  useEffect(() => {
+    // поки не відомий доступ — не рахуємо
+    if (accessLoading) return;
+
+    // якщо не premium і не bypass — не показуємо результат
+    if (!isBypassUser && !isPremium) {
+      setIsCalcLoading(false);
+      setMatchedArchetype(null);
+      return;
+    }
+
     if (!searchParams.has('dominance')) {
-      setIsLoading(false);
+      setIsCalcLoading(false);
       return;
     }
 
@@ -85,11 +173,12 @@ function ResultContent() {
     };
 
     if (isNaN(userVector.dominance)) {
-      setIsLoading(false);
+      setIsCalcLoading(false);
       return;
     }
 
     const partnerGender = (searchParams.get('partner') || 'male').toLowerCase();
+
     let match = findBestMatch(userVector, { partnerGender });
 
     if (match) {
@@ -98,7 +187,7 @@ function ResultContent() {
     }
 
     setMatchedArchetype(match);
-    setIsLoading(false);
+    setIsCalcLoading(false);
 
     let interval;
     if (match) {
@@ -106,8 +195,8 @@ function ResultContent() {
       setAnimatedScore(0);
       if (targetScore > 0) {
         interval = setInterval(() => {
-          setAnimatedScore((prevScore) => {
-            if (prevScore < targetScore) return prevScore + 1;
+          setAnimatedScore((prev) => {
+            if (prev < targetScore) return prev + 1;
             clearInterval(interval);
             return targetScore;
           });
@@ -120,118 +209,78 @@ function ResultContent() {
     return () => {
       if (interval) clearInterval(interval);
     };
-  }, [searchParams]);
+  }, [accessLoading, isPremium, isBypassUser, searchParams]);
 
-  // ✅ 2) Перевіряємо доступ (premium/дата/1 free)
-  const loadAccess = async () => {
-    const res = await fetch('/api/user');
-    if (!res.ok) return { freeAttemptsUsed: isBypassUser ? 0 : 1, isPremium: false, subscriptionActiveUntil: null };
-    return await res.json();
-  };
-
-  useEffect(() => {
-    if (sessionStatus === 'loading') return;
-
-    // result як і test: тільки для залогінених (просте і надійне)
-    if (sessionStatus === 'unauthenticated') {
-      router.push('/');
-      return;
-    }
-
-    if (sessionStatus === 'authenticated') {
-      setAccessLoading(true);
-      loadAccess()
-        .then((data) => {
-          setFreeAttemptsUsed(data?.freeAttemptsUsed ?? 0);
-
-          let premiumByDate = false;
-          if (data?.subscriptionActiveUntil) {
-            const until = new Date(data.subscriptionActiveUntil).getTime();
-            premiumByDate = Number.isFinite(until) && until > Date.now();
-          }
-
-          const premium = Boolean(isBypassUser || premiumByDate || data?.isPremium);
-          setIsPremium(premium);
-        })
-        .finally(() => setAccessLoading(false));
-    }
-  }, [sessionStatus, isBypassUser, router]);
-
-  // ✅ 3) Якщо повернулися з оплати — sync і оновити доступ
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
-    if (sessionStatus !== 'authenticated') return;
-
-    const url = new URL(window.location.href);
-    const paid = url.searchParams.get('paid');
-    if (paid !== '1') return;
-
-    const invoiceId = window.localStorage.getItem(LAST_INVOICE_KEY);
-    if (!invoiceId) {
-      url.searchParams.delete('paid');
-      window.history.replaceState({}, '', url.toString());
-      return;
-    }
-
-    (async () => {
-      try {
-        setIsSyncing(true);
-
-        await fetch('/api/mono/sync', {
-          method: 'POST',
-          headers: { 'content-type': 'application/json' },
-          body: JSON.stringify({ invoiceId }),
-        }).then((r) => r.json().catch(() => null));
-
-        const data = await loadAccess();
-
-        setFreeAttemptsUsed(data?.freeAttemptsUsed ?? 0);
-
-        let premiumByDate = false;
-        if (data?.subscriptionActiveUntil) {
-          const until = new Date(data.subscriptionActiveUntil).getTime();
-          premiumByDate = Number.isFinite(until) && until > Date.now();
-        }
-
-        const premium = Boolean(isBypassUser || premiumByDate || data?.isPremium);
-        setIsPremium(premium);
-
-        // прибираємо paid=1 з URL
-        url.searchParams.delete('paid');
-        window.history.replaceState({}, '', url.toString());
-
-        // прибираємо invoiceId щоб не було повторних sync
-        window.localStorage.removeItem(LAST_INVOICE_KEY);
-      } finally {
-        setIsSyncing(false);
-      }
-    })();
-  }, [sessionStatus, isBypassUser]);
-
-  // ✅ 4) Логіка “чи можна показати результат”
-  const hasFree = (freeAttemptsUsed ?? 0) === 0;
-  const canView = Boolean(isBypassUser || isPremium || hasFree);
-
-  // ✅ 5) Якщо показали результат по free — списуємо freeAttemptsUsed (разово)
-  useEffect(() => {
-    if (!matchedArchetype) return;
-    if (accessLoading) return;
-    if (isBypassUser) return;
-    if (isPremium) return;
-
-    // якщо є free і ми відкрили результат — спалюємо free
-    if (hasFree && !consumedFreeRef.current) {
-      consumedFreeRef.current = true;
-      fetch('/api/user/update', { method: 'POST' }).catch(() => {});
-      setFreeAttemptsUsed(1); // локально, щоб одразу показувало paywall при повторі
-    }
-  }, [matchedArchetype, accessLoading, isBypassUser, isPremium, hasFree]);
-
-  if (isLoading || sessionStatus === 'loading' || accessLoading) {
-    return <p className="text-white">Завантаження...</p>;
+  // loaders
+  if (status === 'loading' || accessLoading) {
+    return <p className="text-white">Перевірка доступу...</p>;
   }
 
-  if (!matchedArchetype) {
+  // ✅ PAYWALL НА РЕЗУЛЬТАТІ (З ПЕРШОГО РАЗУ)
+  if (!isBypassUser && !isPremium) {
+    return (
+      <div className="w-full max-w-md mx-auto bg-gray-900 text-white rounded-lg shadow-2xl overflow-hidden p-6">
+        <h1 className="text-3xl font-serif font-bold">Результат доступний після оплати</h1>
+        <p className="mt-3 text-gray-300">
+          Активуй підписку на 1 місяць і отримай доступ до результатів (безлімітні проходження).
+        </p>
+
+        <button
+          onClick={async () => {
+            if (isPaying || isSyncing) return;
+            setIsPaying(true);
+
+            try {
+              const res = await fetch('/api/mono/create-invoice', {
+                method: 'POST',
+                headers: { 'content-type': 'application/json' },
+                body: JSON.stringify({ amountUah: PRICE_UAH }),
+              });
+
+              const json = await res.json();
+              if (!res.ok || !json?.pageUrl || !json?.invoiceId) {
+                alert(json?.error || 'Не вдалося створити інвойс Monobank');
+                setIsPaying(false);
+                return;
+              }
+
+              window.localStorage.setItem(LAST_INVOICE_KEY, String(json.invoiceId));
+              window.location.href = json.pageUrl;
+            } catch (e) {
+              alert('Не вдалося створити оплату. Перевір /api/mono/create-invoice та env на Render.');
+              setIsPaying(false);
+            }
+          }}
+          className="mt-6 w-full px-6 py-3 bg-red-800 hover:bg-red-700 text-white font-bold rounded-lg text-lg disabled:opacity-60"
+          disabled={isPaying || isSyncing}
+        >
+          {isSyncing ? 'Перевірка оплати...' : isPaying ? 'Переадресація...' : `Підписка на 1 місяць — ${PRICE_UAH} грн`}
+        </button>
+
+        <p className="mt-3 text-xs text-gray-500">
+          Після оплати повернись на сайт — підписка активується автоматично.
+        </p>
+
+        <div className="mt-6 flex gap-3">
+          <button
+            onClick={() => router.push('/')}
+            className="flex-1 px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg font-bold"
+          >
+            На головну
+          </button>
+          <button
+            onClick={() => router.push('/test')}
+            className="flex-1 px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg font-bold"
+          >
+            Пройти ще раз
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  // якщо нема параметрів — просимо пройти тест
+  if (!searchParams.has('dominance')) {
     return (
       <div className="text-center p-8">
         <h1 className="text-3xl font-serif text-white">Спочатку пройдіть тест</h1>
@@ -245,80 +294,14 @@ function ResultContent() {
     );
   }
 
-  // ✅ PAYWALL НА РЕЗУЛЬТАТІ
-  if (!canView) {
-    return (
-      <div className="w-full max-w-md mx-auto bg-gray-900 text-white rounded-2xl shadow-2xl overflow-hidden border border-gray-800">
-        <div className="p-6 relative">
-          <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/30 to-black/60" />
-          <div className="relative">
-            <h1 className="text-2xl font-serif font-bold">Твій результат готовий 🔒</h1>
-            <p className="mt-2 text-gray-300 text-sm">
-              Щоб побачити архетип, опис і сумісність — потрібна підписка на 1 місяць.
-            </p>
-
-            <div className="mt-5 rounded-xl border border-gray-800 bg-black/20 p-4">
-              <p className="text-gray-300 text-sm">
-                ✔ Безлімітні проходження протягом 30 днів <br />
-                ✔ Відкриття результатів без обмежень
-              </p>
-            </div>
-
-            <button
-              onClick={async () => {
-                if (isPaying) return;
-                setIsPaying(true);
-
-                try {
-                  const res = await fetch('/api/mono/create-invoice', {
-                    method: 'POST',
-                    headers: { 'content-type': 'application/json' },
-                    body: JSON.stringify({ amountUah: PRICE_UAH }),
-                  });
-
-                  const json = await res.json();
-                  if (!res.ok || !json?.pageUrl || !json?.invoiceId) {
-                    alert(json?.error || 'Не вдалося створити інвойс Monobank');
-                    setIsPaying(false);
-                    return;
-                  }
-
-                  window.localStorage.setItem(LAST_INVOICE_KEY, String(json.invoiceId));
-                  window.location.href = json.pageUrl;
-                } catch (e) {
-                  alert('Не вдалося створити оплату. Перевір /api/mono/create-invoice та env на Render.');
-                  setIsPaying(false);
-                }
-              }}
-              className="mt-6 w-full px-6 py-3 bg-red-800 hover:bg-red-700 text-white font-bold rounded-xl text-lg disabled:opacity-60"
-              disabled={isPaying || isSyncing}
-            >
-              {isSyncing ? 'Перевірка оплати...' : isPaying ? 'Переадресація...' : `Розблокувати за ${PRICE_UAH} грн`}
-            </button>
-
-            <p className="mt-3 text-xs text-gray-500">
-              Після оплати повернись на сайт — доступ активується автоматично.
-            </p>
-
-            <div className="mt-4 flex gap-3">
-              <Link href="/test" className="w-full">
-                <button className="w-full px-6 py-3 bg-gray-800 hover:bg-gray-700 text-white font-bold rounded-xl text-sm">
-                  Пройти ще раз
-                </button>
-              </Link>
-              <Link href="/" className="w-full">
-                <button className="w-full px-6 py-3 bg-gray-800 hover:bg-gray-700 text-white font-bold rounded-xl text-sm">
-                  На головну
-                </button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
+  if (isCalcLoading) {
+    return <p className="text-white">Розрахунок результату...</p>;
   }
 
-  // ✅ ПОВНИЙ РЕЗУЛЬТАТ (преміум/байпас/або 1 free)
+  if (!matchedArchetype) {
+    return <p className="text-white">Не вдалося сформувати результат. Спробуй пройти тест ще раз.</p>;
+  }
+
   const archetypeImages = [
     `/images/archetypes/archetype_${matchedArchetype.id}(1).png`,
     `/images/archetypes/archetype_${matchedArchetype.id}(2).png`,

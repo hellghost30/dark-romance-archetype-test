@@ -6,12 +6,13 @@ import { useRouter } from 'next/navigation';
 import { useSession } from 'next-auth/react';
 import questions from '@/data/questions.json';
 
-// ✅ ключ localStorage
 const STORAGE_KEY = 'partnerGender';
 
 export default function TestPage() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [userAnswers, setUserAnswers] = useState([]);
+
+  // ✅ стать партнера: з localStorage
   const [partnerGender, setPartnerGender] = useState(null); // 'male' | 'female' | null
 
   const router = useRouter();
@@ -29,9 +30,8 @@ export default function TestPage() {
     }
   }, [router]);
 
-  // ✅ тест тільки для залогінених (як було)
+  // якщо не залогінений — на головну
   useEffect(() => {
-    if (status === 'loading') return;
     if (status === 'unauthenticated') router.push('/');
   }, [status, router]);
 
@@ -65,7 +65,7 @@ export default function TestPage() {
       return;
     }
 
-    // ✅ Кінець тесту: просто рахуємо вектор і ведемо на /result
+    // ✅ Кінець тесту
     const finalVector = calculateFinalVector(nextAnswers);
     const partner = partnerGender || 'male';
 
@@ -107,7 +107,7 @@ export default function TestPage() {
           <div
             className="bg-red-600 h-2.5 rounded-full transition-all duration-300"
             style={{ width: `${((currentQuestionIndex + 1) / questions.length) * 100}%` }}
-          ></div>
+          />
         </div>
       </div>
 
