@@ -2,6 +2,7 @@
 import "./globals.css";
 import Providers from "./Providers";
 import Link from "next/link";
+import TopBar from "./components/TopBar";
 
 export const metadata = {
   title: "Dark Romance Partner Finder",
@@ -14,6 +15,9 @@ export default function RootLayout({ children }) {
       <body className="min-h-screen bg-gray-900">
         <Providers>
           <div className="min-h-screen flex flex-col">
+            {/* ✅ TopBar на всіх сторінках */}
+            <TopBar />
+
             <div className="flex-1">{children}</div>
 
             <footer className="border-t border-gray-800 bg-black/20">

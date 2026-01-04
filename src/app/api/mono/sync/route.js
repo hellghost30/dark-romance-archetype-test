@@ -57,7 +57,27 @@ export async function POST(req) {
     });
   }
 
-  // 2) питаємо Mono статус інвойсу
+  // 2) знаходимо payment по invoiceId (має існувати) і перевіряємо owner
+  const payment = await prisma.payment.findFirst({
+    where: { invoiceId },
+    select: { id: true, userId: true, amount: true, ccy: true, status: true },
+  });
+
+  if (!payment) {
+    return new Response(JSON.stringify({ error: "Payment not found for this invoiceId" }), {
+      status: 404,
+      headers: { "Content-Type": "application/json" },
+    });
+  }
+
+  if (payment.userId !== user.id) {
+    return new Response(JSON.stringify({ error: "Forbidden: invoice does not belong to this user" }), {
+      status: 403,
+      headers: { "Content-Type": "application/json" },
+    });
+  }
+
+  // 3) питаємо Mono статус інвойсу
   const url = `${MONO_API_BASE}/invoice/status?invoiceId=${encodeURIComponent(invoiceId)}`;
 
   const monoRes = await fetch(url, {
@@ -74,17 +94,56 @@ export async function POST(req) {
     );
   }
 
-  // у Mono статус зазвичай в полі status (success / processing / created / expired / failure ...)
   const status = String(monoJson?.status || "").toLowerCase();
 
-  // 3) оновлюємо payment в БД (якщо є)
-  // (не ламаємось, якщо запису нема)
-  try {
-    await prisma.payment.updateMany({
-      where: { invoiceId },
+  // 4) звіряємо суму/валюту (захист від “оплатив інше → активував”)
+  const monoAmount = Number(monoJson?.amount);
+  const monoCcy = Number(monoJson?.ccy);
+
+  if (!Number.isFinite(monoAmount) || monoAmount <= 0) {
+    // все одно оновимо payload/status для дебагу
+    await prisma.payment.update({
+      where: { id: payment.id },
       data: { status, payload: monoJson },
     });
-  } catch {}
+    return new Response(JSON.stringify({ error: "Mono response missing amount", status }), {
+      status: 500,
+      headers: { "Content-Type": "application/json" },
+    });
+  }
+
+  // якщо mono не віддасть ccy — не блокуєм, але якщо віддасть, звіряємо
+  const ccyMismatch = Number.isFinite(monoCcy) && monoCcy !== Number(payment.ccy);
+  const amountMismatch = monoAmount !== Number(payment.amount);
+
+  if (amountMismatch || ccyMismatch) {
+    await prisma.payment.update({
+      where: { id: payment.id },
+      data: { status: "mismatch", payload: monoJson },
+    });
+
+    return new Response(
+      JSON.stringify({
+        ok: false,
+        activated: false,
+        error: "Invoice mismatch",
+        details: {
+          expectedAmount: payment.amount,
+          gotAmount: monoAmount,
+          expectedCcy: payment.ccy,
+          gotCcy: Number.isFinite(monoCcy) ? monoCcy : null,
+          status,
+        },
+      }),
+      { status: 400, headers: { "Content-Type": "application/json" } }
+    );
+  }
+
+  // 5) оновлюємо payment статус + payload
+  await prisma.payment.update({
+    where: { id: payment.id },
+    data: { status, payload: monoJson },
+  });
 
   if (status !== "success") {
     return new Response(
@@ -93,11 +152,12 @@ export async function POST(req) {
     );
   }
 
-  // 4) активуємо підписку (30 днів)
-  // якщо вже була активна в майбутньому — продовжуємо від тієї дати
-  const base = user.subscriptionActiveUntil && new Date(user.subscriptionActiveUntil) > new Date()
-    ? new Date(user.subscriptionActiveUntil)
-    : new Date();
+  // 6) активуємо підписку (30 днів)
+  const now = new Date();
+  const base =
+    user.subscriptionActiveUntil && new Date(user.subscriptionActiveUntil) > now
+      ? new Date(user.subscriptionActiveUntil)
+      : now;
 
   const newUntil = addDays(base, 30);
 
