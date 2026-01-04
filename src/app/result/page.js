@@ -28,50 +28,7 @@ function isPremiumByUser(user) {
   return false;
 }
 
-function pickNeutralInsightsFromQuery(searchParams) {
-  const getInt = (k) => {
-    const v = searchParams?.[k];
-    const s = Array.isArray(v) ? v[0] : v;
-    const n = parseInt(s, 10);
-    return Number.isFinite(n) ? n : null;
-  };
-
-  const dominance = getInt("dominance");
-  const empathy = getInt("empathy");
-  const darkness = getInt("darkness");
-  const chaos = getInt("chaos");
-
-  const lines = [];
-
-  if (dominance !== null) {
-    if (dominance >= 70) lines.push("У тебе відчутна потреба керувати темпом і правилами взаємодії.");
-    else if (dominance <= 35) lines.push("Тобі комфортніше, коли ініціатива розподіляється м’яко і без тиску.");
-  }
-
-  if (darkness !== null) {
-    if (darkness >= 70) lines.push("Тебе сильніше чіпляють інтенсивні сюжети та емоційна глибина.");
-    else if (darkness <= 35) lines.push("Ти краще реагуєш на теплоту й стабільність, без зайвого драматизму.");
-  }
-
-  if (empathy !== null) {
-    if (empathy >= 70) lines.push("Ти тонко зчитуєш стан партнера — важливо мати взаємність.");
-    else if (empathy <= 35) lines.push("Тобі важливі прямі сигнали: без натяків і гри у здогадки.");
-  }
-
-  if (chaos !== null) {
-    if (chaos >= 70) lines.push("Тобі цікавіші непередбачувані люди, але межі мають бути чіткими.");
-    else if (chaos <= 35) lines.push("Ти цінуєш прогнозованість: ясність, рутину та надійність у діях.");
-  }
-
-  if (lines.length < 2) {
-    lines.push("Твій результат уже готовий — залишилось розблокувати деталі.");
-    lines.push("Після оплати відкриються портрет, сумісність і пояснення “чому саме він/вона”.");
-  }
-
-  return lines.slice(0, 2);
-}
-
-export default async function ResultPage({ searchParams }) {
+export default async function ResultPage() {
   const session = await getServerSession(authOptions);
 
   // 1) Авторизація перед результатом (але НЕ автоперекидання)
@@ -94,12 +51,11 @@ export default async function ResultPage({ searchParams }) {
 
   const premium = isBypassUser || isPremiumByUser(user);
 
-  // 3) paywall + teaser
+  // 3) paywall (без тізерів)
   if (!premium) {
-    const neutralInsights = pickNeutralInsightsFromQuery(searchParams || {});
     return (
       <main className="flex min-h-screen items-center justify-center bg-gray-800 p-4">
-        <PaywallClient priceUah={PRICE_UAH} neutralInsights={neutralInsights} />
+        <PaywallClient priceUah={PRICE_UAH} />
       </main>
     );
   }
