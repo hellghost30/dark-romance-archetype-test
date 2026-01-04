@@ -1,8 +1,8 @@
-// src/app/page.js (оновлена, компактніша + красивіша, логіка НЕ змінена)
-'use client';
+// src/app/page.js (оновлена під новий флоу: тест без логіну, логін перед результатом)
+"use client";
 
-import { useSession, signIn } from "next-auth/react";
-import { useRouter } from 'next/navigation';
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 const STORAGE_KEY = "partnerGender";
@@ -14,24 +14,20 @@ export default function HomePage() {
   const [partnerGender, setPartnerGender] = useState(null); // 'male' | 'female' | null
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
     const saved = window.localStorage.getItem(STORAGE_KEY);
-    if (saved === 'male' || saved === 'female') setPartnerGender(saved);
+    if (saved === "male" || saved === "female") setPartnerGender(saved);
   }, []);
 
   const choosePartner = (g) => {
     setPartnerGender(g);
-    if (typeof window !== 'undefined') window.localStorage.setItem(STORAGE_KEY, g);
+    if (typeof window !== "undefined") window.localStorage.setItem(STORAGE_KEY, g);
   };
 
   const handleStart = () => {
     if (!partnerGender) return;
-
-    if (session) {
-      router.push('/test');
-    } else {
-      signIn('google', { callbackUrl: '/test' });
-    }
+    // ✅ ТЕСТ БЕЗ ЛОГІНУ
+    router.push("/test");
   };
 
   if (status === "loading") {
@@ -42,14 +38,15 @@ export default function HomePage() {
     );
   }
 
-  const selectedLabel = partnerGender === 'male' ? 'чоловіка' : partnerGender === 'female' ? 'жінку' : null;
+  const selectedLabel =
+    partnerGender === "male" ? "чоловіка" : partnerGender === "female" ? "жінку" : null;
 
   return (
     <main className="flex min-h-[calc(100vh-56px)] flex-col items-center justify-center bg-gray-900 text-white px-4 py-8">
       <div className="w-full max-w-md">
         {/* Header */}
         <div className="text-center">
-          <h1 className="text-3xl sm:text-4xl font-serif font-bold tracking-tight" style={{ color: '#E9D5D5' }}>
+          <h1 className="text-3xl sm:text-4xl font-serif font-bold tracking-tight" style={{ color: "#E9D5D5" }}>
             Dark Romance Partner Finder
           </h1>
 
@@ -59,7 +56,7 @@ export default function HomePage() {
 
           {session && (
             <p className="mt-2 text-xs text-gray-400">
-              Привіт, <span className="font-semibold text-gray-200">{session.user?.name || 'користувачу'}</span> 👀
+              Привіт, <span className="font-semibold text-gray-200">{session.user?.name || "користувачу"}</span> 👀
             </p>
           )}
         </div>
@@ -84,10 +81,10 @@ export default function HomePage() {
 
             <div className="mt-4 grid grid-cols-2 gap-3">
               <button
-                onClick={() => choosePartner('male')}
+                onClick={() => choosePartner("male")}
                 className={
                   "rounded-xl px-4 py-3 text-sm font-bold transition active:scale-[0.99] " +
-                  (partnerGender === 'male'
+                  (partnerGender === "male"
                     ? "bg-red-800 text-white shadow-lg shadow-red-900/20"
                     : "bg-gray-800 hover:bg-gray-700 text-white")
                 }
@@ -96,10 +93,10 @@ export default function HomePage() {
               </button>
 
               <button
-                onClick={() => choosePartner('female')}
+                onClick={() => choosePartner("female")}
                 className={
                   "rounded-xl px-4 py-3 text-sm font-bold transition active:scale-[0.99] " +
-                  (partnerGender === 'female'
+                  (partnerGender === "female"
                     ? "bg-red-800 text-white shadow-lg shadow-red-900/20"
                     : "bg-gray-800 hover:bg-gray-700 text-white")
                 }
@@ -127,12 +124,18 @@ export default function HomePage() {
                   : "bg-gray-800 text-gray-500 cursor-not-allowed")
               }
             >
-              {session ? "Почати тест" : "Увійти та почати"}
+              Почати тест
             </button>
 
             <p className="mt-3 text-[11px] text-gray-500 leading-relaxed">
               Натискаючи кнопку, ти погоджуєшся з умовами сервісу (див. посилання внизу сторінки).
             </p>
+
+            {!session && (
+              <p className="mt-2 text-[11px] text-gray-500 leading-relaxed">
+                *Увійти через Google потрібно буде вже перед відкриттям результату.
+              </p>
+            )}
           </div>
         </div>
       </div>

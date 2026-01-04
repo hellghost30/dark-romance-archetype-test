@@ -11,75 +11,53 @@ function addDays(date, days) {
   return d;
 }
 
+function jsonResponse(payload, status = 200) {
+  return new Response(JSON.stringify(payload), {
+    status,
+    headers: { "Content-Type": "application/json" },
+  });
+}
+
+function normalizeStatus(s) {
+  return String(s || "").trim().toLowerCase();
+}
+
+function toIntSafe(v) {
+  const n = Number(v);
+  return Number.isFinite(n) ? n : null;
+}
+
 export async function POST(req) {
   const session = await getServerSession(authOptions);
-  const emailRaw = session?.user?.email;
-  const email = (emailRaw || "").trim().toLowerCase();
-
-  if (!email) {
-    return new Response(JSON.stringify({ error: "Not authenticated" }), {
-      status: 401,
-      headers: { "Content-Type": "application/json" },
-    });
-  }
+  const email = String(session?.user?.email || "").trim().toLowerCase();
+  if (!email) return jsonResponse({ error: "Not authenticated" }, 401);
 
   let body = {};
-  try {
-    body = await req.json();
-  } catch {}
+  try { body = await req.json(); } catch {}
 
   const invoiceId = String(body?.invoiceId || "").trim();
-  if (!invoiceId) {
-    return new Response(JSON.stringify({ error: "Missing invoiceId" }), {
-      status: 400,
-      headers: { "Content-Type": "application/json" },
-    });
-  }
+  if (!invoiceId) return jsonResponse({ error: "Missing invoiceId" }, 400);
 
   const token = process.env.MONO_MERCHANT_TOKEN;
-  if (!token) {
-    return new Response(JSON.stringify({ error: "Missing MONO_MERCHANT_TOKEN in env" }), {
-      status: 500,
-      headers: { "Content-Type": "application/json" },
-    });
-  }
+  if (!token) return jsonResponse({ error: "Missing MONO_MERCHANT_TOKEN in env" }, 500);
 
-  // 1) дістаємо юзера
   const user = await prisma.user.findUnique({
     where: { email },
-    select: { id: true, subscriptionActiveUntil: true },
+    select: { id: true, subscriptionActiveUntil: true, isPremium: true },
   });
+  if (!user?.id) return jsonResponse({ error: "User not found" }, 404);
 
-  if (!user?.id) {
-    return new Response(JSON.stringify({ error: "User not found" }), {
-      status: 404,
-      headers: { "Content-Type": "application/json" },
-    });
-  }
-
-  // 2) знаходимо payment по invoiceId (має існувати) і перевіряємо owner
   const payment = await prisma.payment.findFirst({
     where: { invoiceId },
-    select: { id: true, userId: true, amount: true, ccy: true, status: true },
+    select: { id: true, userId: true, amount: true, ccy: true, status: true, paidAt: true },
   });
 
-  if (!payment) {
-    return new Response(JSON.stringify({ error: "Payment not found for this invoiceId" }), {
-      status: 404,
-      headers: { "Content-Type": "application/json" },
-    });
-  }
+  if (!payment) return jsonResponse({ error: "Payment not found for this invoiceId" }, 404);
+  if (payment.userId !== user.id) return jsonResponse({ error: "Forbidden: invoice does not belong to this user" }, 403);
 
-  if (payment.userId !== user.id) {
-    return new Response(JSON.stringify({ error: "Forbidden: invoice does not belong to this user" }), {
-      status: 403,
-      headers: { "Content-Type": "application/json" },
-    });
-  }
+  const alreadyActivated = normalizeStatus(payment.status) === "success";
 
-  // 3) питаємо Mono статус інвойсу
   const url = `${MONO_API_BASE}/invoice/status?invoiceId=${encodeURIComponent(invoiceId)}`;
-
   const monoRes = await fetch(url, {
     method: "GET",
     headers: { "X-Token": token },
@@ -88,33 +66,32 @@ export async function POST(req) {
   const monoJson = await monoRes.json().catch(() => null);
 
   if (!monoRes.ok) {
-    return new Response(
-      JSON.stringify({ error: "Mono invoice status failed", details: monoJson }),
-      { status: 500, headers: { "Content-Type": "application/json" } }
-    );
+    await prisma.payment.update({
+      where: { id: payment.id },
+      data: { status: "mono_error", payload: monoJson },
+    });
+    return jsonResponse({ error: "Mono invoice status failed" }, 500);
   }
 
-  const status = String(monoJson?.status || "").toLowerCase();
+  const status = normalizeStatus(monoJson?.status);
 
-  // 4) звіряємо суму/валюту (захист від “оплатив інше → активував”)
-  const monoAmount = Number(monoJson?.amount);
-  const monoCcy = Number(monoJson?.ccy);
+  // amount/ccy check
+  const monoAmount = toIntSafe(monoJson?.paidAmount) ?? toIntSafe(monoJson?.amount);
+  const monoCcy = toIntSafe(monoJson?.ccy);
 
   if (!Number.isFinite(monoAmount) || monoAmount <= 0) {
-    // все одно оновимо payload/status для дебагу
     await prisma.payment.update({
       where: { id: payment.id },
       data: { status, payload: monoJson },
     });
-    return new Response(JSON.stringify({ error: "Mono response missing amount", status }), {
-      status: 500,
-      headers: { "Content-Type": "application/json" },
-    });
+    return jsonResponse({ error: "Mono response missing amount", status }, 500);
   }
 
-  // якщо mono не віддасть ccy — не блокуєм, але якщо віддасть, звіряємо
-  const ccyMismatch = Number.isFinite(monoCcy) && monoCcy !== Number(payment.ccy);
-  const amountMismatch = monoAmount !== Number(payment.amount);
+  const expectedAmount = Number(payment.amount);
+  const expectedCcy = Number(payment.ccy);
+
+  const amountMismatch = monoAmount !== expectedAmount;
+  const ccyMismatch = Number.isFinite(monoCcy) ? monoCcy !== expectedCcy : false;
 
   if (amountMismatch || ccyMismatch) {
     await prisma.payment.update({
@@ -122,37 +99,51 @@ export async function POST(req) {
       data: { status: "mismatch", payload: monoJson },
     });
 
-    return new Response(
-      JSON.stringify({
+    return jsonResponse(
+      {
         ok: false,
         activated: false,
         error: "Invoice mismatch",
         details: {
-          expectedAmount: payment.amount,
+          expectedAmount,
           gotAmount: monoAmount,
-          expectedCcy: payment.ccy,
+          expectedCcy,
           gotCcy: Number.isFinite(monoCcy) ? monoCcy : null,
           status,
         },
-      }),
-      { status: 400, headers: { "Content-Type": "application/json" } }
+      },
+      400
     );
   }
 
-  // 5) оновлюємо payment статус + payload
-  await prisma.payment.update({
-    where: { id: payment.id },
-    data: { status, payload: monoJson },
-  });
-
+  // if not success -> just persist status/payload
   if (status !== "success") {
-    return new Response(
-      JSON.stringify({ ok: true, activated: false, status }),
-      { status: 200, headers: { "Content-Type": "application/json" } }
+    await prisma.payment.update({
+      where: { id: payment.id },
+      data: { status, payload: monoJson },
+    });
+    return jsonResponse({ ok: true, activated: false, status }, 200);
+  }
+
+  // success but already activated -> ensure payment status/payload ok, return current user state
+  if (alreadyActivated) {
+    await prisma.payment.update({
+      where: { id: payment.id },
+      data: { status: "success", payload: monoJson },
+    });
+
+    return jsonResponse(
+      {
+        ok: true,
+        activated: true,
+        status,
+        subscriptionActiveUntil: user.subscriptionActiveUntil,
+        note: "Already activated earlier",
+      },
+      200
     );
   }
 
-  // 6) активуємо підписку (30 днів)
   const now = new Date();
   const base =
     user.subscriptionActiveUntil && new Date(user.subscriptionActiveUntil) > now
@@ -161,17 +152,28 @@ export async function POST(req) {
 
   const newUntil = addDays(base, 30);
 
-  await prisma.user.update({
-    where: { id: user.id },
-    data: {
-      isPremium: true, // залишаємо для сумісності
-      subscriptionActiveUntil: newUntil,
-    },
+  await prisma.$transaction(async (tx) => {
+    await tx.payment.update({
+      where: { id: payment.id },
+      data: {
+        status: "success",
+        payload: monoJson,
+        paidAt: payment.paidAt ?? now, // ✅ paidAt тільки 1 раз
+      },
+    });
+
+    await tx.user.update({
+      where: { id: user.id },
+      data: {
+        isPremium: true,
+        subscriptionActiveUntil: newUntil,
+      },
+    });
   });
 
-  return new Response(
-    JSON.stringify({ ok: true, activated: true, status, subscriptionActiveUntil: newUntil }),
-    { status: 200, headers: { "Content-Type": "application/json" } }
+  return jsonResponse(
+    { ok: true, activated: true, status, subscriptionActiveUntil: newUntil },
+    200
   );
 }
 

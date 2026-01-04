@@ -1,12 +1,11 @@
 // src/app/test/page.js
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
-import { useSession } from 'next-auth/react';
-import questions from '@/data/questions.json';
+import React, { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
+import questions from "@/data/questions.json";
 
-const STORAGE_KEY = 'partnerGender';
+const STORAGE_KEY = "partnerGender";
 
 export default function TestPage() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -16,24 +15,18 @@ export default function TestPage() {
   const [partnerGender, setPartnerGender] = useState(null); // 'male' | 'female' | null
 
   const router = useRouter();
-  const { status } = useSession();
 
   // якщо нема partnerGender -> на головну
   useEffect(() => {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
     const saved = window.localStorage.getItem(STORAGE_KEY);
 
-    if (saved === 'male' || saved === 'female') {
+    if (saved === "male" || saved === "female") {
       setPartnerGender(saved);
     } else {
-      router.push('/');
+      router.push("/");
     }
   }, [router]);
-
-  // якщо не залогінений — на головну
-  useEffect(() => {
-    if (status === 'unauthenticated') router.push('/');
-  }, [status, router]);
 
   const calculateFinalVector = (answers) => {
     const initialVector = {
@@ -56,7 +49,7 @@ export default function TestPage() {
     return initialVector;
   };
 
-  const handleAnswer = async (answer) => {
+  const handleAnswer = (answer) => {
     const nextAnswers = [...userAnswers, answer.effects];
 
     if (currentQuestionIndex < questions.length - 1) {
@@ -67,7 +60,7 @@ export default function TestPage() {
 
     // ✅ Кінець тесту
     const finalVector = calculateFinalVector(nextAnswers);
-    const partner = partnerGender || 'male';
+    const partner = partnerGender || "male";
 
     const qs = new URLSearchParams({
       ...finalVector,
@@ -85,14 +78,6 @@ export default function TestPage() {
     );
   }
 
-  if (status === 'loading') {
-    return (
-      <main className="flex min-h-screen items-center justify-center bg-gray-900">
-        <p className="text-white text-xl">Завантаження...</p>
-      </main>
-    );
-  }
-
   const currentQuestion = questions[currentQuestionIndex];
   const imageUrl = `/images/questions/q${currentQuestion.id}.png`;
 
@@ -100,7 +85,7 @@ export default function TestPage() {
     <main className="flex min-h-screen flex-col items-center justify-center bg-gray-900 text-white p-4 md:p-8">
       <div className="w-full max-w-2xl mb-4">
         <div className="flex items-center justify-between mb-2 text-sm text-gray-400">
-          <span>Партнер: {partnerGender === 'male' ? 'чоловік' : 'жінка'}</span>
+          <span>Партнер: {partnerGender === "male" ? "чоловік" : "жінка"}</span>
         </div>
 
         <div className="bg-gray-700 rounded-full h-2.5">
@@ -119,7 +104,9 @@ export default function TestPage() {
           className="w-full max-w-sm h-auto object-contain rounded-lg mb-6 mx-auto"
         />
 
-        <h2 className="text-2xl md:text-3xl font-serif mb-8 px-4">{currentQuestion.question_text}</h2>
+        <h2 className="text-2xl md:text-3xl font-serif mb-8 px-4">
+          {currentQuestion.question_text}
+        </h2>
 
         <div className="space-y-4">
           {currentQuestion.answers.map((answer, index) => (
