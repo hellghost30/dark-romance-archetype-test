@@ -25,8 +25,16 @@ export default function HomePage() {
   };
 
   const handleStart = () => {
-    if (!partnerGender) return;
-    // ✅ ТЕСТ БЕЗ ЛОГІНУ
+    // ✅ робимо надійно: якщо state ще null — беремо з localStorage
+    let g = partnerGender;
+
+    if (!g && typeof window !== "undefined") {
+      const saved = window.localStorage.getItem(STORAGE_KEY);
+      if (saved === "male" || saved === "female") g = saved;
+    }
+
+    if (!g) return;
+
     router.push("/test");
   };
 
@@ -46,7 +54,10 @@ export default function HomePage() {
       <div className="w-full max-w-md">
         {/* Header */}
         <div className="text-center">
-          <h1 className="text-3xl sm:text-4xl font-serif font-bold tracking-tight" style={{ color: "#E9D5D5" }}>
+          <h1
+            className="text-3xl sm:text-4xl font-serif font-bold tracking-tight"
+            style={{ color: "#E9D5D5" }}
+          >
             Dark Romance Partner Finder
           </h1>
 
@@ -81,6 +92,7 @@ export default function HomePage() {
 
             <div className="mt-4 grid grid-cols-2 gap-3">
               <button
+                type="button"
                 onClick={() => choosePartner("male")}
                 className={
                   "rounded-xl px-4 py-3 text-sm font-bold transition active:scale-[0.99] " +
@@ -93,6 +105,7 @@ export default function HomePage() {
               </button>
 
               <button
+                type="button"
                 onClick={() => choosePartner("female")}
                 className={
                   "rounded-xl px-4 py-3 text-sm font-bold transition active:scale-[0.99] " +
@@ -115,6 +128,7 @@ export default function HomePage() {
           {/* CTA */}
           <div className="p-5 border-t border-gray-800 bg-black/20">
             <button
+              type="button"
               onClick={handleStart}
               disabled={!partnerGender}
               className={
@@ -127,15 +141,7 @@ export default function HomePage() {
               Почати тест
             </button>
 
-            <p className="mt-3 text-[11px] text-gray-500 leading-relaxed">
-              Натискаючи кнопку, ти погоджуєшся з умовами сервісу (див. посилання внизу сторінки).
-            </p>
-
-            {!session && (
-              <p className="mt-2 text-[11px] text-gray-500 leading-relaxed">
-                *Увійти через Google потрібно буде вже перед відкриттям результату.
-              </p>
-            )}
+            {/* ✅ Прибрали тексти, які ти просив прибрати */}
           </div>
         </div>
       </div>

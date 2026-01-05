@@ -7,8 +7,6 @@ import { useSession } from 'next-auth/react';
 import questions from '@/data/questions.json';
 
 const STORAGE_KEY = 'partnerGender';
-
-// ✅ зберігаємо останній result qs, щоб після оплати повернутись саме на нього
 const LAST_RESULT_QS_KEY = 'lastResultQs';
 
 export default function TestPage() {
@@ -20,6 +18,7 @@ export default function TestPage() {
   const router = useRouter();
   const { status } = useSession();
 
+  // якщо нема partnerGender -> на головну
   useEffect(() => {
     if (typeof window === 'undefined') return;
     const saved = window.localStorage.getItem(STORAGE_KEY);
@@ -31,9 +30,7 @@ export default function TestPage() {
     }
   }, [router]);
 
-  useEffect(() => {
-    if (status === 'unauthenticated') router.push('/');
-  }, [status, router]);
+  // ✅ ВАЖЛИВО: тест без логіну — НЕ редіректимо unauthenticated
 
   const calculateFinalVector = (answers) => {
     const initialVector = {
