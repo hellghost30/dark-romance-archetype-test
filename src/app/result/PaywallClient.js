@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 const LAST_INVOICE_KEY = "lastMonoInvoiceId";
+const LAST_RESULT_QS_KEY = "lastResultQs";
 
 // 60s total, every 3s
 const POLL_INTERVAL_MS = 3000;
@@ -26,6 +27,18 @@ export default function PaywallClient({ priceUah }) {
       pollTimerRef.current = null;
     }
     pollStopAtRef.current = 0;
+  };
+
+  const redirectToLastResult = () => {
+    try {
+      const qs = window.localStorage.getItem(LAST_RESULT_QS_KEY);
+      // мінімальна валідація, щоб не піти на порожній result
+      if (qs && qs.includes("dominance=")) {
+        router.replace(`/result?${qs}`);
+        return true;
+      }
+    } catch {}
+    return false;
   };
 
   const startSilentPolling = async () => {
@@ -57,12 +70,18 @@ export default function PaywallClient({ priceUah }) {
 
         const json = await res.json().catch(() => null);
 
-        // If activated -> unlock result
+        // ✅ success -> unlock + redirect to the exact result
         if (res.ok && json?.activated) {
           window.localStorage.removeItem(LAST_INVOICE_KEY);
+
           clearPoll();
           setIsSyncing(false);
-          router.refresh(); // 🔥 server gate will now show ResultClient
+
+          // пробуємо повернути на result з параметрами тесту
+          if (!redirectToLastResult()) {
+            // fallback: просто оновити серверний гейт
+            router.refresh();
+          }
         }
       } catch {
         // silently ignore; next poll will retry
@@ -105,7 +124,10 @@ export default function PaywallClient({ priceUah }) {
 
   return (
     <div className="w-full max-w-md mx-auto bg-gray-900 text-white rounded-lg shadow-2xl overflow-hidden p-6">
-      <h1 className="text-3xl font-serif font-bold">Результат доступний після оплати</h1>
+      <h1 className="text-3xl font-serif font-bold">
+        Результат доступний після оплати
+      </h1>
+
       <p className="mt-3 text-gray-300">
         Після оплати результат відкриється автоматично.
       </p>
@@ -145,6 +167,17 @@ export default function PaywallClient({ priceUah }) {
             }
 
             window.localStorage.setItem(LAST_INVOICE_KEY, String(json.invoiceId));
+
+            // (необовʼязково, але корисно) якщо qs ще не збережений — збережемо поточний
+            // наприклад, якщо користувач зайшов на paywall з /result?....
+            try {
+              const cur = new URL(window.location.href);
+              const curQs = cur.searchParams.toString();
+              if (curQs && curQs.includes("dominance=")) {
+                window.localStorage.setItem(LAST_RESULT_QS_KEY, curQs);
+              }
+            } catch {}
+
             window.location.href = json.pageUrl;
           } catch {
             alert("Помилка створення оплати");
@@ -154,7 +187,11 @@ export default function PaywallClient({ priceUah }) {
         disabled={isPaying || isSyncing}
         className="mt-6 w-full px-6 py-3 bg-red-800 hover:bg-red-700 text-white font-bold rounded-lg text-lg disabled:opacity-60"
       >
-        {isSyncing ? "Завершуємо оплату..." : isPaying ? "Переадресація..." : `Оплатити — ${priceUah} грн`}
+        {isSyncing
+          ? "Завершуємо оплату..."
+          : isPaying
+          ? "Переадресація..."
+          : `Оплатити — ${priceUah} грн`}
       </button>
 
       <div className="mt-6 flex gap-3">
