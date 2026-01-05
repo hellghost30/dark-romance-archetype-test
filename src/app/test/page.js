@@ -121,14 +121,16 @@ export default function TestPage() {
           className="w-full max-w-sm h-auto object-contain rounded-lg mb-6 mx-auto"
         />
 
-        <h2 className="text-2xl md:text-3xl font-serif mb-8 px-4">{currentQuestion.question_text}</h2>
+        <h2 className="text-lg sm:text-xl md:text-2xl font-serif mb-6 px-2 leading-snug">
+          {currentQuestion.question_text}
+        </h2>
 
         <div className="space-y-4">
           {currentQuestion.answers.map((answer, index) => (
             <button
               key={index}
               onClick={() => handleAnswer(answer)}
-              className="w-full p-4 bg-gray-800 hover:bg-red-800 rounded-lg text-lg transition-colors duration-200"
+              className="w-full p-4 bg-gray-800 hover:bg-red-800 rounded-lg text-base sm:text-lg transition-colors duration-200"
             >
               {answer.text}
             </button>
