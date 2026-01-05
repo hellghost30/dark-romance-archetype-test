@@ -1,7 +1,7 @@
-// src/app/page.js (оновлена під новий флоу: тест без логіну, логін перед результатом)
+// src/app/page.js
 "use client";
 
-import { useSession } from "next-auth/react";
+import { useSession, signIn, signOut } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
@@ -25,14 +25,12 @@ export default function HomePage() {
   };
 
   const handleStart = () => {
-    // ✅ робимо надійно: якщо state ще null — беремо з localStorage
+    // надійно: якщо state ще null — беремо з localStorage
     let g = partnerGender;
-
     if (!g && typeof window !== "undefined") {
       const saved = window.localStorage.getItem(STORAGE_KEY);
       if (saved === "male" || saved === "female") g = saved;
     }
-
     if (!g) return;
 
     router.push("/test");
@@ -54,10 +52,7 @@ export default function HomePage() {
       <div className="w-full max-w-md">
         {/* Header */}
         <div className="text-center">
-          <h1
-            className="text-3xl sm:text-4xl font-serif font-bold tracking-tight"
-            style={{ color: "#E9D5D5" }}
-          >
+          <h1 className="text-3xl sm:text-4xl font-serif font-bold tracking-tight" style={{ color: "#E9D5D5" }}>
             Dark Romance Partner Finder
           </h1>
 
@@ -65,11 +60,31 @@ export default function HomePage() {
             Пройди тест і дізнайся, який темний персонаж з книжок та фільмів підходить саме тобі.
           </p>
 
-          {session && (
-            <p className="mt-2 text-xs text-gray-400">
-              Привіт, <span className="font-semibold text-gray-200">{session.user?.name || "користувачу"}</span> 👀
-            </p>
-          )}
+          {/* ✅ Легкий логін/логаут (не обовʼязково) */}
+          <div className="mt-3 flex items-center justify-center gap-2">
+            {session ? (
+              <>
+                <span className="text-xs text-gray-400">
+                  Увійшов як <span className="text-gray-200 font-semibold">{session.user?.name || "користувач"}</span>
+                </span>
+                <button
+                  type="button"
+                  onClick={() => signOut({ callbackUrl: "/" })}
+                  className="text-xs px-3 py-1 rounded-full bg-gray-800 hover:bg-gray-700 border border-gray-700"
+                >
+                  Вийти
+                </button>
+              </>
+            ) : (
+              <button
+                type="button"
+                onClick={() => signIn("google", { callbackUrl: "/" })}
+                className="text-xs px-3 py-1 rounded-full bg-gray-800 hover:bg-gray-700 border border-gray-700"
+              >
+                Увійти
+              </button>
+            )}
+          </div>
         </div>
 
         {/* Card */}
@@ -140,8 +155,6 @@ export default function HomePage() {
             >
               Почати тест
             </button>
-
-            {/* ✅ Прибрали тексти, які ти просив прибрати */}
           </div>
         </div>
       </div>
