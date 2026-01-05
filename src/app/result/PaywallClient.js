@@ -1,4 +1,3 @@
-// src/app/result/PaywallClient.js
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
@@ -32,7 +31,6 @@ export default function PaywallClient({ priceUah }) {
   const redirectToLastResult = () => {
     try {
       const qs = window.localStorage.getItem(LAST_RESULT_QS_KEY);
-      // мінімальна валідація, щоб не піти на порожній result
       if (qs && qs.includes("dominance=")) {
         router.replace(`/result?${qs}`);
         return true;
@@ -92,12 +90,10 @@ export default function PaywallClient({ priceUah }) {
     await attempt();
 
     // and then polling
-    pollTimerRef.current = setInterval(() => {
-      attempt();
-    }, POLL_INTERVAL_MS);
+    pollTimerRef.current = setInterval(attempt, POLL_INTERVAL_MS);
   };
 
-  // 1) If returned from payment: start polling and clean paid=1
+  // ✅ Poll ONLY when we come back from mono redirect (?paid=1)
   useEffect(() => {
     if (typeof window === "undefined") return;
 
@@ -108,31 +104,21 @@ export default function PaywallClient({ priceUah }) {
       url.searchParams.delete("paid");
       window.history.replaceState({}, "", url.toString());
       startSilentPolling();
-      return;
     }
-  }, [router]);
-
-  // 2) Also: if user just refreshes the paywall and invoiceId still exists — continue polling silently
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    const invoiceId = window.localStorage.getItem(LAST_INVOICE_KEY);
-    if (invoiceId) startSilentPolling();
 
     return () => clearPoll();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [router]);
 
   return (
     <div className="w-full max-w-md mx-auto bg-gray-900 text-white rounded-lg shadow-2xl overflow-hidden p-6">
-      <h1 className="text-3xl font-serif font-bold">
-        Результат доступний після оплати
-      </h1>
+      <h1 className="text-3xl font-serif font-bold">Твій результат уже готовий</h1>
 
       <p className="mt-3 text-gray-300">
-        Після оплати результат відкриється автоматично.
+        Залишився останній крок — після оплати результат відкриється автоматично.
       </p>
 
-      {/* Skeleton */}
+      {/* Skeleton preview */}
       <div className="mt-4 rounded-xl bg-black/20 border border-white/10 p-4">
         <div className="h-5 w-40 bg-white/10 rounded mb-3" />
         <div className="h-28 bg-white/10 rounded mb-3" />
@@ -149,6 +135,12 @@ export default function PaywallClient({ priceUah }) {
       <button
         onClick={async () => {
           if (isPaying || isSyncing) return;
+
+          // ✅ важливо: прибираємо старий invoiceId, щоб не було фантомного polling
+          try {
+            window.localStorage.removeItem(LAST_INVOICE_KEY);
+          } catch {}
+
           setIsPaying(true);
 
           try {
@@ -168,8 +160,7 @@ export default function PaywallClient({ priceUah }) {
 
             window.localStorage.setItem(LAST_INVOICE_KEY, String(json.invoiceId));
 
-            // (необовʼязково, але корисно) якщо qs ще не збережений — збережемо поточний
-            // наприклад, якщо користувач зайшов на paywall з /result?....
+            // збережемо поточний qs (щоб після оплати повернутись саме на цей результат)
             try {
               const cur = new URL(window.location.href);
               const curQs = cur.searchParams.toString();
@@ -180,7 +171,6 @@ export default function PaywallClient({ priceUah }) {
 
             window.location.href = json.pageUrl;
           } catch {
-            alert("Помилка створення оплати");
             setIsPaying(false);
           }
         }}
@@ -191,7 +181,7 @@ export default function PaywallClient({ priceUah }) {
           ? "Завершуємо оплату..."
           : isPaying
           ? "Переадресація..."
-          : `Оплатити — ${priceUah} грн`}
+          : `Дізнатись, хто мені підходить — ${priceUah} грн`}
       </button>
 
       <div className="mt-6 flex gap-3">
