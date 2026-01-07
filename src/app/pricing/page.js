@@ -1,48 +1,45 @@
 // src/app/pricing/page.js
+import PaywallClient from "./PaywallClient";
+
 export const metadata = {
-    title: "Послуги та ціни | Dark Finder",
-    description: "Перелік послуг та ціни в гривнях (UAH) для сервісу Dark Finder",
-  };
-  
-  export default function PricingPage() {
-    return (
-      <main className="min-h-screen bg-gray-900 text-white px-4 py-10">
-        <div className="mx-auto w-full max-w-3xl">
-          <h1 className="text-4xl font-serif font-bold mb-3">Послуги та ціни</h1>
-  
-          <p className="text-gray-300 mb-8">
-            Нижче наведена інформація про платну послугу сервісу{" "}
-            <span className="font-semibold">Dark Finder</span>. Усі ціни вказані у гривнях (UAH).
+  title: "Відкрити результат | Dark Finder",
+  description: "Оплата доступу до повного результату тесту Dark Finder",
+};
+
+const PRICE_UAH = 49;
+
+export default function PricingPage() {
+  return (
+    <main className="min-h-screen bg-gray-900 text-white px-4 py-10">
+      <div className="mx-auto w-full max-w-3xl">
+        <div className="mb-8">
+          <h1 className="text-4xl font-serif font-bold mb-2">Результат готовий</h1>
+          <p className="text-gray-300">
+            Оплати один раз — і результат відкриється автоматично.
           </p>
-  
-          {/* ЄДИНА ПОСЛУГА */}
-          <div className="bg-black/20 rounded-xl p-6 border border-gray-800 flex items-center justify-between gap-4">
-            <div>
-              <div className="text-lg font-semibold mb-1">
-                Підписка на 1 місяць
-              </div>
-              <div className="text-gray-300 text-sm">
-                Безлімітна кількість проходжень тесту та доступ до результатів протягом 30 календарних днів з моменту оплати.
-              </div>
-            </div>
-  
-            <div className="text-2xl font-bold whitespace-nowrap">
-              49 ₴
-            </div>
-          </div>
-  
-          {/* ФОРМАТ НАДАННЯ ПОСЛУГ */}
-          <div className="mt-10 bg-black/20 rounded-xl p-6 border border-gray-800">
-            <h2 className="text-2xl font-serif mb-3">Формат надання послуг</h2>
-            <ul className="list-disc list-inside text-gray-300 space-y-2">
-              <li>Послуга надається онлайн у цифровому вигляді через сайт.</li>
-              <li>Доступ активується автоматично після підтвердження оплати.</li>
-              <li>Термін дії підписки — 30 календарних днів з моменту оплати.</li>
-              <li>Оплата здійснюється безготівково через платіжні сервіси, доступні на сайті.</li>
-            </ul>
-          </div>
         </div>
-      </main>
-    );
-  }
-  
+
+        {/* PAYWALL */}
+        <PaywallClient priceUah={PRICE_UAH} />
+
+        {/* TRUST + LINKS */}
+        <div className="mt-8 text-sm text-gray-400 space-y-2">
+          <p>
+            Натискаючи кнопку оплати, ти погоджуєшся з{" "}
+            <a className="underline" href="/offer" target="_blank" rel="noopener noreferrer">
+              публічною офертою
+            </a>
+            .
+          </p>
+          <p>
+            Потрібна допомога?{" "}
+            <a className="underline" href="/contacts">
+              Контакти
+            </a>
+            .
+          </p>
+        </div>
+      </div>
+    </main>
+  );
+}

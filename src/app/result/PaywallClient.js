@@ -7,7 +7,6 @@ import { useRouter } from "next/navigation";
 const LAST_INVOICE_KEY = "lastMonoInvoiceId";
 const LAST_RESULT_QS_KEY = "lastResultQs";
 
-// 60s total, every 3s
 const POLL_INTERVAL_MS = 3000;
 const POLL_TOTAL_MS = 60000;
 
@@ -44,15 +43,12 @@ export default function PaywallClient({ priceUah }) {
 
     const invoiceId = window.localStorage.getItem(LAST_INVOICE_KEY);
     if (!invoiceId) return;
-
-    // already polling
     if (pollTimerRef.current) return;
 
     setIsSyncing(true);
     pollStopAtRef.current = Date.now() + POLL_TOTAL_MS;
 
     const attempt = async () => {
-      // timeout reached
       if (Date.now() > pollStopAtRef.current) {
         clearPoll();
         setIsSyncing(false);
@@ -68,32 +64,23 @@ export default function PaywallClient({ priceUah }) {
 
         const json = await res.json().catch(() => null);
 
-        // ✅ success -> unlock + redirect to the exact result
         if (res.ok && json?.activated) {
           window.localStorage.removeItem(LAST_INVOICE_KEY);
 
           clearPoll();
           setIsSyncing(false);
 
-          // пробуємо повернути на result з параметрами тесту
           if (!redirectToLastResult()) {
-            // fallback: просто оновити серверний гейт
             router.refresh();
           }
         }
-      } catch {
-        // silently ignore; next poll will retry
-      }
+      } catch {}
     };
 
-    // first immediate attempt
     await attempt();
-
-    // and then polling
     pollTimerRef.current = setInterval(attempt, POLL_INTERVAL_MS);
   };
 
-  // ✅ Poll ONLY when we come back from mono redirect (?paid=1)
   useEffect(() => {
     if (typeof window === "undefined") return;
 
@@ -111,17 +98,28 @@ export default function PaywallClient({ priceUah }) {
   }, [router]);
 
   return (
-    <div className="w-full max-w-md mx-auto bg-gray-900 text-white rounded-lg shadow-2xl overflow-hidden p-6">
-      <h1 className="text-3xl font-serif font-bold">Твій результат уже готовий</h1>
+    <div className="w-full max-w-md mx-auto bg-gray-900 text-white rounded-2xl shadow-2xl overflow-hidden p-6 border border-white/10">
+      <div className="text-center">
+        <h1 className="text-3xl font-serif font-bold">Результат готовий ✅</h1>
+        <p className="mt-2 text-gray-300">
+          Відкрий повний опис і пояснення — це займе секунду.
+        </p>
+      </div>
 
-      <p className="mt-3 text-gray-300">
-        Залишився останній крок — після оплати результат відкриється автоматично.
-      </p>
+      {/* What you get */}
+      <div className="mt-5 rounded-2xl bg-black/30 border border-white/10 p-4 text-gray-200 text-sm space-y-2">
+        <p>• Повний портрет твого архетипу (без урізань)</p>
+        <p>• Пояснення “чому саме він/вона тобі підходить”</p>
+        <p>• Твій % сумісності + логіка підбору</p>
+      </div>
 
-      {/* Skeleton preview */}
-      <div className="mt-4 rounded-xl bg-black/20 border border-white/10 p-4">
-        <div className="h-5 w-40 bg-white/10 rounded mb-3" />
-        <div className="h-28 bg-white/10 rounded mb-3" />
+      {/* Preview (tease) */}
+      <div className="mt-4 rounded-2xl bg-black/20 border border-white/10 p-4">
+        <div className="flex items-center justify-between mb-3">
+          <div className="h-5 w-44 bg-white/10 rounded" />
+          <div className="h-5 w-16 bg-white/10 rounded" />
+        </div>
+        <div className="h-32 bg-white/10 rounded mb-3" />
         <div className="flex gap-2 mb-3">
           <div className="h-8 w-24 bg-white/10 rounded" />
           <div className="h-8 w-28 bg-white/10 rounded" />
@@ -130,13 +128,16 @@ export default function PaywallClient({ priceUah }) {
         <div className="h-4 bg-white/10 rounded mb-2" />
         <div className="h-4 bg-white/10 rounded mb-2" />
         <div className="h-4 bg-white/10 rounded w-3/4" />
+        <p className="mt-3 text-xs text-gray-400">
+          Це превʼю. Після оплати відкриється весь текст.
+        </p>
       </div>
 
+      {/* CTA */}
       <button
         onClick={async () => {
           if (isPaying || isSyncing) return;
 
-          // ✅ важливо: прибираємо старий invoiceId, щоб не було фантомного polling
           try {
             window.localStorage.removeItem(LAST_INVOICE_KEY);
           } catch {}
@@ -160,7 +161,6 @@ export default function PaywallClient({ priceUah }) {
 
             window.localStorage.setItem(LAST_INVOICE_KEY, String(json.invoiceId));
 
-            // збережемо поточний qs (щоб після оплати повернутись саме на цей результат)
             try {
               const cur = new URL(window.location.href);
               const curQs = cur.searchParams.toString();
@@ -175,23 +175,35 @@ export default function PaywallClient({ priceUah }) {
           }
         }}
         disabled={isPaying || isSyncing}
-        className="mt-6 w-full px-6 py-3 bg-red-800 hover:bg-red-700 text-white font-bold rounded-lg text-lg disabled:opacity-60"
+        className="mt-6 w-full px-6 py-3 bg-red-800 hover:bg-red-700 text-white font-bold rounded-xl text-lg disabled:opacity-60 transition"
       >
         {isSyncing
-          ? "Завершуємо оплату..."
+          ? "Підтверджуємо оплату..."
           : isPaying
           ? "Переадресація..."
-          : `Дізнатись, хто мені підходить — ${priceUah} грн`}
+          : `Відкрити повний результат — ${priceUah} грн`}
       </button>
+
+      {/* Trust microcopy */}
+      <div className="mt-3 text-center text-gray-400 text-xs space-y-1">
+        <p>Після оплати результат відкриється автоматично.</p>
+        <p>
+          Натискаючи кнопку, ти погоджуєшся з{" "}
+          <Link href="/offer" className="underline hover:text-gray-200">
+            публічною офертою
+          </Link>
+          .
+        </p>
+      </div>
 
       <div className="mt-6 flex gap-3">
         <Link href="/" className="flex-1">
-          <button className="w-full px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg font-bold">
+          <button className="w-full px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-xl font-bold">
             На головну
           </button>
         </Link>
         <Link href="/test" className="flex-1">
-          <button className="w-full px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg font-bold">
+          <button className="w-full px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-xl font-bold">
             Пройти ще раз
           </button>
         </Link>

@@ -25,7 +25,6 @@ export default function HomePage() {
   };
 
   const handleStart = () => {
-    // надійно: якщо state ще null — беремо з localStorage
     let g = partnerGender;
     if (!g && typeof window !== "undefined") {
       const saved = window.localStorage.getItem(STORAGE_KEY);
@@ -47,20 +46,43 @@ export default function HomePage() {
   const selectedLabel =
     partnerGender === "male" ? "чоловіка" : partnerGender === "female" ? "жінку" : null;
 
+  const heroTitle =
+    partnerGender === "male"
+      ? "Який тип чоловіка тобі реально підходить?"
+      : partnerGender === "female"
+      ? "Який тип жінки тобі реально підходить?"
+      : "Хто тобі реально підходить?";
+
   return (
     <main className="flex min-h-[calc(100vh-56px)] flex-col items-center justify-center bg-gray-900 text-white px-4 py-8">
       <div className="w-full max-w-md">
         {/* Header */}
         <div className="text-center">
           <h1 className="text-3xl sm:text-4xl font-serif font-bold tracking-tight" style={{ color: "#E9D5D5" }}>
-            Dark Romance Partner Finder
+            Dark Finder
           </h1>
 
           <p className="mt-2 text-sm sm:text-base text-gray-300 leading-relaxed">
-            Пройди тест і дізнайся, який темний персонаж з книжок та фільмів підходить саме тобі.
+            {heroTitle} <span className="text-gray-200 font-semibold">Тест на 2 хвилини</span> — результат одразу після проходження.
           </p>
 
-          {/* ✅ Легкий логін/логаут (не обовʼязково) */}
+          <div className="mt-4 grid grid-cols-3 gap-2 text-xs text-gray-300">
+            <div className="rounded-xl bg-black/25 border border-white/10 px-2 py-2">
+              Портрет персонажа
+            </div>
+            <div className="rounded-xl bg-black/25 border border-white/10 px-2 py-2">
+              % сумісності
+            </div>
+            <div className="rounded-xl bg-black/25 border border-white/10 px-2 py-2">
+              Чому підходить саме тобі
+            </div>
+          </div>
+
+          <p className="mt-3 text-xs text-gray-400">
+            Зараз проходять тест сотні людей — спробуй і ти.
+          </p>
+
+          {/* Логін/логаут */}
           <div className="mt-3 flex items-center justify-center gap-2">
             {session ? (
               <>
@@ -94,7 +116,7 @@ export default function HomePage() {
               <div>
                 <h2 className="text-lg font-serif">Кого ти шукаєш?</h2>
                 <p className="mt-1 text-xs text-gray-400">
-                  Це впливає на те, з якої категорії персонажів буде підібрано результат.
+                  Обери — і ми підберемо архетип з потрібної категорії.
                 </p>
               </div>
 
@@ -135,7 +157,7 @@ export default function HomePage() {
 
             {!partnerGender && (
               <p className="mt-3 text-xs text-gray-500">
-                Спочатку обери варіант — і кнопка старту стане активною.
+                Спочатку обери варіант — і кнопка стане активною.
               </p>
             )}
           </div>
@@ -153,8 +175,12 @@ export default function HomePage() {
                   : "bg-gray-800 text-gray-500 cursor-not-allowed")
               }
             >
-              Почати тест
+              {partnerGender ? "Побачити мій результат" : "Обери варіант вище"}
             </button>
+
+            <p className="mt-3 text-[11px] text-gray-500 text-center">
+              Без реєстрації. Результат сформується одразу після тесту.
+            </p>
           </div>
         </div>
       </div>
