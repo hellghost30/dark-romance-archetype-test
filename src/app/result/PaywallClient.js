@@ -1,3 +1,4 @@
+// src/components/PaywallClient.js
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
@@ -66,13 +67,10 @@ export default function PaywallClient({ priceUah }) {
 
         if (res.ok && json?.activated) {
           window.localStorage.removeItem(LAST_INVOICE_KEY);
-
           clearPoll();
           setIsSyncing(false);
 
-          if (!redirectToLastResult()) {
-            router.refresh();
-          }
+          if (!redirectToLastResult()) router.refresh();
         }
       } catch {}
     };
@@ -98,28 +96,20 @@ export default function PaywallClient({ priceUah }) {
   }, [router]);
 
   return (
-    <div className="w-full max-w-md mx-auto bg-gray-900 text-white rounded-2xl shadow-2xl overflow-hidden p-6 border border-white/10">
-      <div className="text-center">
-        <h1 className="text-3xl font-serif font-bold">Результат готовий ✅</h1>
-        <p className="mt-2 text-gray-300">
-          Відкрий повний опис і пояснення — це займе секунду.
-        </p>
+    <div className="w-full max-w-md mx-auto bg-gray-900 text-white rounded-lg shadow-2xl overflow-hidden p-6">
+      <h1 className="text-3xl font-serif font-bold">Твій результат уже готовий</h1>
+
+      <p className="mt-3 text-gray-300">Ти вже майже бачиш повну картину. Залишився один крок.</p>
+
+      <div className="mt-4 rounded-xl bg-black/30 border border-white/10 p-4 text-gray-300 text-sm space-y-2">
+        <p>• Повний опис твого архетипу</p>
+        <p>• Пояснення, чому саме цей тип тобі підходить</p>
+        <p>• Результат на основі твоїх відповідей</p>
       </div>
 
-      {/* What you get */}
-      <div className="mt-5 rounded-2xl bg-black/30 border border-white/10 p-4 text-gray-200 text-sm space-y-2">
-        <p>• Повний портрет твого архетипу (без урізань)</p>
-        <p>• Пояснення “чому саме він/вона тобі підходить”</p>
-        <p>• Твій % сумісності + логіка підбору</p>
-      </div>
-
-      {/* Preview (tease) */}
-      <div className="mt-4 rounded-2xl bg-black/20 border border-white/10 p-4">
-        <div className="flex items-center justify-between mb-3">
-          <div className="h-5 w-44 bg-white/10 rounded" />
-          <div className="h-5 w-16 bg-white/10 rounded" />
-        </div>
-        <div className="h-32 bg-white/10 rounded mb-3" />
+      <div className="mt-4 rounded-xl bg-black/20 border border-white/10 p-4">
+        <div className="h-5 w-40 bg-white/10 rounded mb-3" />
+        <div className="h-28 bg-white/10 rounded mb-3" />
         <div className="flex gap-2 mb-3">
           <div className="h-8 w-24 bg-white/10 rounded" />
           <div className="h-8 w-28 bg-white/10 rounded" />
@@ -128,12 +118,8 @@ export default function PaywallClient({ priceUah }) {
         <div className="h-4 bg-white/10 rounded mb-2" />
         <div className="h-4 bg-white/10 rounded mb-2" />
         <div className="h-4 bg-white/10 rounded w-3/4" />
-        <p className="mt-3 text-xs text-gray-400">
-          Це превʼю. Після оплати відкриється весь текст.
-        </p>
       </div>
 
-      {/* CTA */}
       <button
         onClick={async () => {
           if (isPaying || isSyncing) return;
@@ -175,37 +161,19 @@ export default function PaywallClient({ priceUah }) {
           }
         }}
         disabled={isPaying || isSyncing}
-        className="mt-6 w-full px-6 py-3 bg-red-800 hover:bg-red-700 text-white font-bold rounded-xl text-lg disabled:opacity-60 transition"
+        className="mt-6 w-full px-6 py-3 bg-red-800 hover:bg-red-700 text-white font-bold rounded-lg text-lg disabled:opacity-60"
       >
-        {isSyncing
-          ? "Підтверджуємо оплату..."
-          : isPaying
-          ? "Переадресація..."
-          : `Відкрити повний результат — ${priceUah} грн`}
+        {isSyncing ? "Завершуємо оплату..." : isPaying ? "Переадресація..." : `Відкрити мій результат — ${priceUah} грн`}
       </button>
 
-      {/* Trust microcopy */}
-      <div className="mt-3 text-center text-gray-400 text-xs space-y-1">
-        <p>Після оплати результат відкриється автоматично.</p>
-        <p>
-          Натискаючи кнопку, ти погоджуєшся з{" "}
-          <Link href="/offer" className="underline hover:text-gray-200">
-            публічною офертою
-          </Link>
-          .
-        </p>
-      </div>
+      <p className="mt-3 text-center text-gray-400 text-sm">Оплата відкриває доступ до результату цього тесту</p>
 
       <div className="mt-6 flex gap-3">
         <Link href="/" className="flex-1">
-          <button className="w-full px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-xl font-bold">
-            На головну
-          </button>
+          <button className="w-full px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg font-bold">На головну</button>
         </Link>
         <Link href="/test" className="flex-1">
-          <button className="w-full px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-xl font-bold">
-            Пройти ще раз
-          </button>
+          <button className="w-full px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg font-bold">Пройти ще раз</button>
         </Link>
       </div>
     </div>

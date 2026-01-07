@@ -18,9 +18,9 @@ export const metadata = {
           {/* ЄДИНА ПОСЛУГА */}
           <div className="bg-black/20 rounded-xl p-6 border border-gray-800 flex items-center justify-between gap-4">
             <div>
-              <div className="text-lg font-semibold mb-1">Доступ до повного результату</div>
+              <div className="text-lg font-semibold mb-1">Доступ до результатів</div>
               <div className="text-gray-300 text-sm">
-                Одноразова оплата відкриває доступ до результату тесту.
+                Оплата відкриває повний результат тесту (портрет + сумісність).
               </div>
             </div>
   

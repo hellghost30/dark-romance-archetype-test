@@ -7,11 +7,22 @@ import React, { useEffect, useState } from "react";
 
 const STORAGE_KEY = "partnerGender";
 
+function randInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 export default function HomePage() {
   const { data: session, status } = useSession();
   const router = useRouter();
 
-  const [partnerGender, setPartnerGender] = useState(null); // 'male' | 'female' | null
+  const [partnerGender, setPartnerGender] = useState(null);
+  const [liveCount, setLiveCount] = useState(0);
+
+  useEffect(() => {
+    setLiveCount(randInt(5, 100));
+    const t = setInterval(() => setLiveCount(randInt(5, 100)), 2500);
+    return () => clearInterval(t);
+  }, []);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -31,7 +42,6 @@ export default function HomePage() {
       if (saved === "male" || saved === "female") g = saved;
     }
     if (!g) return;
-
     router.push("/test");
   };
 
@@ -43,46 +53,25 @@ export default function HomePage() {
     );
   }
 
-  const selectedLabel =
-    partnerGender === "male" ? "чоловіка" : partnerGender === "female" ? "жінку" : null;
-
-  const heroTitle =
-    partnerGender === "male"
-      ? "Який тип чоловіка тобі реально підходить?"
-      : partnerGender === "female"
-      ? "Який тип жінки тобі реально підходить?"
-      : "Хто тобі реально підходить?";
+  const selectedLabel = partnerGender === "male" ? "чоловіка" : partnerGender === "female" ? "жінку" : null;
 
   return (
     <main className="flex min-h-[calc(100vh-56px)] flex-col items-center justify-center bg-gray-900 text-white px-4 py-8">
       <div className="w-full max-w-md">
-        {/* Header */}
         <div className="text-center">
           <h1 className="text-3xl sm:text-4xl font-serif font-bold tracking-tight" style={{ color: "#E9D5D5" }}>
             Dark Finder
           </h1>
 
           <p className="mt-2 text-sm sm:text-base text-gray-300 leading-relaxed">
-            {heroTitle} <span className="text-gray-200 font-semibold">Тест на 2 хвилини</span> — результат одразу після проходження.
+            Дізнайся, який темний персонаж з книжок та фільмів підходить саме тобі.
           </p>
 
-          <div className="mt-4 grid grid-cols-3 gap-2 text-xs text-gray-300">
-            <div className="rounded-xl bg-black/25 border border-white/10 px-2 py-2">
-              Портрет персонажа
-            </div>
-            <div className="rounded-xl bg-black/25 border border-white/10 px-2 py-2">
-              % сумісності
-            </div>
-            <div className="rounded-xl bg-black/25 border border-white/10 px-2 py-2">
-              Чому підходить саме тобі
-            </div>
+          <div className="mt-3 text-xs text-gray-400">
+            Зараз проходять тест:{" "}
+            <span className="text-gray-200 font-bold">{liveCount}</span>
           </div>
 
-          <p className="mt-3 text-xs text-gray-400">
-            Зараз проходять тест сотні людей — спробуй і ти.
-          </p>
-
-          {/* Логін/логаут */}
           <div className="mt-3 flex items-center justify-center gap-2">
             {session ? (
               <>
@@ -109,14 +98,13 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Card */}
         <div className="mt-6 rounded-2xl border border-gray-800 bg-black/30 shadow-xl overflow-hidden">
           <div className="p-5">
             <div className="flex items-start justify-between gap-3">
               <div>
                 <h2 className="text-lg font-serif">Кого ти шукаєш?</h2>
                 <p className="mt-1 text-xs text-gray-400">
-                  Обери — і ми підберемо архетип з потрібної категорії.
+                  Це впливає на те, з якої категорії персонажів буде підібрано результат.
                 </p>
               </div>
 
@@ -156,13 +144,10 @@ export default function HomePage() {
             </div>
 
             {!partnerGender && (
-              <p className="mt-3 text-xs text-gray-500">
-                Спочатку обери варіант — і кнопка стане активною.
-              </p>
+              <p className="mt-3 text-xs text-gray-500">Спочатку обери варіант — і кнопка старту стане активною.</p>
             )}
           </div>
 
-          {/* CTA */}
           <div className="p-5 border-t border-gray-800 bg-black/20">
             <button
               type="button"
@@ -170,16 +155,14 @@ export default function HomePage() {
               disabled={!partnerGender}
               className={
                 "w-full rounded-xl px-5 py-3 text-base font-bold transition active:scale-[0.99] " +
-                (partnerGender
-                  ? "bg-red-800 hover:bg-red-700 text-white"
-                  : "bg-gray-800 text-gray-500 cursor-not-allowed")
+                (partnerGender ? "bg-red-800 hover:bg-red-700 text-white" : "bg-gray-800 text-gray-500 cursor-not-allowed")
               }
             >
-              {partnerGender ? "Побачити мій результат" : "Обери варіант вище"}
+              Побачити мій результат
             </button>
 
-            <p className="mt-3 text-[11px] text-gray-500 text-center">
-              Без реєстрації. Результат сформується одразу після тесту.
+            <p className="mt-2 text-center text-xs text-gray-500">
+              Результат формується одразу після тесту.
             </p>
           </div>
         </div>

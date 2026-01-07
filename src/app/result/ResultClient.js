@@ -1,13 +1,14 @@
 // src/app/result/ResultClient.js
 "use client";
 
-import React, { useState, useEffect, Suspense, useRef, useMemo } from "react";
+import React, { useState, useEffect, Suspense, useRef } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { findBestMatch } from "@/utils/matching";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import compatibilityTexts from "@/data/compatibility_texts.json";
+import PaywallClient from "@/components/PaywallClient";
 
 const PRICE_UAH = 49;
 
@@ -32,9 +33,6 @@ function ResultInner() {
 
   const [showImageDisclaimer, setShowImageDisclaimer] = useState(false);
   const disclaimerRef = useRef(null);
-
-  const qs = useMemo(() => searchParams?.toString() || "", [searchParams]);
-  const payLink = useMemo(() => `/pricing?${qs}`, [qs]);
 
   useEffect(() => {
     function handleOutsideClick(e) {
@@ -94,11 +92,6 @@ function ResultInner() {
     const targetScore = Number(match.compatibility) || 0;
     setAnimatedScore(0);
 
-    if (targetScore <= 0) {
-      setAnimatedScore(targetScore);
-      return;
-    }
-
     const id = setInterval(() => {
       setAnimatedScore((prev) => {
         const next = prev + 1;
@@ -108,7 +101,7 @@ function ResultInner() {
         }
         return next;
       });
-    }, 18);
+    }, 20);
 
     return () => clearInterval(id);
   }, [searchParams]);
@@ -137,13 +130,12 @@ function ResultInner() {
     `/images/archetypes/archetype_${matchedArchetype.id}(4).png`,
   ];
 
-  const teaserPortrait =
-    (matchedArchetype.long_description || "").slice(0, 140).trim() +
-    ((matchedArchetype.long_description || "").length > 140 ? "…" : "");
-
-  const teaserCompat =
-    (matchedArchetype.compatibility_text || "Пояснення сумісності для цього архетипу ще готується.").slice(0, 120).trim() +
-    (((matchedArchetype.compatibility_text || "").length > 120) ? "…" : "");
+  // сильніше “закриваємо”: показуємо дуже короткий шматок, решта — blur + оверлей з оплатою
+  const portraitPreview = (matchedArchetype.long_description || "").slice(0, 140);
+  const compatPreview = (matchedArchetype.compatibility_text || "Текст сумісності для цього архетипу ще не додано.").slice(
+    0,
+    140
+  );
 
   return (
     <div className="w-full max-w-md mx-auto bg-gray-900 text-white rounded-lg shadow-2xl overflow-hidden">
@@ -162,7 +154,7 @@ function ResultInner() {
         </div>
 
         <div className="absolute top-4 right-4 flex items-center gap-2">
-          <div className="bg-black/55 px-3 py-1 rounded-full">
+          <div className="bg-black/50 px-3 py-1 rounded-full">
             <p className="text-white font-bold">{animatedScore}% сумісність</p>
           </div>
 
@@ -174,7 +166,7 @@ function ResultInner() {
           >
             <button
               type="button"
-              className="w-9 h-9 rounded-full bg-black/55 hover:bg-black/75 text-white font-bold flex items-center justify-center backdrop-blur transition"
+              className="w-9 h-9 rounded-full bg-black/50 hover:bg-black/70 text-white font-bold flex items-center justify-center backdrop-blur transition"
               aria-label="Інформація про зображення"
               onClick={() => setShowImageDisclaimer((v) => !v)}
             >
@@ -194,63 +186,43 @@ function ResultInner() {
         <div className="flex border-b border-gray-700 mb-4">
           <button
             onClick={() => setActiveTab("portrait")}
-            className={`py-2 px-4 ${activeTab === "portrait" ? "border-b-2 border-red-500 text-white" : "text-gray-400"}`}
+            className={`py-2 px-4 ${activeTab === "portrait" ? "border-b-2 border-red-500" : "text-gray-400"}`}
           >
             Портрет
           </button>
           <button
             onClick={() => setActiveTab("compatibility")}
-            className={`py-2 px-4 ${activeTab === "compatibility" ? "border-b-2 border-red-500 text-white" : "text-gray-400"}`}
+            className={`py-2 px-4 ${activeTab === "compatibility" ? "border-b-2 border-red-500" : "text-gray-400"}`}
           >
             Сумісність
           </button>
         </div>
 
-        {/* Teaser (видимий) */}
-        {activeTab === "portrait" && (
-          <p className="text-gray-300">
-            {teaserPortrait}
-            <span className="text-gray-500"> (далі — після відкриття)</span>
-          </p>
-        )}
-        {activeTab === "compatibility" && (
-          <p className="text-gray-300">
-            {teaserCompat}
-            <span className="text-gray-500"> (далі — після відкриття)</span>
-          </p>
-        )}
-
-        {/* Locked overlay */}
-        <div className="mt-5 relative rounded-xl border border-white/10 bg-black/20 p-4 overflow-hidden">
-          <div className="blur-sm select-none pointer-events-none">
-            <p className="text-gray-300 mb-2">
-              {matchedArchetype.long_description || "—"}
-            </p>
-            <p className="text-gray-300">
-              {matchedArchetype.compatibility_text || "—"}
-            </p>
+        <div className="relative rounded-xl bg-black/20 border border-white/10 overflow-hidden">
+          <div className="p-4">
+            {activeTab === "portrait" ? (
+              <>
+                <p className="text-gray-300">{portraitPreview}…</p>
+                <div className="mt-3 h-24 rounded-lg bg-white/5 blur-md" />
+              </>
+            ) : (
+              <>
+                <p className="text-gray-300">{compatPreview}…</p>
+                <div className="mt-3 h-24 rounded-lg bg-white/5 blur-md" />
+              </>
+            )}
           </div>
 
-          <div className="absolute inset-0 flex flex-col items-center justify-center p-4 bg-gradient-to-t from-black/85 via-black/55 to-transparent text-center">
-            <p className="text-white font-bold text-lg">Результат вже порахований</p>
-            <p className="text-gray-300 text-sm mt-1">
-              Відкрий повний текст і пояснення сумісності
-            </p>
-
-            <Link href={payLink} className="w-full mt-4">
-              <button className="w-full px-6 py-3 bg-red-800 hover:bg-red-700 text-white font-bold rounded-lg text-lg">
-                Відкрити мій результат — {PRICE_UAH} грн
-              </button>
-            </Link>
-
-            <p className="text-gray-400 text-xs mt-2">
-              Після оплати відкриється автоматично
-            </p>
+          {/* overlay paywall */}
+          <div className="absolute inset-0 flex items-end justify-center">
+            <div className="w-full p-4 bg-gradient-to-t from-black via-black/70 to-transparent">
+              <PaywallClient priceUah={PRICE_UAH} />
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="p-6 pt-0">
+      <div className="p-6">
         <Link href="/test">
           <button className="w-full px-8 py-3 bg-gray-700 hover:bg-gray-600 text-white font-bold rounded-lg text-lg">
             Пройти тест ще раз
